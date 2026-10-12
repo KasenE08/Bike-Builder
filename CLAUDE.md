@@ -4,6 +4,7 @@ Personal motorcycle build configurator. iPhone PWA on GitHub Pages. Owner-only u
 
 ## How to work
 - Ask questions and show a plan before writing code. Confirm before each phase.
+- Data-accuracy calls (which figure, source or fitment is right): research and pick the most accurate yourself, note it; do not ask the owner.
 - Be direct, keep work token-efficient (owner is on a limited plan).
 - Dev branch = `claude/bike-build-configurator-g5w85d`. Merge to `main` (via PR) only after owner approval. `main` auto-deploys to Pages.
 - After each phase: explain simply what was built, update the progress log below.
