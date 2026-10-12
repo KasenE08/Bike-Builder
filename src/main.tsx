@@ -1,7 +1,5 @@
 import { render } from 'preact';
-
-function App() {
-  return <main style={{ fontFamily: 'system-ui', padding: 24 }}>Bike Builder — scaffold</main>;
-}
+import { App } from './ui/App';
+import './ui/styles.css';
 
 render(<App />, document.getElementById('app')!);

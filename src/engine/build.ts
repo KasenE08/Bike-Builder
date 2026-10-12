@@ -22,6 +22,7 @@ export interface BuildResult extends SimResult {
   weightLb: number; // wet + part deltas (no rider)
   limiterRemoved: boolean;
   est: boolean; // any input estimated
+  estBy: { power: boolean; weight: boolean; times: boolean }; // per-metric est. flags for the UI
 }
 
 export function evaluate(bike: Bike, build: Build): BuildResult {
@@ -47,10 +48,13 @@ export function evaluate(bike: Bike, build: Build): BuildResult {
 
   const partsUsd = parts.reduce((s, p) => s + (p.price.usd ?? 0), 0);
   const laborUsd = parts.reduce((s, p) => s + (p.labor?.usd ?? 0), 0);
-  const est =
-    bike.calibration.est ||
-    parts.some((p) => p.effect.est || p.weightDeltaLb.est || p.labor?.est || p.effect.roughGuess) ||
+  const power =
+    !!bike.hp.est || !!bike.torqueLbFt.est ||
+    parts.some((p) => p.effect.est || p.effect.roughGuess) ||
     (parts.some((p) => p.effect.needsTuneForFullGain && p.effect.hpPct > 0) && !hasTune);
+  const weight = !!bike.wetWeightLb.est || parts.some((p) => p.weightDeltaLb.est);
+  const times = bike.calibration.est || power || weight;
+  const est = times || parts.some((p) => p.labor?.est);
 
   return {
     ...simulate(input),
@@ -63,5 +67,6 @@ export function evaluate(bike: Bike, build: Build): BuildResult {
     weightLb: +weightLb.toFixed(1),
     limiterRemoved,
     est,
+    estBy: { power, weight, times },
   };
 }
