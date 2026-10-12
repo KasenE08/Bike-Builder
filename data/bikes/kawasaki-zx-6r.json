@@ -10,7 +10,7 @@
     "checked": "2026-10-12"
   },
   "hp": {
-    "value": 127.0,
+    "value": 127,
     "est": false,
     "source": "ISO 4106, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-6r",
     "checked": "2026-10-12"
@@ -24,7 +24,7 @@
   "peakHpRpm": 13000,
   "peakTorqueRpm": 10800,
   "wetWeightLb": {
-    "value": 430.0,
+    "value": 430,
     "est": false,
     "source": "curb, 49-state non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-6r",
     "checked": "2026-10-12"
@@ -87,5 +87,12 @@
   "drawing": "generic",
   "notes": [
     "Stock KQS assumed from 2024+ spec; verify."
-  ]
+  ],
+  "calibration": {
+    "cdA": 3.409,
+    "launchG": 0.938,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 -0.0%, top -0.0%, 0-150 +9.7% (target est.), 60-150 +13.1% (target est.); shift 0.06s est."
+  }
 }

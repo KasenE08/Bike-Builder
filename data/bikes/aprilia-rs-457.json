@@ -44,7 +44,7 @@
     "limitMph": 120
   },
   "zeroTo60S": {
-    "value": 4.0,
+    "value": 4,
     "est": true,
     "source": "est. no published test; similar to Ninja 400 (4.07 s, MotoStatz)",
     "checked": "2026-10-12"
@@ -71,7 +71,7 @@
       1.947,
       1.5,
       1.227,
-      1.0,
+      1,
       0.84
     ],
     "rearTire": "150/60-17",
@@ -82,5 +82,12 @@
   },
   "streetLegal": true,
   "stock": {},
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 3.46,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +15.3% (target est.), top +0.0%; shift 0.25s est."
+  }
 }

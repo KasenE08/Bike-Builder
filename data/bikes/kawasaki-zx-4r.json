@@ -10,7 +10,7 @@
     "checked": "2026-10-12"
   },
   "hp": {
-    "value": 56.0,
+    "value": 56,
     "est": false,
     "source": "US-spec rating (ISO 4106); global model is 77 PS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-4r-abs",
     "checked": "2026-10-12"
@@ -44,9 +44,9 @@
     "limitMph": null
   },
   "zeroTo60S": {
-    "value": 4.0,
+    "value": 4.5,
     "est": true,
-    "source": "est. no published test of US 56 hp model",
+    "source": "US model detuned to 56 hp; road tests put 0-60 in the mid-4-second range, https://www.bikebound.com/bike-reviews/kawasaki-ninja-zx-4r/",
     "checked": "2026-10-12"
   },
   "sixtyTo150S": {
@@ -85,5 +85,12 @@
   "drawing": "generic",
   "notes": [
     "US model is detuned to 56 hp (https://doubleclutch.ca/article/review-2026-kawasaki-zx4rr)."
-  ]
+  ],
+  "calibration": {
+    "cdA": 3.64,
+    "launchG": 0.776,
+    "shiftTimeS": 0.25,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0% (target est.), top +0.0% (target est.); shift 0.25s est."
+  }
 }

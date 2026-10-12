@@ -68,7 +68,7 @@
     "primaryRatio": 1.8,
     "gearRatios": [
       2.4,
-      2.0,
+      2,
       1.737,
       1.524,
       1.364,
@@ -85,5 +85,12 @@
     "quickshifter": "Ducati DQS up/down EVO 2",
     "winglets": "Factory aero winglets"
   },
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 3.403,
+    "launchG": 1.022,
+    "shiftTimeS": 0.06,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0% (target est.), top -0.0%, 0-150 +0.5%, 60-150 +0.8% (target est.); shift 0.06s est."
+  }
 }

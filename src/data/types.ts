@@ -38,7 +38,9 @@ export interface Gearing {
 export interface Calibration {
   cdA: number;        // drag area, ft^2 (bike + rider)
   launchG: number;    // traction/wheelie-limited peak accel, g
-  shiftTimeS: number; // per shift, without quickshifter
+  shiftTimeS: number; // per shift, stock (quickshifter if fitted from the factory)
+  est: boolean;       // fitted to estimated targets, or a target could not be matched
+  fit: string;        // which published figures were matched, and any misses
 }
 
 export interface Bike {

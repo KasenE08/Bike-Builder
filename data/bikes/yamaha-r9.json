@@ -84,5 +84,12 @@
   "stock": {
     "quickshifter": "Yamaha QSS up/down"
   },
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 4.041,
+    "launchG": 0.932,
+    "shiftTimeS": 0.06,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 -0.0% (target est.), top +0.0% (target est.), 0-150 +61.4% (target est.), 60-150 +78.7% (target est.); shift 0.06s est."
+  }
 }

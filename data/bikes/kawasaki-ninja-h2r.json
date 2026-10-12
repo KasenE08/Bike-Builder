@@ -90,5 +90,12 @@
   "streetLegalReason": "H2R base bike: track only",
   "notes": [
     "249 mph (400 km/h) record run used non-stock gearing, so it isn't used here. MCN's 205.7 mph may be runway-limited."
-  ]
+  ],
+  "calibration": {
+    "cdA": 4.627,
+    "launchG": 1.016,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top -0.0%, 0-150 +2.5%, 60-150 +3.9% (target est.); shift 0.06s est."
+  }
 }

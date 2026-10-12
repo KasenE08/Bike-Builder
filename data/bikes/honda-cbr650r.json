@@ -30,7 +30,7 @@
     "checked": "2026-10-12"
   },
   "dryWeightLb": {
-    "value": 429.0,
+    "value": 429,
     "est": true,
     "source": "est. wet minus fuel (4.1 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
     "checked": "2026-10-12"
@@ -82,5 +82,12 @@
   },
   "streetLegal": true,
   "stock": {},
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 3.936,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.5%, top -0.0%; shift 0.25s est."
+  }
 }

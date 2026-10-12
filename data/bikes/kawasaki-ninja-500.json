@@ -10,7 +10,7 @@
     "checked": "2026-10-12"
   },
   "hp": {
-    "value": 51.0,
+    "value": 51,
     "est": false,
     "source": "Kawasaki US (ISO 4106), https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-500",
     "checked": "2026-10-12"
@@ -82,5 +82,12 @@
   },
   "streetLegal": true,
   "stock": {},
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 4.214,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +7.4% (target est.), top +0.0% (target est.); shift 0.25s est."
+  }
 }

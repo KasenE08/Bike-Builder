@@ -10,7 +10,7 @@
     "checked": "2026-10-12"
   },
   "hp": {
-    "value": 190.0,
+    "value": 190,
     "est": false,
     "source": "ISO 4106, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
     "checked": "2026-10-12"
@@ -84,5 +84,12 @@
   "stock": {
     "quickshifter": "Kawasaki KQS up/down"
   },
-  "drawing": "generic"
+  "drawing": "generic",
+  "calibration": {
+    "cdA": 3.297,
+    "launchG": 1.017,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top +0.0%, 0-150 -0.0%, 60-150 -0.0% (target est.); shift 0.06s est."
+  }
 }
