@@ -1,0 +1,7 @@
+node_modules
+dist
+*.local
+.DS_Store
+# Never commit personal data: backups, photos, exports
+*.bikebuilder.json
+backups/

@@ -1,0 +1,64 @@
+{
+  "id": "ducati-panigale-v4-s",
+  "make": "Ducati",
+  "model": "Panigale V4 S",
+  "modelYear": 2026,
+  "streetLegal": true,
+  "msrp": {
+    "value": null,
+    "source": null,
+    "est": false,
+    "checked": null
+  },
+  "stats": {
+    "hp": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "torque": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "wetWeight": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "topSpeed": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "zeroTo60": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "sixtyTo150": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "zeroTo150": {
+      "value": null,
+      "source": null,
+      "est": false
+    },
+    "displacement": {
+      "value": null,
+      "source": null,
+      "est": false
+    }
+  },
+  "physics": {
+    "redlineRpm": null,
+    "primaryRatio": null,
+    "gearRatios": [],
+    "frontSprocket": null,
+    "rearSprocket": null,
+    "rearTireCircumferenceM": null,
+    "source": null
+  }
+}
