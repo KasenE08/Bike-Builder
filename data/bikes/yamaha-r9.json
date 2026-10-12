@@ -1,0 +1,82 @@
+{
+  "id": "yamaha-r9",
+  "make": "Yamaha",
+  "model": "YZF-R9",
+  "year": 2026,
+  "msrp": {
+    "value": 12499,
+    "est": false,
+    "source": "$13,124 incl. $625 destination, https://www.slashgear.com/1685711/yamaha-r9-features-specs-pricing-details",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 117,
+    "est": false,
+    "source": "https://www.slashgear.com/1685711/yamaha-r9-features-specs-pricing-details",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 68.6,
+    "est": false,
+    "source": "https://www.slashgear.com/1685711/yamaha-r9-features-specs-pricing-details",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 10000,
+  "peakTorqueRpm": 7000,
+  "wetWeightLb": {
+    "value": 430,
+    "est": false,
+    "source": "https://www.slashgear.com/1685711/yamaha-r9-features-specs-pricing-details",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 155,
+    "est": true,
+    "source": "est. GPS 141 mph limited by test area (https://bt-moto.com/blog/yamaha-r9-performance-breakdown-dyno-results-ride-feel-and-tuning-potential-explained); riders report 150+",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 3.2,
+    "est": true,
+    "source": "est. unverified database figure, https://accelerationtimes.com/models/yamaha-yzf-r9",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 11.3,
+    "est": true,
+    "source": "est. 0-150 est. minus 0-60 est.",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 14.5,
+    "est": true,
+    "source": "est. scaled from tested bikes with similar power-to-weight",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 890,
+  "gearing": {
+    "frontSprocket": 16,
+    "rearSprocket": 43,
+    "primaryRatio": 1.681,
+    "gearRatios": [
+      2.571,
+      1.947,
+      1.619,
+      1.381,
+      1.19,
+      1.037
+    ],
+    "rearTire": "180/55-17",
+    "rearTireDiameterIn": 24.8,
+    "redlineRpm": 11000,
+    "est": true,
+    "source": "sprockets https://sprocketcenter.com/c-1393155-YZF-R9--2025-2026.html ; primary https://fastcarcheck.uk/motorcycle-specs/make/yamaha/yzf-r9/5996 ; gears est. from MT-09 CP3"
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Yamaha QSS up/down"
+  },
+  "drawing": "generic"
+}

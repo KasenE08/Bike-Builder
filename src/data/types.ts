@@ -27,8 +27,10 @@ export interface Gearing {
   rearSprocket: number;
   primaryRatio: number;
   gearRatios: number[]; // 1st..6th
+  rearTire: string; // e.g. "190/55-17"
   rearTireDiameterIn: number;
   redlineRpm: number;
+  est: boolean; // true if any ratio is estimated (see source)
   source: string;
 }
 
@@ -56,12 +58,15 @@ export interface Bike {
   zeroTo150S: Stat;
   displacementCc: number;
   gearing: Gearing;
-  calibration: Calibration;
+  calibration?: Calibration; // added in Phase 4
+  /** Set when the published wet weight excludes fuel (Ducati); gallons to add. */
+  weightExcludesFuelGal?: number;
   streetLegal: boolean;
   streetLegalReason?: string; // e.g. "H2R base bike: track only"
   /** Categories fitted from the factory; shown as "Stock". */
   stock: Partial<Record<Category, string>>; // e.g. { quickshifter: "KQS up/down" }
   drawing: string; // SVG drawing id; "generic" until a custom one exists
+  notes?: string[];
 }
 
 export type Tier = 'budget' | 'mid' | 'premium';

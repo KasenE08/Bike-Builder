@@ -1,0 +1,83 @@
+{
+  "id": "kawasaki-zx-4r",
+  "make": "Kawasaki",
+  "model": "Ninja ZX-4R ABS",
+  "year": 2026,
+  "msrp": {
+    "value": 9299,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-4r-abs",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 56.0,
+    "est": false,
+    "source": "US-spec rating (ISO 4106); global model is 77 PS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-4r-abs",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 26.5,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-4r-abs",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 11500,
+  "peakTorqueRpm": 11000,
+  "wetWeightLb": {
+    "value": 414.5,
+    "est": false,
+    "source": "curb, https://www.birkeys.com/inventory/v1/Current/Kawasaki/Motorcycle/StreetTrack/Ninja/SuperSport/Ninja-ZX-4R-ABS",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 125,
+    "est": true,
+    "source": "est. US 56 hp model; no published test (global 77 PS bike ~140 mph)",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 4.0,
+    "est": true,
+    "source": "est. no published test of US 56 hp model",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 399,
+  "gearing": {
+    "frontSprocket": 14,
+    "rearSprocket": 48,
+    "primaryRatio": 2.029,
+    "gearRatios": [
+      2.929,
+      2.056,
+      1.619,
+      1.333,
+      1.154,
+      1.037
+    ],
+    "rearTire": "160/60-17",
+    "rearTireDiameterIn": 24.56,
+    "redlineRpm": 16000,
+    "est": false,
+    "source": "https://www.kawasaki.com.au/en-au/products/ProductSpecSheetPDF/2025-ninja-zx-4r (redline est.)"
+  },
+  "streetLegal": true,
+  "stock": {},
+  "drawing": "generic",
+  "notes": [
+    "US model is detuned to 56 hp (https://doubleclutch.ca/article/review-2026-kawasaki-zx4rr)."
+  ]
+}

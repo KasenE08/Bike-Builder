@@ -1,0 +1,82 @@
+{
+  "id": "kawasaki-zx-10r",
+  "make": "Kawasaki",
+  "model": "Ninja ZX-10R",
+  "year": 2026,
+  "msrp": {
+    "value": 16999,
+    "est": false,
+    "source": "Kawasaki US lists TBA; https://www.motorcycle.com/specs/kawasaki/sport/2026/ninja-zx-10r/base/detail.html",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 190.0,
+    "est": false,
+    "source": "ISO 4106, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 82.5,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 11500,
+  "peakTorqueRpm": 11300,
+  "wetWeightLb": {
+    "value": 458.6,
+    "est": false,
+    "source": "curb, non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 188.9,
+    "est": false,
+    "source": "GPS test, at limiter, https://motostatz.com/kawasaki-zx-10r-acceleration/",
+    "checked": "2026-10-12",
+    "limited": true,
+    "limitMph": 188.9
+  },
+  "zeroTo60S": {
+    "value": 2.91,
+    "est": false,
+    "source": "https://motostatz.com/kawasaki-zx-10r-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 6.79,
+    "est": true,
+    "source": "est. tested 0-150 minus tested 0-60",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 9.7,
+    "est": false,
+    "source": "https://motostatz.com/kawasaki-zx-10r-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 998,
+  "gearing": {
+    "frontSprocket": 17,
+    "rearSprocket": 41,
+    "primaryRatio": 1.681,
+    "gearRatios": [
+      2.6,
+      2.158,
+      1.882,
+      1.65,
+      1.476,
+      1.304
+    ],
+    "rearTire": "190/55-17",
+    "rearTireDiameterIn": 25.23,
+    "redlineRpm": 14000,
+    "est": false,
+    "source": "https://www.kawasaki.com.au/en-au/motorcycle/ninja/supersport/ninja-zx-10r/2026-ninja-zx-10r (redline est.)"
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Kawasaki KQS up/down"
+  },
+  "drawing": "generic"
+}

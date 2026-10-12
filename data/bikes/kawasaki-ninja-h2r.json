@@ -1,0 +1,88 @@
+{
+  "id": "kawasaki-ninja-h2r",
+  "make": "Kawasaki",
+  "model": "Ninja H2R",
+  "year": 2026,
+  "msrp": {
+    "value": 59100,
+    "est": false,
+    "source": "https://www.cyclenews.com/2025/09/article/new-2026-kawasaki-ninja-h2-abs-ninja-h2r-abs-specs-and-prices/",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 322,
+    "est": false,
+    "source": "ISO 4106, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-h2r-abs",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 121.5,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-h2r-abs",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 14000,
+  "peakTorqueRpm": 12500,
+  "wetWeightLb": {
+    "value": 476.3,
+    "est": false,
+    "source": "curb (2023 US sheet, assumed unchanged), https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2023-ninja-h2r",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 205.7,
+    "est": false,
+    "source": "MCN test on stock gearing, via https://jalopnik.com/1895756/kawasaki-ninja-hr2-0-60-quickest/",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 2.93,
+    "est": false,
+    "source": "https://motostatz.com/kawasaki-h2r-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 5.45,
+    "est": true,
+    "source": "est. tested 0-150 minus tested 0-60",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 8.38,
+    "est": false,
+    "source": "https://motostatz.com/hayabusa-vs-h2r/",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 998,
+  "gearing": {
+    "frontSprocket": 18,
+    "rearSprocket": 42,
+    "primaryRatio": 1.551,
+    "gearRatios": [
+      3.188,
+      2.526,
+      2.045,
+      1.727,
+      1.524,
+      1.348
+    ],
+    "rearTire": "190/65-17",
+    "rearTireDiameterIn": 26.72,
+    "redlineRpm": 14500,
+    "est": false,
+    "source": "https://www.kawasaki.com.au/en-au/products/ProductSpecSheetPDF/2024-ninja-h2r (redline est.)"
+  },
+  "streetLegal": false,
+  "stock": {
+    "forcedInduction": "Kawasaki centrifugal supercharger",
+    "quickshifter": "Kawasaki KQS up/down",
+    "winglets": "Carbon winglets"
+  },
+  "drawing": "generic",
+  "streetLegalReason": "H2R base bike: track only",
+  "notes": [
+    "249 mph (400 km/h) record run used non-stock gearing, so it isn't used here. MCN's 205.7 mph may be runway-limited."
+  ]
+}

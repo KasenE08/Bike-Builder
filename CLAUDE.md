@@ -39,4 +39,5 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 Side-profile SVG per bike, traced from owner's reference photo (potrace → hand-redrawn clean panels: tank, fairing, tail, bellyPan, wheels, frame). Two-tone flat shading per panel, signature details listed before drawing, no floating parts, render and compare to photo before showing. Do one bike first and get approval.
 
 ## Progress log
-- **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Awaiting approval.
+- **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Approved.
+- **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Awaiting approval.
