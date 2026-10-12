@@ -1,12 +1,12 @@
 {
   "id": "honda-cbr650r",
   "make": "Honda",
-  "model": "CBR650R ABS",
+  "model": "CBR650R E-Clutch",
   "year": 2026,
   "msrp": {
     "value": 9199,
     "est": false,
-    "source": "https://motorcycles.autotrader.com/motorcycles/2026/honda/cbr650r/201974300",
+    "source": "2026 US MSRP before destination (US model is E-Clutch only), https://www.torquepedia.com/honda/cbr650r/2026/e-clutch",
     "checked": "2026-10-12"
   },
   "hp": {
@@ -81,12 +81,17 @@
     "source": "sprockets 15/42 https://hondanews.com/en-US/releases/release-410d07897fdd63d8043cb727500900a8-2024-honda-cbr650r-specifications ; primary+gears est."
   },
   "streetLegal": true,
-  "stock": {},
+  "stock": {
+    "quickshifter": "Honda E-Clutch (clutchless up/down shifts)"
+  },
   "calibration": {
     "cdA": 3.936,
     "launchG": 2.5,
-    "shiftTimeS": 0.25,
+    "shiftTimeS": 0.06,
     "est": false,
-    "fit": "sim (180 lb test rider) vs published: 0-60 +0.5%, top -0.0%; shift 0.25s est."
-  }
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.5%, top -0.0%; shift 0.06s est."
+  },
+  "notes": [
+    "2026 US CBR650R is sold only with Honda E-Clutch, which also works as an up/down quickshifter (https://powersports.honda.com/motorcycle/sport/cbr650r/2026/cbr650r-e-clutch)."
+  ]
 }

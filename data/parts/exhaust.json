@@ -222,5 +222,77 @@
       "basis": "No 2026 figure; est. from Akrapovic racing (open) system on 2022 R7: +5.9 hp, +2.9 Nm (https://www.rideapart.com/news/554286/akrapovic-exhaust-euro5-yamaha-r7/); % of 73 hp / 50.2 lb-ft.",
       "needsTuneForFullGain": true
     }
+  },
+  {
+    "id": "arrow-pro-race-cbr650r-2024",
+    "category": "exhaust",
+    "name": "Pro-Race Exhaust System",
+    "brand": "Arrow",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 1152.0,
+      "source": "https://www.revzilla.com/motorcycle/arrow-pro-race-exhaust-system-honda-cbr650r-2024-2025",
+      "checked": "2026-10-12",
+      "note": "Fits CBR650R ABS 2024-25 and E-Clutch 2024-26; RevZilla 2026 parts page shows $1,329; out of stock"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.4,
+      "est": true,
+      "source": "est. from LeoVince LV-14 R on same bike (-4.37 lb vs OEM)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.2,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "est. from Scorpion Serket full-system claim on 2019-20 CBR650R (+1.1 bhp), https://www.sportsbikeshop.co.uk/motorcycle_parts/content_prod/497561; % of 94 hp.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles"
+  },
+  {
+    "id": "leovince-lv14r-cbr650r",
+    "category": "exhaust",
+    "name": "LV-14 R Exhaust System (black stainless)",
+    "brand": "LeoVince",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 1316.0,
+      "source": "https://www.revzilla.com/motorcycle/leovince-lv-14-r-exhaust-system-honda-cbr650r-cb650r-2019-2025",
+      "checked": "2026-10-12",
+      "note": "$1,316-$1,430 by finish; fits CBR650R E-Clutch 2024-2026"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.37,
+      "est": false,
+      "source": "LeoVince: 14.37 lb, -4.37 lb vs OEM, https://www.leovince.com/en-us/product/1812-0616-lv-14-r-honda-cbr-650-r-2019-2025",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.2,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "est. from Scorpion Serket full-system claim on 2019-20 CBR650R (+1.1 bhp), https://www.sportsbikeshop.co.uk/motorcycle_parts/content_prod/497561; % of 94 hp.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Maker: not homologated; may trigger check-engine light"
   }
 ]

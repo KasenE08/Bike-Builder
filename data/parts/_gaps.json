@@ -238,5 +238,65 @@
     "bike": "yamaha-r7",
     "category": "forcedInduction",
     "note": "Extreme Creations CP2 turbo kit (Australia, from A$4,275) has no US listing."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "exhaust",
+    "note": "Only Arrow and LeoVince full systems found with 2024+ fitment; Akrapovic/Yoshimura listings are pre-2024 or eBay."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "intake",
+    "note": "Only DNA found; K&N HA-6519 not confirmed for 2024+ at a US retailer."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "tune",
+    "note": "Only BT Moto found; Dynojet Power Vision 3 listing is 2021-22 and discontinued."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "frameSliders",
+    "note": "Only Puig R19 confirmed for 2024+; R&G/T-Rex listings are 2019-2022."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "tailTidy",
+    "note": "Only Yoshimura V2 confirmed for 2024+ at a US retailer; Evotech listed in AUD only."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "brakes",
+    "note": "No pad or line listing confirms 2024+ CBR650R fitment at a US retailer."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "suspension",
+    "note": "No shock or fork kit with confirmed 2024+ fitment and US price."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "chain",
+    "note": "No chain-only listing; chains come in the gearing kits."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "carbon",
+    "note": "Only eBay/UK listings."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "wheels",
+    "note": "No wheels listed for the CBR650R."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "winglets",
+    "note": "Only eBay winglets."
+  },
+  {
+    "bike": "honda-cbr650r",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]

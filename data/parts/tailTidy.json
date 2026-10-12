@@ -320,5 +320,40 @@
       "est": false,
       "basis": "No power effect."
     }
+  },
+  {
+    "id": "yoshimura-v2-fender-cbr650r",
+    "category": "tailTidy",
+    "name": "V2 Fender Eliminator Kit (075BG126520)",
+    "brand": "Yoshimura",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 179.0,
+      "source": "https://www.yoshimura-rd.com/products/cbr650r-cb650r-fender-eliminator-kit-075bg126520",
+      "checked": "2026-10-12",
+      "note": "Fits 2023-2025 (Cycle Gear lists 2023-2026); price with standard options"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
   }
 ]
