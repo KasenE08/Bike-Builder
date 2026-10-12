@@ -22,7 +22,8 @@ export const CATEGORIES: { key: Category; label: string }[] = [
   { key: 'forcedInduction', label: 'Turbo / supercharger' },
 ];
 
-export const TIERS = ['budget', 'mid', 'premium'] as const;
+/** Most catalog products listed per category per bike. */
+export const MAX_PER_CATEGORY = 5;
 
 // Owner data loaded from IndexedDB (App calls setUserData after every change).
 let custom: Part[] = [];
