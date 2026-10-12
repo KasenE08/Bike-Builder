@@ -426,5 +426,75 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "tst-sliders-zx6r-2024",
+    "category": "frameSliders",
+    "name": "Frame Slider Crash Protection",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 174.99,
+      "source": "https://tstindustries.com/tst-frame-slider-crash-protection-kawasaki-zx6r-2024.html",
+      "checked": "2026-10-12",
+      "note": "2024+ ZX-6R"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "puig-pro2-zx6r-2024",
+    "category": "frameSliders",
+    "name": "Pro 2.0 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 227.27,
+      "source": "https://www.jpcycles.com/product/puig-pro-20-frame-sliders-kawasaki-ninja-zx-6r-zx636-2024-1781196118",
+      "checked": "2026-10-12",
+      "note": "List price; that listing is an open-box unit at $195.18"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

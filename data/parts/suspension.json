@@ -104,5 +104,40 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "ohlins-fkr223-zx6r",
+    "category": "suspension",
+    "name": "FKR223 Fork Cartridge Kit",
+    "brand": "Ohlins",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 2499.0,
+      "source": "https://www.cyclegear.com/parts/ohlins-fkr223-cartridge-kit-kawasaki-ninja-zx-6r-636-2013-2025",
+      "checked": "2026-10-12",
+      "note": "Fits 2013-2026; out of stock"
+    },
+    "labor": {
+      "usd": 441.0,
+      "hours": 3.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. similar to stock unit",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

@@ -472,5 +472,149 @@
     },
     "streetLegal": false,
     "streetLegalReason": "Maker: not homologated"
+  },
+  {
+    "id": "akrapovic-slipon-zx6r",
+    "category": "exhaust",
+    "name": "Slip-On Line",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 1049.35,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-slip-on-exhaust-kawasaki-zx6r-zx636-2009-2019",
+      "checked": "2026-10-12",
+      "note": "List price; fits 2009-2026 (2024+ may need Akrapovic linkage pipe)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.5,
+      "est": false,
+      "source": "Akrapovic: -2.5 kg vs stock system (Kawasaki listing)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.5,
+      "torquePct": 2.4,
+      "est": false,
+      "basis": "Akrapovic dyno +1.4 kW (1.9 hp) at 9,000 rpm, +1.7 Nm at 7,500 rpm (https://www.kawasaki.com/en-us/shop/vehicle-accessories/motorcycle/zx636hkf/132288/ninja-zx-6r-akrapovic-slip-on-exhaust); % of 127 hp / 52.1 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles"
+  },
+  {
+    "id": "yoshimura-at2-zx6r-2024",
+    "category": "exhaust",
+    "name": "AT2 Slip-On",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 839.0,
+      "source": "https://www.revzilla.com/motorcycle/yoshimura-at2-slip-on-exhausts-kawasaki-ninja-zx-6r-zx636-2024",
+      "checked": "2026-10-12",
+      "note": "Fits 2024-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.5,
+      "est": true,
+      "source": "est. from Akrapovic slip-on (-2.5 kg)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.5,
+      "torquePct": 2.4,
+      "est": true,
+      "basis": "No Yoshimura figure; est. from Akrapovic slip-on on same bike: Akrapovic dyno +1.4 kW (1.9 hp) at 9,000 rpm, +1.7 Nm at 7,500 rpm (https://www.kawasaki.com/en-us/shop/vehicle-accessories/motorcycle/zx636hkf/132288/ninja-zx-6r-akrapovic-slip-on-exhaust); % of 127 hp / 52.1 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "graves-hexagonal-zx6r",
+    "category": "exhaust",
+    "name": "Hexagonal Slip-On",
+    "brand": "Graves Motorsports",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 849.95,
+      "source": "https://www.revzilla.com/buy/exhaust-for-kawasaki-zx6r-0aiz00a",
+      "checked": "2026-10-12",
+      "note": "List price; fits 2019-2026; seen from $659"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.5,
+      "est": true,
+      "source": "est. from Akrapovic slip-on",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.5,
+      "torquePct": 2.4,
+      "est": true,
+      "basis": "No Graves figure; est. from Akrapovic slip-on: Akrapovic dyno +1.4 kW (1.9 hp) at 9,000 rpm, +1.7 Nm at 7,500 rpm (https://www.kawasaki.com/en-us/shop/vehicle-accessories/motorcycle/zx636hkf/132288/ninja-zx-6r-akrapovic-slip-on-exhaust); % of 127 hp / 52.1 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "akrapovic-racing-full-zx6r-2024",
+    "category": "exhaust",
+    "name": "Racing Line Full Exhaust System",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 2515.95,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-racing-exhaust-system-kawasaki-zx-6r-zx636-2024",
+      "checked": "2026-10-12",
+      "note": "List price; fits 2024-2026"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from older Akrapovic ZX-6R full system (-2.9 kg)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 3.0,
+      "torquePct": 3.0,
+      "est": true,
+      "basis": "No 2024 figure; est. as twice the Akrapovic slip-on gain: Akrapovic dyno +1.4 kW (1.9 hp) at 9,000 rpm, +1.7 Nm at 7,500 rpm (https://www.kawasaki.com/en-us/shop/vehicle-accessories/motorcycle/zx636hkf/132288/ninja-zx-6r-akrapovic-slip-on-exhaust); % of 127 hp / 52.1 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles"
   }
 ]

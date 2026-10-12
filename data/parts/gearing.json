@@ -524,5 +524,109 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-jt-kit-zx6r",
+    "category": "gearing",
+    "name": "520 Chain Kit, chromoly front / steel rear, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 154.0,
+      "source": "https://sprocketcenter.com/c-1393017-ZX-6R-Ninja-2019-2024.html",
+      "checked": "2026-10-12",
+      "note": "Listed for 2019-2024 (same drivetrain as 2026)"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          14,
+          15,
+          16
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-driven-evo-kit-zx6r",
+    "category": "gearing",
+    "name": "520 Chain Kit, Driven Racing Evo rear, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 210.0,
+      "source": "https://sprocketcenter.com/c-1393017-ZX-6R-Ninja-2019-2024.html",
+      "checked": "2026-10-12",
+      "note": "Listed for 2019-2024 (same drivetrain as 2026)"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          14,
+          15,
+          16
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
