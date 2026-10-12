@@ -458,5 +458,70 @@
     "bike": "yamaha-r1",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "exhaust",
+    "note": "2026 ZX-10R has new fairing, winglets, emissions hardware and suspension; Akrapovic slip-ons listed for 2021-2025 only (Kawasaki store MSRP ~$1,250); 2026 fitment unconfirmed."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "intake",
+    "note": "2026 ZX-10R has new fairing, winglets, emissions hardware and suspension; DNA filter listed for 2016-2025 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "tune",
+    "note": "Only TST and 2WDW list 2026 ECUs; BT Moto lists 2016-2020 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "frameSliders",
+    "note": "2026 ZX-10R has new fairing, winglets, emissions hardware and suspension; Puig Pro 2.0 and R&G Aero listed for 2011-2025 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "tailTidy",
+    "note": "2026 ZX-10R has new fairing, winglets, emissions hardware and suspension; Graves fender eliminator listed for 2021-2025 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "gearing",
+    "note": "Sprocket Center kits listed for 2016-2020 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "suspension",
+    "note": "2026 ZX-10R has new fairing, winglets, emissions hardware and suspension; Ohlins FKR205 listed for 2016-2025 only."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "brakes",
+    "note": "No priced pad/line listing with 2026 fitment."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "chain",
+    "note": "No chain listing with 2026 fitment."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "carbon",
+    "note": "No priced carbon parts with 2026 fitment."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "wheels",
+    "note": "No priced forged wheels with 2026 fitment."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "winglets",
+    "note": "2026 has factory winglets; no aftermarket set found."
+  },
+  {
+    "bike": "kawasaki-zx-10r",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]
