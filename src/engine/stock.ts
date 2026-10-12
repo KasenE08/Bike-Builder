@@ -2,7 +2,7 @@
 import type { Bike, Calibration } from '../data/types.ts';
 import type { SimInput } from './sim.ts';
 
-export const DEFAULT_RIDER_LB = 210;
+export const DEFAULT_RIDER_LB = 155;
 
 /** Stock per-shift time (est.): factory quickshifter vs full-throttle clutch shift by a test rider. */
 export const shiftTimeFor = (b: Bike) => (b.stock.quickshifter ? 0.06 : 0.25);

@@ -32,11 +32,11 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 
 ## Engine
 - Mod gains stack with diminishing returns: sort largest first, each next gain × 0.85^n, applied multiplicatively. Exhaust/intake reach full gain only with a tune.
-- Time-step sim (torque curve, gears, traction/wheelie limit, shift time, drag, rolling resistance, rider weight default 210 lb).
+- Time-step sim (torque curve, gears, traction/wheelie limit, shift time, drag, rolling resistance, rider weight default 155 lb).
 - Per-bike `calibration` (cdA, launchG, shiftTimeS) fitted so stock sim matches published numbers.
 - Limiter caps top speed unless tune's "remove limiter" is on.
 - Code: `src/engine/` (curve, gains, sim, stock, calibrate, build). `npm run calibrate` rewrites every bike's `calibration`.
-- Est. constants: exhaust/intake without tune = 50% of gain; stock shift 0.25 s (0.06 s with factory QS); calibration uses a 180 lb test rider (published tests), builds use the owner's 210 lb; torque curve synthesized from peak hp/torque rpm.
+- Est. constants: exhaust/intake without tune = 50% of gain; stock shift 0.25 s (0.06 s with factory QS); calibration uses a 180 lb test rider (published tests), builds use the owner's 155 lb; torque curve synthesized from peak hp/torque rpm.
 - Wrap/color is cosmetic only: never added to build price (owner decision, Phase 3a).
 
 ## Drawings
