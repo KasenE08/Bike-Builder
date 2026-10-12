@@ -19,9 +19,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. similar to stock unit",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "ohlins-fkr235-r7-2026",
@@ -44,8 +55,19 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. similar to stock unit",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   }
 ]

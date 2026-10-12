@@ -20,9 +20,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No TST figure published; est. from BT Moto Ninja 500 flash dyno 45->50 whp, 27->29 wtq (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "tst-worx-stage3-ninja500",
@@ -45,9 +56,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "Est. as Stage 1 (BT Moto Ninja 500 flash dyno). TST Stage 3 is mapped for its airbox + full exhaust; gains on stock hardware may be lower. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "flashtune-datalink-kawasaki",
@@ -70,9 +92,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "Est. from BT Moto Ninja 500 flash dyno 45->50 whp (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "btmoto-stage1plus-rs457",
@@ -95,9 +128,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "limiterRemovable": true,
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No RS 457 figure; est. from BT Moto flash dyno on Ninja 500 twin (+11% whp). Removes 2nd-gear and 120 mph limits (https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "aprilia-racing-ecu-rs457",
@@ -120,9 +165,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "Track/race use only"
+    "streetLegalReason": "Track/race use only",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No figure published; est. from BT Moto twin-cylinder flash dyno (+11% whp). Race maps intended with race exhaust."
+    }
   },
   {
     "id": "tst-worx-zx4r",
@@ -145,9 +201,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 20.2,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "TST dyno ZX-4RR ECU-only 58.56 -> 70.39 whp (+20.2%) (https://tstindustries.com/blogs/news/removing-the-leash-kawasakis-ninja-zx-4rr-tune-reveals-massive-power-gains). Torque gain not published, est. +5%. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "2wdw-flash-zx4r",
@@ -170,9 +237,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 20.2,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "No 2WDW figure; est. from TST ZX-4RR ECU-only dyno +20.2% (https://tstindustries.com/blogs/news/removing-the-leash-kawasakis-ninja-zx-4rr-tune-reveals-massive-power-gains). Torque est. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
   },
   {
     "id": "tst-worx-stage1-r7-2026",
@@ -195,9 +273,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 2.5,
+      "torquePct": 2.5,
+      "est": true,
+      "basis": "TST claim 'up to 2.5%' hp and torque for 2022-25 R7 tune, applied to 2026; rev limit to 11,000 rpm (https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2022)."
+    }
   },
   {
     "id": "tst-worx-stage2-r7-2026",
@@ -220,8 +309,19 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
-    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 2.5,
+      "torquePct": 2.5,
+      "est": true,
+      "basis": "No Stage 2 figure; est. from TST R7 claim 'up to 2.5%' (https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2022). Stage 2 is mapped for TST airbox."
+    }
   }
 ]

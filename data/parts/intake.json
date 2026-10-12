@@ -19,9 +19,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No Ninja 500 dyno; est. from MT-07 DNA filter dyno (+~0.5 hp peak on ~50 hp) (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
   },
   {
     "id": "norton-ram-air-ninja400-500",
@@ -44,12 +56,24 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
     "streetLegal": false,
     "streetLegalReason": "Requires ABS removal; closed-course",
     "requires": [
       "tune"
-    ]
+    ],
+    "effect": {
+      "hpPct": 4.2,
+      "torquePct": 2.0,
+      "est": true,
+      "basis": "No published dyno; hp est. from TST V2 velocity stacks claim on Ninja 500 (+4.2% peak) (https://tstindustries.com/products/tst-worx-v2-velocity-stacks-kawasaki-ninja-500-2024); torque est.",
+      "needsTuneForFullGain": true
+    }
   },
   {
     "id": "dna-filter-rs457",
@@ -72,9 +96,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No RS 457 dyno; est. from MT-07 DNA filter dyno (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
   },
   {
     "id": "dna-filter-zx4r",
@@ -97,9 +133,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No ZX-4R dyno; est. from MT-07 DNA filter dyno (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
   },
   {
     "id": "dna-filter-r7",
@@ -122,8 +170,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "MT-07 (same CP2 engine) DNA dyno +~0.5 hp peak; test also had a modified airbox lid (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
   }
 ]

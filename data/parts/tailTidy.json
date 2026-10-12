@@ -20,10 +20,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "yoshimura-fender-elim-ninja500",
@@ -45,10 +56,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "nrc-led-fender-elim-ninja500",
@@ -70,10 +92,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "DOT lighting; legal if plate light kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "tst-elite1-tail-rs457",
@@ -96,10 +129,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "puig-fender-elim-rs457",
@@ -122,10 +166,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "graves-fender-elim-rs457",
@@ -148,10 +203,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "graves-fender-elim-zx4r",
@@ -174,10 +240,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "tst-elite1-tail-r7-2026",
@@ -200,10 +277,21 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   },
   {
     "id": "yoshimura-fender-elim-r7",
@@ -226,9 +314,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy"
+    "layer": "tailTidy",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   }
 ]

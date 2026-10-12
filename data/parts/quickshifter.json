@@ -20,12 +20,24 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact",
     "requires": [
       "tune"
-    ]
+    ],
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
   },
   {
     "id": "ftecu-qs-ninja400-500",
@@ -48,12 +60,24 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact",
     "requires": [
       "tune"
-    ]
+    ],
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
   },
   {
     "id": "kawasaki-oem-qs-zx4r",
@@ -76,8 +100,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact"
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
   }
 ]

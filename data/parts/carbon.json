@@ -20,9 +20,20 @@
       "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
       "est": true
     },
-    "weightDeltaLb": null,
+    "weightDeltaLb": {
+      "value": -0.4,
+      "est": true,
+      "source": "est. carbon vs plastic fender",
+      "checked": "2026-10-12"
+    },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact",
-    "layer": "carbon"
+    "layer": "carbon",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    }
   }
 ]

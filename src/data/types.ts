@@ -87,10 +87,13 @@ export interface Labor {
 export interface Effect {
   hpPct: number;     // crank hp change, % of stock
   torquePct: number;
+  est: boolean;      // true when taken from the closest similar data, not this exact part/bike
   /** Full gain needs an ECU tune (exhaust/intake); without one a reduced share applies. */
   needsTuneForFullGain?: boolean;
-  /** Gearing parts: final-drive ratio is derived from the sprockets instead. */
-  sprockets?: { front: number; rear: number };
+  /** Gearing parts: tooth counts the kit is sold in. The UI defaults to stock and the owner picks. */
+  sprocketOptions?: { front: number[]; rear: number[]; est: boolean };
+  /** Quickshifter: seconds per upshift with the shifter (replaces calibration.shiftTimeS). */
+  shiftTimeS?: number;
   roughGuess?: boolean; // forced induction on a bike that didn't ship with it
   basis: string;        // dyno source + wheel->crank conversion note
 }
@@ -104,8 +107,8 @@ export interface Part {
   fits: string[]; // bike ids
   price: Price;
   labor?: Labor;
-  weightDeltaLb: number | null; // negative = lighter; null until Phase 3b
-  effect?: Effect;              // performance effect; added in Phase 3b
+  weightDeltaLb: Stat; // negative = lighter
+  effect: Effect;
   requires?: Category[]; // e.g. forcedInduction -> ["tune"]
   streetLegal: boolean;
   streetLegalReason: string;

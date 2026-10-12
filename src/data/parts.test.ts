@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { parts, gaps } from './parts';
-import { bikes } from './bikes';
+import { bikes, bikeById } from './bikes';
 
 const ids = new Set(bikes.map((b) => b.id));
 const date = /^\d{4}-\d{2}-\d{2}$/;
@@ -18,6 +18,22 @@ describe('parts data', () => {
       for (const f of p.fits) expect(ids.has(f), f).toBe(true);
       expect(p.category).not.toBe('wrap'); // wraps are cosmetic, not priced
       expect(p.labor!.usd).toBeCloseTo(p.labor!.hours * 147, 2);
+    });
+  }
+
+  for (const p of parts) {
+    it(`${p.id}: effect and weight are sourced`, () => {
+      expect(p.effect.basis).toBeTruthy();
+      expect(p.weightDeltaLb.source).toBeTruthy();
+      expect(p.weightDeltaLb.checked).toMatch(date);
+      expect(typeof p.weightDeltaLb.value).toBe('number');
+      if (['exhaust', 'intake'].includes(p.category) && p.effect.hpPct > 0) expect(p.effect.needsTuneForFullGain).toBe(true);
+      if (p.category === 'quickshifter') expect(p.effect.shiftTimeS).toBeGreaterThan(0);
+      if (p.category === 'gearing') {
+        const g = bikeById(p.fits[0])!.gearing;
+        expect(p.effect.sprocketOptions!.front).toContain(g.frontSprocket);
+        expect(p.effect.sprocketOptions!.rear).toContain(g.rearSprocket);
+      }
     });
   }
 
