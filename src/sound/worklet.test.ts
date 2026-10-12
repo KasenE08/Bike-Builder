@@ -46,7 +46,7 @@ describe('engine sound generator', () => {
         expect(Math.abs(gaps[i] - want), `${b.id} gap ${i}`).toBeLessThanOrEqual(step + 1e-9);
       }
     }
-  });
+  }, 20000);
 
   it('stays finite and bounded for every bike at idle, full load and on the limiter, with crackle', () => {
     for (const b of bikes) {
@@ -62,7 +62,7 @@ describe('engine sound generator', () => {
         expect(rms, `${b.id} silent at ${rpm} rpm`).toBeGreaterThan(1e-4);
       }
     }
-  });
+  }, 20000); // renders ~10 s of audio in total; CI runners are slower
 });
 
 /** Rotation of the expected gap list that best matches the measured sequence. */
