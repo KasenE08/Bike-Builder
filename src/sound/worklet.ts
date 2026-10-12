@@ -20,7 +20,7 @@ class EngineProc extends AudioWorkletProcessor {
     const ch = outs[0], out = ch[0], n = out.length, dt = 1 / sampleRate;
     const rpm = params.rpm[0], load = params.load[0], crackle = params.crackle[0];
     const dDeg = (rpm * 6) / sampleRate;
-    const atLimit = rpm >= this.red * 0.99;
+    const atLimit = rpm >= this.red * 0.995;
     const norm = 0.5 / Math.sqrt(this.f.length);
     for (let i = 0; i < n; i++) {
       const prev = this.ang; let a = prev + dDeg; let wrapped = false;
@@ -30,7 +30,7 @@ class EngineProc extends AudioWorkletProcessor {
         const fd = this.f[k];
         const crossed = wrapped ? (fd > prev || fd <= a) : (fd > prev && fd <= a);
         if (!crossed) continue;
-        if (atLimit && this.rand() < 0.55) continue; // rev-limiter cut
+        if (atLimit) continue; // rev-limiter ignition cut
         if (this.pulses.length < 24) this.pulses.push({ t: 0, d: this.decay, amp: (0.45 + 0.55 * load) * (0.9 + 0.2 * this.rand()), f: this.hz * (0.96 + 0.08 * this.rand()), ph: this.rand() * TAU, noise: 0.12 });
       }
       if (crackle > 0 && this.rand() < 26 * dt * crackle && this.pulses.length < 24) {

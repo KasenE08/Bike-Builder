@@ -45,3 +45,25 @@ describe('engine sound profile', () => {
     expect(built.revUpS).toBeLessThan(stock.revUpS);
   });
 });
+
+describe('every bike sounds different', () => {
+  const rhythm = (f: number[]) => f.map((d, i) => (i + 1 < f.length ? f[i + 1] : f[0] + 720) - d).join(',');
+  it('each pair differs in firing rhythm, redline pitch (>= 1 semitone), exhaust tone (>= 10%) or hardware', () => {
+    const ps = bikes.map((b) => ({ id: b.id, p: soundProfile(b, []) }));
+    for (let i = 0; i < ps.length; i++) for (let j = i + 1; j < ps.length; j++) {
+      const A = ps[i].p, B = ps[j].p;
+      const pitch = Math.abs(12 * Math.log2((A.redlineRpm * A.firingDeg.length) / (B.redlineRpm * B.firingDeg.length)));
+      const distinct = rhythm(A.firingDeg) !== rhythm(B.firingDeg) || pitch >= 1 || Math.abs(A.pulseHz / B.pulseHz - 1) >= 0.1
+        || A.fi !== B.fi || A.exhaust !== B.exhaust || A.ramAir !== B.ramAir;
+      expect(distinct, `${ps[i].id} vs ${ps[j].id}`).toBe(true);
+    }
+  });
+
+  it('H2R uses its track-only race silencer voice and supercharger; ram-air bikes howl', () => {
+    const h2r = soundProfile(bikeById('kawasaki-ninja-h2r')!, []);
+    expect(h2r.exhaust).toBe('race');
+    expect(h2r.fi).toBe('supercharger');
+    expect(soundProfile(bikeById('kawasaki-zx-6r')!, []).ramAir).toBe(true);
+    expect(soundProfile(bikeById('honda-cbr650r')!, []).ramAir).toBe(false);
+  });
+});
