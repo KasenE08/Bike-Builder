@@ -601,5 +601,75 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-zx10r-2026",
+    "category": "tune",
+    "name": "TST WORX Performance ECU Tune (mail-in, 2026+)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-10r"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-for-kawasaki-zx-10r-2026",
+      "checked": "2026-10-12",
+      "note": "2026+ North American ECUs"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.5,
+      "torquePct": 4.0,
+      "est": true,
+      "basis": "Half of the exhaust-paired claim used for ECU-only. No 2026 figure; est. from TST's claim for its 2021-2025 ZX-10R tune: +13% peak power with a matching exhaust (https://tstindustries.com/products/tst-worx-performance-ecu-tune-for-kawasaki-zx-10r-2021-2025); ECU-only gain likely lower."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "2wdw-flash-zx10r-2026",
+    "category": "tune",
+    "name": "Mail-In ECU Flashing Service (2026+)",
+    "brand": "2 Wheel Dynoworks",
+    "fits": [
+      "kawasaki-zx-10r"
+    ],
+    "price": {
+      "usd": 399.99,
+      "source": "https://2wheeldynoworks.com/products/2wdw-2026-zx10r-mail-in-ecu-flashing-service",
+      "checked": "2026-10-12",
+      "note": "Regular price; $374.99 on sale; was sold out"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.5,
+      "torquePct": 4.0,
+      "est": true,
+      "basis": "Half of the exhaust-paired claim used for ECU-only. No 2026 figure; est. from TST's claim for its 2021-2025 ZX-10R tune: +13% peak power with a matching exhaust (https://tstindustries.com/products/tst-worx-performance-ecu-tune-for-kawasaki-zx-10r-2021-2025); ECU-only gain likely lower."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]
