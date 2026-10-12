@@ -8,6 +8,7 @@ export default defineConfig({
     preact(),
     VitePWA({
       registerType: 'autoUpdate',
+      includeManifestIcons: false, // icons come network-first (see runtimeCaching)
       manifest: {
         name: 'Bike Builder',
         short_name: 'Bike Builder',
@@ -19,7 +20,26 @@ export default defineConfig({
           { src: 'icons/icon-v2-512.png', sizes: '512x512', type: 'image/png' },
         ],
       },
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,json,png}'] },
+      workbox: {
+        // Hashed JS/CSS are precached. The page and icons are fetched network-first so a new
+        // deploy (or a new icon) shows on the next open; the cached copy is only used offline.
+        globPatterns: ['**/*.{js,css}'],
+        globIgnores: ['sw.js', 'workbox-*.js', 'registerSW.js'],
+        navigateFallback: null,
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [
+          {
+            urlPattern: ({ request }) => request.mode === 'navigate',
+            handler: 'NetworkFirst',
+            options: { cacheName: 'pages', networkTimeoutSeconds: 4 },
+          },
+          {
+            urlPattern: ({ url }) => /\/(icons\/.*\.png|icon\.svg|manifest\.webmanifest)$/.test(url.pathname),
+            handler: 'NetworkFirst',
+            options: { cacheName: 'icons', networkTimeoutSeconds: 4 },
+          },
+        ],
+      },
     }),
   ],
 });
