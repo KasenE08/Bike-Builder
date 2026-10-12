@@ -358,5 +358,109 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-r9",
+    "category": "tune",
+    "name": "TST WORX Performance ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-for-yamaha-yzf-r9-2025",
+      "checked": "2026-10-12",
+      "note": "2025-2026 North American ECUs; mapped for full-system exhaust"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.2,
+      "torquePct": 4.5,
+      "est": true,
+      "basis": "No TST figure; est. from BT Moto R9 dyno 113 -> 120 whp, 67 -> 70 wtq (https://bt-moto.com/product/25-26-yamaha-r9-stage-1-ecu-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "2wdw-flash-r9",
+    "category": "tune",
+    "name": "Mail-In ECU Flashing Service",
+    "brand": "2 Wheel Dynoworks",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 399.99,
+      "source": "https://2wheeldynoworks.com/products/2wdw-yamaha-r9-mail-in-ecu-flashing-service",
+      "checked": "2026-10-12",
+      "note": "Regular price; $349.99 on sale"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.2,
+      "torquePct": 4.5,
+      "est": true,
+      "basis": "No 2WDW figure; est. from BT Moto R9 dyno 113 -> 120 whp, 67 -> 70 wtq (https://bt-moto.com/product/25-26-yamaha-r9-stage-1-ecu-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "btmoto-stage1plus-r9",
+    "category": "tune",
+    "name": "Stage 1+ ECU Flash with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 799.0,
+      "source": "https://bt-moto.com/product/25-26-yamaha-r9-stage-1-ecu-flash-with-tuner",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.2,
+      "torquePct": 4.5,
+      "est": false,
+      "basis": "BT Moto R9 dyno 113 -> 120 whp, 67 -> 70 wtq (https://bt-moto.com/product/25-26-yamaha-r9-stage-1-ecu-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

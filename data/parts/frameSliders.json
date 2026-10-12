@@ -356,5 +356,75 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "gbracing-bullet-r9",
+    "category": "frameSliders",
+    "name": "Bullet Race Frame Sliders",
+    "brand": "GB Racing",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 121.91,
+      "source": "https://www.revzilla.com/motorcycle/gb-racing-bullet-race-frame-sliders-yamaha-r9-2025-2026",
+      "checked": "2026-10-12",
+      "note": "Requires cutting the OEM fairing"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "yamaha-oem-sliders-r9",
+    "category": "frameSliders",
+    "name": "Yamaha Frame Sliders (BKN-F11D0-V1-00)",
+    "brand": "Yamaha",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": null,
+      "source": "https://yamahaonlineparts.com/products/yamaha-bkn-f11d0-v1-00-yzf-r9-frame-sliders",
+      "checked": "2026-10-12",
+      "note": "OEM accessory for 2025-2027; price not shown"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

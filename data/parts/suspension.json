@@ -69,5 +69,40 @@
       "est": false,
       "basis": "No power effect."
     }
+  },
+  {
+    "id": "ohlins-fkr232-r9",
+    "category": "suspension",
+    "name": "FKR232 Fork Cartridge Kit",
+    "brand": "Ohlins",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 2499.0,
+      "source": "https://www.revzilla.com/motorcycle/ohlins-fkr232-cartridge-kit-yamaha-r9-r1-2025-2026",
+      "checked": "2026-10-12",
+      "note": "Fits R9/R1 2025-2026; out of stock"
+    },
+    "labor": {
+      "usd": 441.0,
+      "hours": 3.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. similar to stock unit",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
