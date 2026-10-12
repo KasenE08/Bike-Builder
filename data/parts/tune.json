@@ -706,5 +706,75 @@
     },
     "streetLegal": false,
     "streetLegalReason": "CARB approval pending (seller)"
+  },
+  {
+    "id": "btmoto-stage1plus-ninja500",
+    "category": "tune",
+    "name": "Stage 1+ Performance Flash with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 699.0,
+      "source": "https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner",
+      "checked": "2026-10-12",
+      "note": "Listing title 2023-2025"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": false,
+      "basis": "BT Moto Ninja 500 dyno 45 -> 50 whp, 27 -> 29 wtq (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-stage2-ninja500",
+    "category": "tune",
+    "name": "TST WORX Stage 2 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-stage-2-ecu-tune-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "Mapped for V2 velocity stacks, MWR filter and full exhaust"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No TST figure; est. from BT Moto Ninja 500 dyno 45 -> 50 whp, 27 -> 29 wtq (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

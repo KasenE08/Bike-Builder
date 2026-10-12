@@ -292,5 +292,41 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "tst-v2-stacks-ninja500",
+    "category": "intake",
+    "name": "TST WORX V2 Velocity Stacks",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 119.99,
+      "source": "https://tstindustries.com/products/tst-worx-v2-velocity-stacks-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "Paired with TST Stage 2 tune"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 4.2,
+      "torquePct": 2.0,
+      "est": true,
+      "basis": "TST claim: +4.2% peak power (https://tstindustries.com/products/tst-worx-v2-velocity-stacks-kawasaki-ninja-500-2024); torque est.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: closed-course use only"
   }
 ]

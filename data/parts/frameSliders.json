@@ -287,42 +287,6 @@
     }
   },
   {
-    "id": "graves-sliders-r7",
-    "category": "frameSliders",
-    "tier": "premium",
-    "name": "Diamond Frame Sliders",
-    "brand": "Graves Motorsports",
-    "fits": [
-      "yamaha-r7"
-    ],
-    "price": {
-      "usd": 209.95,
-      "source": "https://edrperformance.com/collections/fz07-mt07-r7/products/graves-yamaha-r7-diamond-frame-sliders-2021",
-      "checked": "2026-10-12",
-      "note": "Fitment R7 2021+"
-    },
-    "labor": {
-      "usd": 110.25,
-      "hours": 0.75,
-      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
-      "est": true
-    },
-    "weightDeltaLb": {
-      "value": 1.0,
-      "est": true,
-      "source": "est. pair of sliders + bolts",
-      "checked": "2026-10-12"
-    },
-    "streetLegal": true,
-    "streetLegalReason": "Bolt-on, no emissions impact",
-    "effect": {
-      "hpPct": 0,
-      "torquePct": 0,
-      "est": false,
-      "basis": "No power effect."
-    }
-  },
-  {
     "id": "puig-r19-cbr650r-2024",
     "category": "frameSliders",
     "name": "R19 Frame Sliders",
@@ -636,5 +600,109 @@
     },
     "streetLegal": false,
     "streetLegalReason": "H2R itself is track-only"
+  },
+  {
+    "id": "puig-pro2-ninja500",
+    "category": "frameSliders",
+    "name": "Pro 2.0 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 270.66,
+      "source": "https://www.cyclegear.com/parts/puig-pro-20-frame-sliders-kawasaki-ninja-500-2024-2025",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "oes-carbon-sliders-r7-2026",
+    "category": "frameSliders",
+    "name": "Carbon Frame Sliders (No Cut, 2026)",
+    "brand": "OES Accessories",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 79.99,
+      "source": "https://www.oesaccessories.com/store/p1114/Yamaha_YZF-R7_Carbon_Frame_Sliders_2026.html",
+      "checked": "2026-10-12",
+      "note": "2026-specific; made in USA"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "woodcraft-sliders-r7",
+    "category": "frameSliders",
+    "name": "Frame Slider Kit with Pucks (50-0407)",
+    "brand": "Woodcraft",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 79.99,
+      "source": "https://woodcraft-cfm.com/products/yamaha-fz07-mt07-xsr700-frame-slider-base-kit-50-0407",
+      "checked": "2026-10-12",
+      "note": "2026 R7 requires cutting the right-side bodywork"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

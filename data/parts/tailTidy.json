@@ -704,5 +704,74 @@
     },
     "streetLegal": true,
     "streetLegalReason": "DOT lighting; legal if plate light kept"
+  },
+  {
+    "id": "tst-elite1-low-ninja500",
+    "category": "tailTidy",
+    "name": "Elite-1 Low Mount Fender Eliminator (with undertail closeout)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 99.99,
+      "source": "https://tstindustries.com/products/tst-elite-1-low-mount-fender-eliminator-kawasaki-ninja-500-z500-2024",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "tst-elite1-high-zx4r",
+    "category": "tailTidy",
+    "name": "Elite-1 High Mount Fender Eliminator (with undertail)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 89.99,
+      "source": "https://tstindustries.com/products/tst-elite-1-high-mount-fender-eliminator-kawasaki-zx4rr-2023-zx4r-2024",
+      "checked": "2026-10-12",
+      "note": "ZX-4R 2024-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
   }
 ]
