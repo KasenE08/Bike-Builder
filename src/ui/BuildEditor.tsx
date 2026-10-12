@@ -6,10 +6,11 @@ import { CustomPartForm } from './CustomPartForm';
 import { PartSheet } from './PartSheet';
 import { Est, StatBar } from './Stats';
 import { isOutdated, usd } from './format';
-import { CATEGORIES, TIERS, bikeName, customFor, evalSaved, evalStock, gapFor, partById, partsFor, userPrice } from './model';
+import { CATEGORIES, bikeName, customFor, evalSaved, evalStock, gapFor, partById, partsFor, userPrice } from './model';
 import { go } from './router';
 
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
+const byPrice = (ps: Part[]) => [...ps].sort((a, b) => (a.price.usd ?? Infinity) - (b.price.usd ?? Infinity));
 
 interface Props {
   initial: SavedBuild;
@@ -23,6 +24,7 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
   const [b, setB] = useState(initial);
   const [sheet, setSheet] = useState<Part | null>(null);
   const [form, setForm] = useState<{ category: Category; existing?: Part } | null>(null);
+  const [open, setOpen] = useState<Category | null>(null);
   const bike = bikeById(b.bikeId)!;
   const stock = useMemo(() => evalStock(bike.id, riderLb), [bike.id, riderLb]);
   const r = useMemo(() => evalSaved(b, riderLb), [b, riderLb, userVersion]);
@@ -71,48 +73,59 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
         const shownUsd = mine ?? chosen?.price.usd;
         return (
           <section class="cat" key={key}>
-            <div class="spread">
-              <strong>{label}</strong>
-              {chosen ? <button class="btn ghost small" onClick={() => setSheet(chosen)}>Details</button> : null}
-            </div>
-            <div class="seg" role="group" aria-label={`${label} tier`} style={customs.length ? { gridTemplateColumns: 'repeat(5, 1fr)' } : undefined}>
-              <button aria-pressed={!chosen} onClick={() => setPick(key, undefined)}>Stock</button>
-              {TIERS.map((t) => {
-                const p = options.find((o) => o.tier === t);
-                return (
-                  <button key={t} disabled={!p} aria-pressed={!!p && chosen?.id === p.id} onClick={() => p && setPick(key, p.id)}>
-                    {cap(t)}
+            <button class="cat-head" aria-expanded={open === key} onClick={() => setOpen(open === key ? null : key)}>
+              <span>
+                <strong>{label}</strong>
+                <span class="cat-pick">
+                  {chosen ? `${chosen.brand} ${chosen.name}` : stockItem ? `Stock: ${stockItem}` : 'Stock'}
+                </span>
+              </span>
+              <span class="cat-right">
+                {chosen && <span class="small">{shownUsd == null ? '—' : usd(shownUsd)}</span>}
+                <span class="chev" aria-hidden="true">{open === key ? '▴' : '▾'}</span>
+              </span>
+            </button>
+            {open === key && (
+              <div class="opts" role="radiogroup" aria-label={label}>
+                <div class="opt">
+                  <button class="opt-main" role="radio" aria-checked={!chosen} onClick={() => setPick(key, undefined)}>
+                    <span class="dot" />
+                    <span>
+                      <span class="opt-title">{stockItem ? `Stock — ${stockItem}` : 'Stock'}</span>
+                      <span class="opt-sub">No cost</span>
+                    </span>
                   </button>
-                );
-              })}
-              {customs.length > 0 && (
-                <button aria-pressed={chosen?.tier === 'custom'} onClick={() => setPick(key, chosen?.tier === 'custom' ? chosen.id : customs[0].id)}>Custom</button>
-              )}
-            </div>
-            {chosen?.tier === 'custom' && customs.length > 1 && (
-              <select aria-label={`${label} custom part`} value={chosen.id} onChange={(e) => setPick(key, (e.target as HTMLSelectElement).value)} style={{ marginTop: 8, width: '100%' }}>
-                {customs.map((c) => <option key={c.id} value={c.id}>{c.brand} {c.name}</option>)}
-              </select>
+                </div>
+                {[...byPrice(options), ...customs].map((p) => {
+                  const up = userPrice(p.id);
+                  const price = up ?? p.price.usd;
+                  return (
+                    <div class="opt" key={p.id}>
+                      <button class="opt-main" role="radio" aria-checked={chosen?.id === p.id} onClick={() => setPick(key, p.id)}>
+                        <span class="dot" />
+                        <span>
+                          <span class="opt-title">{p.brand} {p.name}{p.tier === 'custom' && <span class="est">custom</span>}</span>
+                          <span class="opt-sub">
+                            {price == null ? (p.tier === 'custom' ? 'No price' : 'Price not found') : usd(price)}
+                            {up != null && ' (your price)'}
+                            {p.labor && p.labor.usd > 0 && <> + {usd(p.labor.usd)} labor</>}
+                            {p.effect.hpPct > 0 && <> · +{p.effect.hpPct}% hp{p.effect.est && <Est />}</>}
+                            {p.effect.shiftTimeS != null && <> · {p.effect.shiftTimeS}s shifts</>}
+                          </span>
+                          {p.tier !== 'custom' && up == null && isOutdated(p.price.checked) && <span class="flag">Price may be outdated</span>}
+                        </span>
+                      </button>
+                      <button class="opt-info" aria-label={`Details: ${p.brand} ${p.name}`} onClick={() => setSheet(p)}>i</button>
+                    </div>
+                  );
+                })}
+                {chosen?.effect.needsTuneForFullGain && !b.picks.tune && chosen.effect.hpPct > 0 && (
+                  <div class="flag">Half of this gain applies until you add an ECU tune.</div>
+                )}
+                {gap && <div class="flag">{gap.note}</div>}
+                <button class="btn ghost small" onClick={() => setForm({ category: key })}>+ Add custom part</button>
+              </div>
             )}
-            <div class="pick">
-              {chosen ? (
-                <>
-                  <div>{chosen.brand} {chosen.name}</div>
-                  <div class="muted small">
-                    {shownUsd == null ? (chosen.tier === 'custom' ? 'No price' : 'Price not found') : usd(shownUsd)}
-                    {mine != null && ' (your price)'}
-                    {chosen.labor && <> + {usd(chosen.labor.usd)} labor<Est /></>}
-                    {chosen.effect.hpPct > 0 && <> · +{chosen.effect.hpPct}% hp{chosen.effect.est && <Est />}</>}
-                    {chosen.effect.needsTuneForFullGain && !b.picks.tune && chosen.effect.hpPct > 0 && <> (half without tune)</>}
-                  </div>
-                  {chosen.tier !== 'custom' && mine == null && isOutdated(chosen.price.checked) && <div class="flag">Price may be outdated</div>}
-                </>
-              ) : (
-                stockItem && <div class="muted small">Stock: {stockItem}</div>
-              )}
-              {gap && <div class="flag" style={{ marginTop: 4 }}>{gap.note}</div>}
-              <button class="btn ghost small" onClick={() => setForm({ category: key })}>+ Add custom part</button>
-            </div>
 
             {key === 'gearing' && (
               <div class="row small" style={{ marginTop: 8 }}>

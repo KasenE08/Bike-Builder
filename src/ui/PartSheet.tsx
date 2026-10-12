@@ -3,7 +3,7 @@ import type { Part } from '../data/types';
 import { clearPriceEdit, deleteCustomPart, setPriceEdit } from '../store/db';
 import { Est } from './Stats';
 import { daysSince, isOutdated, usd } from './format';
-import { userPrice } from './model';
+import { CATEGORIES, userPrice } from './model';
 
 interface Props {
   part: Part;
@@ -34,8 +34,8 @@ export function PartSheet({ part, onClose, onUserDataChanged, onEditCustom }: Pr
       <div class="sheet" role="dialog" aria-label={part.name} onClick={(ev) => ev.stopPropagation()}>
         <div class="spread">
           <div>
-            <div class="muted small">{part.brand} · {part.tier}</div>
-            <h2 style={{ margin: '2px 0 12px' }}>{part.name}</h2>
+            <div class="muted small">{CATEGORIES.find((c) => c.key === part.category)?.label}{isCustom ? ' · your custom part' : ''}</div>
+            <h2 style={{ margin: '2px 0 12px' }}>{part.brand} {part.name}</h2>
           </div>
           <button class="btn ghost" onClick={onClose}>Done</button>
         </div>

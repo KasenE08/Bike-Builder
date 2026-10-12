@@ -102,7 +102,7 @@ export interface Effect {
 export interface Part {
   id: string;
   category: Category;
-  tier: Tier;
+  tier?: Tier; // legacy budget/mid/premium label (UI lists products by name); 'custom' = owner-made
   name: string;
   brand: string;
   fits: string[]; // bike ids

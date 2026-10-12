@@ -25,7 +25,7 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 
 ## Data
 - `data/bikes/<bike-id>.json` — one per bike, shape `Bike` in `src/data/types.ts`.
-- `data/parts/<category>.json` — array of `Part`; `fits` lists bike ids. Up to 3 tiers (budget/mid/premium) per category per bike.
+- `data/parts/<category>.json` — array of `Part`; `fits` lists bike ids. Up to 5 real products per category per bike, shown by exact brand + model (no budget/mid/premium in the UI; `tier` is legacy).
 - Every number carries `{ value, est, source, checked }`.
 - Weights: `wetWeightLb` = ready to ride, full tank (physics uses this); `dryWeightLb` = no fuel/oil/coolant. Unpublished dry = wet − fuel×6.1 lb/gal − 12 lb (est.).
 - Adding a bike = add a JSON file, then `npm run calibrate`.
@@ -50,3 +50,5 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - **Phase 5b (owner prices, custom parts, backup):** DB v2 adds `prices` (owner price per catalog part; listed price still shown) and `customParts` (tier `custom`, fits one bike, all numbers est.). Build editor: "Custom" option + "+ Add custom part" per category; part sheet: "Use my price"/reset, edit/delete custom. Settings: backup to Files (share sheet or download, `*.bikebuilder-backup.json`) and restore (replaces all). Approved; live.
 - **App icon v2:** sportbike silhouette, red/black on white (`public/icon.svg`, `public/icons/icon-v2-*.png`). iPhone home-screen icons only update when the app is removed and re-added.
 - **Offline/update fix:** service worker precaches only hashed JS/CSS; the page is fetched with `cache: no-cache` (bypasses GitHub's 10-min HTTP cache), icons network-first, cached copies only offline. `skipWaiting` + `clientsClaim`; `src/main.tsx` registers the SW, checks for updates on open/foreground and reloads once when a new version takes over. Verified with a GitHub-Pages-like server: updates show on the first open; offline still works.
+- **Phase 6a (named products):** build editor lists every product by brand + model (radio list per category, collapsible, sorted by price, ⓘ for details); tiers removed from the UI; up to 5 products per category per bike. Owner approved.
+- **Phase 6b (in progress):** parts for the other 8 bikes (CBR650R, then R9, ZX-6R, R1, ZX-10R, Panigale V4 S, V4 R, H2R) and top-up of the first 4 to up to 5 products per category.

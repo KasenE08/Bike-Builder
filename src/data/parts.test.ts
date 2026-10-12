@@ -37,13 +37,10 @@ describe('parts data', () => {
     });
   }
 
-  it('at most one part per tier per category per bike', () => {
-    const seen = new Set<string>();
-    for (const p of parts) for (const b of p.fits) {
-      const k = `${b}/${p.category}/${p.tier}`;
-      expect(seen.has(k), k).toBe(false);
-      seen.add(k);
-    }
+  it('at most 5 products per category per bike', () => {
+    const count = new Map<string, number>();
+    for (const p of parts) for (const b of p.fits) count.set(`${b}/${p.category}`, (count.get(`${b}/${p.category}`) ?? 0) + 1);
+    for (const [k, n] of count) expect(n, k).toBeLessThanOrEqual(5);
   });
 
   it('a gap is recorded wherever a bike has fewer than 3 parts in a category', () => {
