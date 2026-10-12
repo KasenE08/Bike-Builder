@@ -3,10 +3,11 @@ import { bikeById } from '../data/bikes';
 import type { Category, Part } from '../data/types';
 import { deleteBuild, saveBuild, type SavedBuild } from '../store/db';
 import { CustomPartForm } from './CustomPartForm';
+import { EngineSoundCard } from './EngineSoundCard';
 import { PartSheet } from './PartSheet';
 import { Est, StatBar } from './Stats';
 import { isOutdated, usd } from './format';
-import { CATEGORIES, bikeName, customFor, evalSaved, evalStock, gapFor, partById, partsFor, userPrice } from './model';
+import { CATEGORIES, bikeName, customFor, evalSaved, evalStock, gapFor, partById, partsFor, pickedParts, userPrice } from './model';
 import { go } from './router';
 
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
@@ -28,6 +29,7 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
   const bike = bikeById(b.bikeId)!;
   const stock = useMemo(() => evalStock(bike.id, riderLb), [bike.id, riderLb]);
   const r = useMemo(() => evalSaved(b, riderLb), [b, riderLb, userVersion]);
+  const soundParts = useMemo(() => pickedParts(b), [b.picks, userVersion]);
 
   // Autosave (debounced) to IndexedDB.
   const first = useRef(true);
@@ -62,6 +64,7 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
       <input class="title" type="text" value={b.name} aria-label="Build name" onInput={(e) => setB({ ...b, name: (e.target as HTMLInputElement).value })} />
       <div class="muted small" style={{ marginBottom: 8 }}>{bikeName(bike)} · {riderLb} lb rider</div>
       <StatBar r={r} base={stock} />
+      <EngineSoundCard bike={bike} parts={soundParts} />
 
       {CATEGORIES.map(({ key, label }) => {
         const options = partsFor(bike.id, key);

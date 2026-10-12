@@ -93,5 +93,17 @@
   },
   "notes": [
     "2026 US CBR650R is sold only with Honda E-Clutch, which also works as an up/down quickshifter (https://powersports.honda.com/motorcycle/sport/cbr650r/2026/cbr650r-e-clutch)."
-  ]
+  ],
+  "engine": {
+    "layout": "inline4",
+    "firingDeg": [
+      0,
+      180,
+      360,
+      540
+    ],
+    "idleRpm": 1300,
+    "est": true,
+    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est."
+  }
 }

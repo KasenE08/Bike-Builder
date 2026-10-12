@@ -40,6 +40,12 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - Est. constants: exhaust/intake without tune = 50% of gain; stock shift 0.25 s (0.06 s with factory QS); calibration uses a 180 lb test rider (published tests), builds use the owner's 155 lb; torque curve synthesized from peak hp/torque rpm.
 - Wrap/color is cosmetic only: never added to build price (owner decision, Phase 3a).
 
+## Engine sound
+- Generated live with Web Audio (no recordings): `src/sound/` (profile → worklet pulse generator → shaper/body/muffler filters; intake noise; supercharger whine; turbo whistle + blow-off; decel crackle).
+- Each bike's `engine` = layout + firing angles in the 720° cycle (e.g. R1 crossplane 0-270-450-540, Panigale twin-pulse 0-90-290-380) + idle rpm (est.).
+- Exhaust voice from the part name (slip-on / full system / race; `exhaustKind` overrides). Tune = faster revs + crackle. Forced induction from `bike.stock` or a custom part's `fiType`.
+- UI: Build screen "Engine sound" card (Start engine, Hold to rev, tach). iOS: `navigator.audioSession.type = 'playback'` so it plays with the silent switch on.
+
 ## Progress log
 - **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Approved.
 - **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Approved.
@@ -52,3 +58,4 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - **Offline/update fix:** service worker precaches only hashed JS/CSS; the page is fetched with `cache: no-cache` (bypasses GitHub's 10-min HTTP cache), icons network-first, cached copies only offline. `skipWaiting` + `clientsClaim`; `src/main.tsx` registers the SW, checks for updates on open/foreground and reloads once when a new version takes over. Verified with a GitHub-Pages-like server: updates show on the first open; offline still works.
 - **Phase 6a (named products):** build editor lists every product by brand + model (radio list per category, collapsible, sorted by price, ⓘ for details); tiers removed from the UI; up to 5 products per category per bike. Owner approved.
 - **Phase 6b (all 12 bikes):** 138 products, 135 gaps. Per bike: Ninja 500 32, R9 19, ZX-6R 17, RS 457 15, ZX-4R 14, R7 11, CBR650R 9, R1 9, Panigale V4 S 7, H2R 3, ZX-10R 2, Panigale V4 R 1. Fitment rule: listing must cover the exact model and the 2026 generation; older-year listings only where that model didn't change (H2R, ZX-6R 2024+, RS 457). 2026 CBR650R is E-Clutch only (counts as stock quickshifter). 2026 ZX-10R and R7 changed, so 2021-2025 parts are logged as gaps. Sums of two real listings are allowed with a note (Panigale sprockets). Done.
+- **Phase 7 (engine sound):** owner chose generated sound, Hold-to-rev control, forced induction via custom parts (Turbo/Supercharger choice). Verified by offline rendering in Chromium (levels, rev-limiter, crackle, whine, spool/blow-off). Approved by owner request.
