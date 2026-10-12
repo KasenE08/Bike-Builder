@@ -462,5 +462,144 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-zx6r-2024",
+    "category": "tune",
+    "name": "TST WORX Performance ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-for-kawasaki-zx-6r-2024",
+      "checked": "2026-10-12",
+      "note": "2024-2026 North American ECUs; mapped for full-system exhaust"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.1,
+      "torquePct": 6.7,
+      "est": true,
+      "basis": "No TST figure; est. from BT Moto ZX-6R dyno 115 -> 122 whp, 45 -> 48 wtq (https://bt-moto.com/product/2024-2026-kawasaki-zx-6r-stage-1-handheld-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "2wdw-flash-zx6r-2024",
+    "category": "tune",
+    "name": "Mail-In ECU Flashing Service (2024+)",
+    "brand": "2 Wheel Dynoworks",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 399.99,
+      "source": "https://2wheeldynoworks.com/products/2wdw-2024-kawasaki-zx6r-mail-in-ecu-flashing-service",
+      "checked": "2026-10-12",
+      "note": "Regular price; $349.99 on sale; was sold out"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.1,
+      "torquePct": 6.7,
+      "est": true,
+      "basis": "No 2WDW figure; est. from BT Moto ZX-6R dyno 115 -> 122 whp, 45 -> 48 wtq (https://bt-moto.com/product/2024-2026-kawasaki-zx-6r-stage-1-handheld-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "btmoto-stage1plus-zx6r",
+    "category": "tune",
+    "name": "Stage 1+ Performance Calibration with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 699.0,
+      "source": "https://bt-moto.com/product/2024-2026-kawasaki-zx-6r-stage-1-handheld-tuner",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.1,
+      "torquePct": 6.7,
+      "est": false,
+      "basis": "BT Moto ZX-6R dyno 115 -> 122 whp, 45 -> 48 wtq (https://bt-moto.com/product/2024-2026-kawasaki-zx-6r-stage-1-handheld-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "flashtune-type16-zx6r-2024",
+    "category": "tune",
+    "name": "FlashTune ECU Type 16 Bike-Side Tune Kit",
+    "brand": "FTECU",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 380.0,
+      "source": "https://www.sportbiketrackgear.com/flashtune-kawasaki-zx-6r-2024-ecu-type-16-bike-side-tune-kit/",
+      "checked": "2026-10-12",
+      "note": "List price; self-flash kit"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 6.1,
+      "torquePct": 6.7,
+      "est": true,
+      "basis": "No FTECU figure; est. from BT Moto ZX-6R dyno 115 -> 122 whp, 45 -> 48 wtq (https://bt-moto.com/product/2024-2026-kawasaki-zx-6r-stage-1-handheld-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

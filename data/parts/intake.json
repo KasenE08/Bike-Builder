@@ -221,5 +221,40 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "kn-ka6009-zx6r",
+    "category": "intake",
+    "name": "Replacement Air Filter (KA-6009)",
+    "brand": "K&N",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 62.99,
+      "source": "https://www.knfilters.com/air-filters/kawasaki/zx6r/636/2024",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No ZX-6R dyno; est. from MT-07 DNA filter dyno, https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

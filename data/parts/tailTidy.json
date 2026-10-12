@@ -529,5 +529,110 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "yoshimura-fender-zx6r",
+    "category": "tailTidy",
+    "name": "Fender Eliminator Kit (070BG146420)",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 189.0,
+      "source": "https://www.yoshimura-rd.com/products/kawasaki-zx-6r-fender-eliminator-kit-070bg146420",
+      "checked": "2026-10-12",
+      "note": "Listed for ZX-6R 2019-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "tst-elite1-low-zx6r",
+    "category": "tailTidy",
+    "name": "Elite-1 Low Mount Fender Eliminator (FE-1049)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 76.99,
+      "source": "https://tstindustries.com/products/tst-low-mount-fender-eliminator-bracket-kawasaki-zx-6r-2019",
+      "checked": "2026-10-12",
+      "note": "Applications include 2024-2026; another TST page shows $35.99"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "graves-tag-zx6r",
+    "category": "tailTidy",
+    "name": "Fender Eliminator Kit",
+    "brand": "Graves Motorsports",
+    "fits": [
+      "kawasaki-zx-6r"
+    ],
+    "price": {
+      "usd": 161.58,
+      "source": "https://ctracingservices.com/products/kawasaki-zx-6r-fender-eliminator",
+      "checked": "2026-10-12",
+      "note": "Regular price; listed for 2019-2024 (same bodywork generation as 2026)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
   }
 ]

@@ -343,5 +343,55 @@
     "bike": "yamaha-r9",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "intake",
+    "note": "Only K&N found; no DNA/BMC listing with 2024+ fitment."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "frameSliders",
+    "note": "Only TST and Puig found at US retailers; Shogun only on eBay."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "gearing",
+    "note": "Only 2 Sprocket Center kits found."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "suspension",
+    "note": "Only Ohlins FKR223 found; NIX30 and TTX GP listings end at 2021/2020."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "brakes",
+    "note": "No priced pad/line listing with 2024+ fitment."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "chain",
+    "note": "No chain-only listing; chains come in the gearing kits."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "carbon",
+    "note": "No priced carbon parts at US retailers."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "wheels",
+    "note": "No wheels listed for the 2024+ ZX-6R."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "winglets",
+    "note": "No branded winglets found."
+  },
+  {
+    "bike": "kawasaki-zx-6r",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]
