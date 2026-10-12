@@ -8,6 +8,7 @@ export default defineConfig({
     preact(),
     VitePWA({
       registerType: 'autoUpdate',
+      injectRegister: false, // registered in src/main.tsx (auto-reloads when a new version is ready)
       includeManifestIcons: false, // icons come network-first (see runtimeCaching)
       manifest: {
         name: 'Bike Builder',
@@ -27,16 +28,39 @@ export default defineConfig({
         globIgnores: ['sw.js', 'workbox-*.js', 'registerSW.js'],
         navigateFallback: null,
         cleanupOutdatedCaches: true,
+        skipWaiting: true, // new version takes over immediately...
+        clientsClaim: true, // ...and controls open pages (main.tsx then reloads once)
         runtimeCaching: [
           {
+            // The page: always ask GitHub Pages for the latest (bypassing the browser's 10-min HTTP cache);
+            // the saved copy is used only when offline or the network takes > 4 s.
             urlPattern: ({ request }) => request.mode === 'navigate',
-            handler: 'NetworkFirst',
-            options: { cacheName: 'pages', networkTimeoutSeconds: 4 },
+            handler: async ({ request }): Promise<Response> => {
+              const cache = await caches.open('pages');
+              const key = new URL('./', (self as unknown as { registration: { scope: string } }).registration.scope).href;
+              try {
+                const res = await Promise.race<Response>([
+                  fetch(request.url, { cache: 'no-cache', credentials: 'same-origin' }),
+                  new Promise<Response>((_, reject) => setTimeout(() => reject(new Error('timeout')), 4000)),
+                ]);
+                if (!res.ok) throw new Error(String(res.status));
+                await cache.put(key, res.clone());
+                return res;
+              } catch {
+                return (await cache.match(key)) ?? Response.error();
+              }
+            },
           },
           {
             urlPattern: ({ url }) => /\/(icons\/.*\.png|icon\.svg|manifest\.webmanifest)$/.test(url.pathname),
             handler: 'NetworkFirst',
-            options: { cacheName: 'icons', networkTimeoutSeconds: 4 },
+            options: { cacheName: 'icons', networkTimeoutSeconds: 4, fetchOptions: { cache: 'no-cache' } },
+          },
+          {
+            // Hashed bundles fetched by a newer page before its service worker takes over: keep them for offline.
+            urlPattern: ({ url }) => url.pathname.includes('/assets/'),
+            handler: 'CacheFirst',
+            options: { cacheName: 'assets', expiration: { maxEntries: 40 } },
           },
         ],
       },
