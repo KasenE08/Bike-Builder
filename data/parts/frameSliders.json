@@ -321,5 +321,40 @@
       "est": false,
       "basis": "No power effect."
     }
+  },
+  {
+    "id": "puig-r19-cbr650r-2024",
+    "category": "frameSliders",
+    "name": "R19 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 242.7,
+      "source": "https://www.revzilla.com/motorcycle/puig-r19-frame-sliders-honda-cbr650r-2024-2025",
+      "checked": "2026-10-12",
+      "note": "List price; fits 2024-2026"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

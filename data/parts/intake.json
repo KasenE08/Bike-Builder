@@ -185,5 +185,41 @@
       "basis": "MT-07 (same CP2 engine) DNA dyno +~0.5 hp peak; test also had a modified airbox lid (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
       "needsTuneForFullGain": true
     }
+  },
+  {
+    "id": "dna-filter-cbr650r",
+    "category": "intake",
+    "name": "High-Performance Air Filter",
+    "brand": "DNA",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 113.5,
+      "source": "https://www.revzilla.com/motorcycle/dna-air-filter-honda-cbr650r-2019-2024",
+      "checked": "2026-10-12",
+      "note": "Fitment list includes CBR650R E-Clutch 2024-2026"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No CBR650R dyno; est. from MT-07 DNA filter dyno (+~0.5 hp peak on ~50 hp), https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

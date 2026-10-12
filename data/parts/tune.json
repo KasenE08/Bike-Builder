@@ -323,5 +323,40 @@
       "est": true,
       "basis": "No Stage 2 figure; est. from TST R7 claim 'up to 2.5%' (https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2022). Stage 2 is mapped for TST airbox."
     }
+  },
+  {
+    "id": "btmoto-stage1plus-cbr650r",
+    "category": "tune",
+    "name": "Stage 1+ ECU Flash with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "honda-cbr650r"
+    ],
+    "price": {
+      "usd": 799.0,
+      "source": "https://bt-moto.com/product/2024-honda-650-r-stage-1-ecu-flash-with-tuner",
+      "checked": "2026-10-12",
+      "note": "2021+ Honda 650R; flash at home, no ECU mail-in"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.0,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "No vendor figure; est. from owner dyno on a tuned 650R (+~5% peak, big midrange gain), https://650f.bike/threads/ecu-tune-flash-vs-pc5.5464/post-53525."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]
