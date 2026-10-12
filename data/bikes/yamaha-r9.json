@@ -100,6 +100,13 @@
     ],
     "idleRpm": 1200,
     "est": true,
-    "source": "CP3 inline triple, even 240-degree firing; idle rpm est."
+    "source": "CP3 inline triple, even 240-degree firing; idle rpm est.",
+    "exhaust": {
+      "layout": "3-1",
+      "headerM": 0.5,
+      "linkM": 0.4,
+      "est": true,
+      "source": "CP3 3-into-1, short side muffler; pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

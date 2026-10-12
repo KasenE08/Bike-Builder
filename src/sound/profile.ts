@@ -8,9 +8,12 @@ export interface SoundProfile {
   firingDeg: number[];
   idleRpm: number;
   redlineRpm: number;
-  pulseHz: number;       // exhaust pulse resonance: lower = deeper
-  ccPerCyl: number;
-  decayS: number;        // how long each firing pulse rings
+  ccPerCyl: number;      // bigger cylinders = bigger pulses
+  pipes: { layout: string; headerS: number; secondaryS: number; linkS: number; groups: number[][] }; // one-way wave travel times
+  runnerS: number;       // intake runner travel time
+  airboxHz: number;      // airbox resonance
+  mufflerScale: number;  // smaller engines carry smaller cans: brighter, thinner
+  trimDb: number;        // loudness trim per engine layout
   exhaust: ExhaustKind;
   tuned: boolean;        // ECU tune: sharper revs, decel crackle
   intakeMod: boolean;    // louder induction noise
@@ -21,14 +24,18 @@ export interface SoundProfile {
   label: string;
 }
 
-// Per-layout character. Per-bike voice then scales with cylinder size (bigger cylinders ring lower and longer).
+// Per-layout rev character (heavier cranks rev slower).
 const LAYOUT = {
-  parallelTwin: { f: 0.72, decayS: 0.020, revUpS: 1.05, name: 'parallel twin' },
-  triple: { f: 0.86, decayS: 0.015, revUpS: 0.92, name: 'inline triple' },
-  inline4: { f: 1.0, decayS: 0.010, revUpS: 0.8, name: 'inline-4' },
-  crossplaneI4: { f: 0.9, decayS: 0.013, revUpS: 0.85, name: 'crossplane inline-4' },
-  v4: { f: 0.8, decayS: 0.014, revUpS: 0.75, name: 'V4' },
+// trimDb evens out loudness: uneven-firing engines bunch their pulses, which reads quieter at the same peak level.
+  parallelTwin: { revUpS: 1.05, trimDb: 1, name: 'parallel twin' },
+  triple: { revUpS: 0.92, trimDb: -0.5, name: 'inline triple' },
+  inline4: { revUpS: 0.8, trimDb: 3.5, name: 'inline-4' },
+  crossplaneI4: { revUpS: 0.85, trimDb: 3, name: 'crossplane inline-4' },
+  v4: { revUpS: 0.75, trimDb: 4.5, name: 'V4' },
 } as const;
+
+export const C_EXHAUST = 520; // m/s, speed of sound in hot exhaust gas (est., ~400 C)
+const C_AIR = 343;
 
 /** Guess slip-on vs full system from the product name unless the part says otherwise. */
 export function exhaustKind(p: Part): ExhaustKind {
@@ -45,9 +52,7 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
   const L = LAYOUT[bike.engine.layout];
   const cc = bike.displacementCc / bike.engine.firingDeg.length; // per cylinder
   const size = cc / 250;
-  const f = bike.engine.firingDeg;
-  const minGapDeg = Math.min(...f.map((d, i) => (i + 1 < f.length ? f[i + 1] : f[0] + 720) - d));
-  const minGapS = minGapDeg / (bike.engine.idleRpm * 6);
+  const X = bike.engine.exhaust;
   const ex = parts.find((p) => p.category === 'exhaust');
   const fiPart = parts.find((p) => p.category === 'forcedInduction');
   const fi: FiKind = fiPart ? fiPart.fiType ?? 'turbo' : /supercharg/i.test(bike.stock.forcedInduction ?? '') ? 'supercharger' : /turbo/i.test(bike.stock.forcedInduction ?? '') ? 'turbo' : 'none';
@@ -59,10 +64,19 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
     firingDeg: bike.engine.firingDeg,
     idleRpm: bike.engine.idleRpm,
     redlineRpm: bike.gearing.redlineRpm,
-    pulseHz: Math.round(150 * L.f * Math.sqrt(1 / size)),
-    // Each pulse must die out before the next one at idle, or uneven firing (crossplane, V4, 270 twins) blurs.
-    decayS: +Math.min(L.decayS * Math.cbrt(size), 0.4 * minGapS).toFixed(4),
     ccPerCyl: Math.round(cc),
+    pipes: {
+      layout: X.layout,
+      headerS: X.headerM / C_EXHAUST,
+      secondaryS: (X.secondaryM ?? 0) / C_EXHAUST,
+      linkS: X.linkM / C_EXHAUST,
+      groups: X.layout === '4-2-1' ? X.groups ?? [] : [],
+    },
+    // Intake runner ~ bore-scaled (est.); airbox resonance lower on bigger engines (est.).
+    runnerS: (0.09 + 0.03 * Math.cbrt(size)) / C_AIR,
+    mufflerScale: +Math.pow(1 / size, 0.35).toFixed(3),
+    trimDb: L.trimDb,
+    airboxHz: Math.round(520 / Math.sqrt(size * bike.engine.firingDeg.length / 2)),
     exhaust,
     tuned,
     intakeMod: parts.some((p) => p.category === 'intake'),
@@ -70,16 +84,17 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
     fi,
     scRatio: 9.2, // Kawasaki H2/H2R impeller ~9.2x crank speed
     revUpS: +(L.revUpS * Math.pow(size, 0.25) / (1 + Math.min(gain, 60) / 100) / (tuned ? 1.1 : 1)).toFixed(3),
-    label: [`${bike.displacementCc} cc ${L.name}`, { stock: 'stock exhaust', slipOn: 'slip-on', fullSystem: 'full system', race: 'race exhaust' }[exhaust], tuned && 'tuned', fi !== 'none' && fi]
+    label: [`${bike.displacementCc} cc ${L.name}`, `${X.layout} pipes`, { stock: 'stock exhaust', slipOn: 'slip-on', fullSystem: 'full system', race: 'race exhaust' }[exhaust], tuned && 'tuned', fi !== 'none' && fi]
       .filter(Boolean).join(' · '),
   };
 }
 
 /** Muffler/voice settings per exhaust (used by the audio graph). */
-// level = loudness applied after the master compressor, so louder exhausts stay louder at full rev.
-export const EXHAUST_VOICE: Record<ExhaustKind, { lowpassHz: number; drive: number; bodyDb: number; gain: number; crackle: number; level: number }> = {
-  stock: { lowpassHz: 1100, drive: 1.6, bodyDb: 4, gain: 0.5, crackle: 0, level: 0.82 },
-  slipOn: { lowpassHz: 2300, drive: 2.6, bodyDb: 6, gain: 0.72, crackle: 0.35, level: 0.9 },
-  fullSystem: { lowpassHz: 3600, drive: 3.6, bodyDb: 7, gain: 0.88, crackle: 0.6, level: 0.96 },
-  race: { lowpassHz: 5200, drive: 5, bodyDb: 8, gain: 0.85, crackle: 1, level: 1 },
+// reflect = wave reflection where the link pipe meets the muffler (more open = stronger pipe resonance);
+// loss = how much high end survives each reflection; level = loudness after the master compressor.
+export const EXHAUST_VOICE: Record<ExhaustKind, { lowpassHz: number; drive: number; bodyDb: number; reflect: number; loss: number; gain: number; crackle: number; level: number }> = {
+  stock: { lowpassHz: 1600, drive: 1.3, bodyDb: 3, reflect: -0.5, loss: 0.45, gain: 0.5, crackle: 0, level: 0.72 },
+  slipOn: { lowpassHz: 2800, drive: 2, bodyDb: 4, reflect: -0.6, loss: 0.55, gain: 0.72, crackle: 0.35, level: 0.86 },
+  fullSystem: { lowpassHz: 4000, drive: 2.6, bodyDb: 5, reflect: -0.7, loss: 0.65, gain: 0.88, crackle: 0.6, level: 0.94 },
+  race: { lowpassHz: 6500, drive: 3.2, bodyDb: 5, reflect: -0.8, loss: 0.75, gain: 0.85, crackle: 1, level: 1 },
 };
