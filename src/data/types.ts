@@ -48,6 +48,7 @@ export interface EngineLayout {
   layout: 'parallelTwin' | 'triple' | 'inline4' | 'crossplaneI4' | 'v4';
   firingDeg: number[]; // firing points within the 720-degree four-stroke cycle
   idleRpm: number;
+  ramAir?: boolean; // pressurized ram-air intake: induction howl at high rpm
   est: boolean;
   source: string;
 }

@@ -107,6 +107,7 @@
     ],
     "idleRpm": 1100,
     "est": true,
-    "source": "flat-plane inline-4 with centrifugal supercharger; idle rpm est."
+    "source": "flat-plane inline-4 with centrifugal supercharger; idle rpm est.; Kawasaki Ram Air intake",
+    "ramAir": true
   }
 }

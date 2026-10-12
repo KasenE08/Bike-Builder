@@ -12,7 +12,7 @@ export function StatBar({ r, base }: { r: BuildResult; base: BuildResult }) {
       <div class="stats-grid">
         {METRICS.map((m) => {
           const v = r[m.key];
-          const d = delta(r, base, m);
+          const d = delta(r, base, m) ?? (v != null && base[m.key] == null ? { text: '▲ now reaches 150', better: true } : null);
           const est = m.est(r);
           return (
             <div class="stat" key={m.key}>

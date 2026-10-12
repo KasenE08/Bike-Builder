@@ -101,6 +101,7 @@
     ],
     "idleRpm": 1150,
     "est": true,
-    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est."
+    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est.; Kawasaki Ram Air intake",
+    "ramAir": true
   }
 }

@@ -11,15 +11,16 @@ export function stepRev(s: RevState, on: boolean, dt: number, p: SoundProfile): 
   const span = p.redlineRpm - p.idleRpm;
   if (on) s.rpm += Math.max(span * 0.35, (p.redlineRpm * 1.03 - s.rpm) * 2.6) * dt / p.revUpS;
   else s.rpm += (p.idleRpm - s.rpm) * dt * 1.9;
-  if (s.rpm > p.redlineRpm) s.rpm = p.redlineRpm - Math.random() * 120; // bounce on the limiter
+  if (s.rpm >= p.redlineRpm) s.rpm = p.redlineRpm * 0.965; // limiter cuts ignition: rpm drops, climbs back (the 'brap-brap')
   if (s.rpm < p.idleRpm * 0.97) s.rpm = p.idleRpm;
   s.load += ((on ? 1 : 0) - s.load) * Math.min(1, dt * (on ? 18 : 10));
-  const spool = Math.max(0, Math.min(1, (s.rpm - 0.4 * p.redlineRpm) / (0.4 * p.redlineRpm)));
-  const target = p.fi === 'turbo' ? (on ? spool : 0) : 0;
-  s.boost += (target - s.boost) * Math.min(1, dt * (target > s.boost ? 1.8 : 6));
+  // Turbo: needs exhaust flow (rpm) and load; boost builds with lag and dumps fast when the throttle shuts.
+  const spool = Math.max(0, Math.min(1, (s.rpm - 0.35 * p.redlineRpm) / (0.45 * p.redlineRpm)));
+  const target = p.fi === 'turbo' ? (on ? spool * s.load : 0) : 0;
+  s.boost += (target - s.boost) * Math.min(1, dt * (target > s.boost ? 1.3 : 7));
   const released = s.wasOn && !on;
   s.wasOn = on;
-  return { crackleStart: released && s.rpm > 0.55 * p.redlineRpm, blowOff: released ? s.boost : 0 };
+  return { crackleStart: released && s.rpm > 0.55 * p.redlineRpm, blowOff: released ? (p.fi === 'supercharger' ? s.rpm / p.redlineRpm : s.boost) : 0 };
 }
 
 function noiseBuffer(ctx: BaseAudioContext, seconds: number) {
@@ -44,8 +45,10 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   for (let i = 0; i < curve.length; i++) { const x = (i / 511.5) - 1; curve[i] = Math.tanh(x * v.drive) / Math.tanh(v.drive); }
   shaper.curve = curve;
   const body = ctx.createBiquadFilter(); body.type = 'peaking'; body.frequency.value = p.pulseHz * 1.6; body.Q.value = 1.1; body.gain.value = v.bodyDb;
-  const muffler = ctx.createBiquadFilter(); muffler.type = 'lowpass'; muffler.frequency.value = v.lowpassHz; muffler.Q.value = 0.7;
-  const exGain = ctx.createGain(); exGain.gain.value = v.gain;
+  // A turbine in the exhaust takes energy out of the pulses: duller, quieter exhaust note.
+  const turbo = p.fi === 'turbo';
+  const muffler = ctx.createBiquadFilter(); muffler.type = 'lowpass'; muffler.frequency.value = v.lowpassHz * (turbo ? 0.6 : 1); muffler.Q.value = 0.7;
+  const exGain = ctx.createGain(); exGain.gain.value = v.gain * (turbo ? 0.75 : 1);
   node.connect(shaper).connect(body).connect(muffler).connect(exGain).connect(out);
 
   // Induction noise (louder with an intake mod).
@@ -53,13 +56,26 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   const intakeBp = ctx.createBiquadFilter(); intakeBp.type = 'bandpass'; intakeBp.Q.value = 0.9;
   const intakeGain = ctx.createGain(); intakeGain.gain.value = 0;
   intake.connect(intakeBp).connect(intakeGain).connect(out); intake.start();
+  const howl = ctx.createOscillator(); howl.type = 'sawtooth';
+  const howlLp = ctx.createBiquadFilter(); howlLp.type = 'lowpass'; howlLp.frequency.value = 2500;
+  const howlGain = ctx.createGain(); howlGain.gain.value = 0;
+  howl.connect(howlLp).connect(howlGain).connect(out);
+  if (p.ramAir) howl.start();
 
-  // Supercharger whine / turbo whistle.
-  const whine = ctx.createOscillator(); whine.type = 'triangle';
-  const whineGain = ctx.createGain(); whineGain.gain.value = 0;
-  whine.connect(whineGain).connect(out); whine.start();
-  const bov = noiseBuffer(ctx, 0.6);
-
+  // Forced induction. Turbo: compressor whistle + intake hiss that build with boost, blow-off on lift.
+  // Supercharger (centrifugal, gear-driven): whine locked to crank speed x impeller ratio, always present.
+  const fiOut = ctx.createGain(); fiOut.gain.value = 1; fiOut.connect(out);
+  const tone1 = ctx.createOscillator(); tone1.type = 'sine';
+  const tone2 = ctx.createOscillator(); tone2.type = 'sine';
+  const toneGain1 = ctx.createGain(); toneGain1.gain.value = 0;
+  const toneGain2 = ctx.createGain(); toneGain2.gain.value = 0;
+  tone1.connect(toneGain1).connect(fiOut); tone2.connect(toneGain2).connect(fiOut);
+  const hiss = ctx.createBufferSource(); hiss.buffer = noiseBuffer(ctx, 2); hiss.loop = true;
+  const hissBp = ctx.createBiquadFilter(); hissBp.type = 'bandpass'; hissBp.Q.value = 1.4;
+  const hissGain = ctx.createGain(); hissGain.gain.value = 0;
+  hiss.connect(hissBp).connect(hissGain).connect(fiOut);
+  if (p.fi !== 'none') { tone1.start(); tone2.start(); hiss.start(); }
+  const burst = noiseBuffer(ctx, 0.8);
   const rpm = node.parameters.get('rpm')!, load = node.parameters.get('load')!, crackle = node.parameters.get('crackle')!;
   let crackleUntil = -1;
   return {
@@ -71,22 +87,45 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
       crackle.setValueAtTime(t < crackleUntil ? crackleAmt * (crackleUntil - t) / 0.9 : 0, t);
       intakeBp.frequency.setValueAtTime(300 + 2200 * r, t);
       intakeGain.gain.setValueAtTime((p.intakeMod ? 0.05 : 0.02) * s.load * (0.3 + r), t);
+      if (p.ramAir) { // airbox resonance tracks the firing frequency: the ZX howl
+        const fire = (s.rpm / 120) * p.firingDeg.length;
+        howl.frequency.setValueAtTime(fire * 2, t);
+        howlGain.gain.setValueAtTime(0.09 * s.load * r * r, t);
+      }
       if (p.fi === 'supercharger') {
-        whine.frequency.setValueAtTime((s.rpm / 60) * p.scRatio * 0.25, t);
-        whineGain.gain.setValueAtTime(0.05 * r * r * (0.4 + 0.6 * s.load), t);
+        const impHz = (s.rpm / 60) * p.scRatio; // impeller shaft frequency
+        tone1.frequency.setValueAtTime(impHz, t);
+        tone2.frequency.setValueAtTime(impHz * 2, t);
+        // Scale with exhaust loudness so the whine stays on top of a loud pipe (the H2R's race can).
+        const lvl = (0.35 + 0.65 * r) * (0.55 + 0.45 * s.load) * Math.max(1, v.gain * 2.2);
+        toneGain1.gain.setValueAtTime(0.24 * lvl, t);
+        toneGain2.gain.setValueAtTime(0.1 * lvl, t);
+        hissBp.frequency.setValueAtTime(1500 + 3000 * r, t);
+        hissGain.gain.setValueAtTime(0.05 * lvl * s.load, t);
+        if (ev.blowOff > 0.45) { // H2's chirp from the boost relief when you lift
+          const o = ctx.createOscillator(); const g = ctx.createGain();
+          o.frequency.setValueAtTime(2600, t); o.frequency.exponentialRampToValueAtTime(900, t + 0.22);
+          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.18 * ev.blowOff, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.25);
+          o.connect(g).connect(fiOut); o.start(t); o.stop(t + 0.3);
+        }
       } else if (p.fi === 'turbo') {
-        whine.frequency.setValueAtTime(1800 + 5200 * s.boost, t);
-        whineGain.gain.setValueAtTime(0.035 * s.boost, t);
-        if (ev.blowOff > 0.3) {
-          const src = ctx.createBufferSource(); src.buffer = bov;
-          const hp = ctx.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 1400;
+        const b = s.boost;
+        tone1.frequency.setValueAtTime(2200 + 8500 * b, t); // compressor whistle rises with shaft speed
+        tone2.frequency.setValueAtTime((2200 + 8500 * b) * 1.52, t);
+        toneGain1.gain.setValueAtTime(0.15 * Math.pow(b, 1.4), t);
+        toneGain2.gain.setValueAtTime(0.035 * Math.pow(b, 1.4), t);
+        hissBp.frequency.setValueAtTime(2500 + 3500 * b, t); // air rushing through the compressor
+        hissGain.gain.setValueAtTime(0.2 * Math.pow(b, 1.5), t);
+        if (ev.blowOff > 0.2) { // blow-off valve: sharp "pssh" that fades
+          const src = ctx.createBufferSource(); src.buffer = burst;
+          const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.setValueAtTime(3200, t); bp.frequency.exponentialRampToValueAtTime(1800, t + 0.5); bp.Q.value = 0.7;
           const g = ctx.createGain();
-          g.gain.setValueAtTime(0.32 * ev.blowOff, t); g.gain.exponentialRampToValueAtTime(0.001, t + 0.45);
-          src.connect(hp).connect(g).connect(out); src.start(t); src.stop(t + 0.5);
+          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.55 * ev.blowOff, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.6);
+          src.connect(bp).connect(g).connect(fiOut); src.start(t); src.stop(t + 0.65);
         }
       }
     },
-    stop(t) { intake.stop(t); whine.stop(t); node.disconnect(); },
+    stop(t) { intake.stop(t); if (p.ramAir) howl.stop(t); if (p.fi !== 'none') { tone1.stop(t); tone2.stop(t); hiss.stop(t); } node.disconnect(); },
   };
 }
 
