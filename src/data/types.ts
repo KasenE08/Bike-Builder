@@ -43,6 +43,15 @@ export interface Calibration {
   fit: string;        // which published figures were matched, and any misses
 }
 
+/** Engine layout for the generated engine sound. */
+export interface EngineLayout {
+  layout: 'parallelTwin' | 'triple' | 'inline4' | 'crossplaneI4' | 'v4';
+  firingDeg: number[]; // firing points within the 720-degree four-stroke cycle
+  idleRpm: number;
+  est: boolean;
+  source: string;
+}
+
 export interface Bike {
   id: string; // kebab-case, matches file name
   make: string;
@@ -62,6 +71,7 @@ export interface Bike {
   displacementCc: number;
   gearing: Gearing;
   calibration?: Calibration; // added in Phase 4
+  engine: EngineLayout;
   streetLegal: boolean;
   streetLegalReason?: string; // e.g. "H2R base bike: track only"
   /** Categories fitted from the factory; shown as "Stock". */
@@ -113,6 +123,10 @@ export interface Part {
   requires?: Category[]; // e.g. forcedInduction -> ["tune"]
   streetLegal: boolean;
   streetLegalReason: string;
+  /** Forced-induction parts: which kind (drives the engine sound). */
+  fiType?: 'turbo' | 'supercharger';
+  /** Exhaust parts: override the slip-on / full-system guess made from the name. */
+  exhaustKind?: 'slipOn' | 'fullSystem' | 'race';
   /** Tune only: can remove the factory speed limiter. */
   limiterRemovable?: boolean;
 }

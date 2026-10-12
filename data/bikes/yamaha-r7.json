@@ -90,5 +90,15 @@
     "shiftTimeS": 0.06,
     "est": false,
     "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top -0.0%; shift 0.06s est."
+  },
+  "engine": {
+    "layout": "parallelTwin",
+    "firingDeg": [
+      0,
+      270
+    ],
+    "idleRpm": 1300,
+    "est": true,
+    "source": "CP2 270-degree crossplane twin; idle rpm est."
   }
 }

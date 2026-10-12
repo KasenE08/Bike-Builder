@@ -24,6 +24,7 @@ export function CustomPartForm({ bikeId, category, categoryLabel, existing, onCl
     tq: ex ? String(ex.effect.torquePct) : '0',
     wt: ex?.weightDeltaLb.value != null ? String(ex.weightDeltaLb.value) : '0',
     needsTune: !!ex?.effect.needsTuneForFullGain,
+    fiType: ex?.fiType ?? 'turbo',
   });
   const set = (k: keyof typeof f) => (e: Event) => {
     const t = e.target as HTMLInputElement;
@@ -38,6 +39,7 @@ export function CustomPartForm({ bikeId, category, categoryLabel, existing, onCl
       { bikeId, category, name: f.name.trim(), brand: f.brand.trim() || 'Custom', usd: price, laborUsd: num(f.labor), hpPct: num(f.hp), torquePct: num(f.tq), weightDeltaLb: num(f.wt), needsTune: f.needsTune },
       ex?.id,
     );
+    if (category === 'forcedInduction') { p.fiType = f.fiType as 'turbo' | 'supercharger'; p.effect.roughGuess = true; }
     await saveCustomPart(p);
     await onSaved(p);
     onClose();
@@ -66,6 +68,15 @@ export function CustomPartForm({ bikeId, category, categoryLabel, existing, onCl
         {field('Power gain (%)', 'hp', 'number')}
         {field('Torque gain (%)', 'tq', 'number')}
         {field('Weight change (lb)', 'wt', 'number', 'Negative = lighter')}
+        {category === 'forcedInduction' && (
+          <label class="spread" style={{ marginBottom: 10 }}>
+            <span>Type</span>
+            <select value={f.fiType} onChange={(e) => setF({ ...f, fiType: (e.target as HTMLSelectElement).value as 'turbo' | 'supercharger' })}>
+              <option value="turbo">Turbo (spool + blow-off)</option>
+              <option value="supercharger">Supercharger (whine)</option>
+            </select>
+          </label>
+        )}
         <label class="switch">
           Needs a tune for full gain
           <input type="checkbox" checked={f.needsTune} onChange={set('needsTune')} />

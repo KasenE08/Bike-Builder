@@ -91,5 +91,17 @@
     "shiftTimeS": 0.25,
     "est": true,
     "fit": "sim (180 lb test rider) vs published: 0-60 +0.0% (target est.), top +0.0% (target est.); shift 0.25s est."
+  },
+  "engine": {
+    "layout": "inline4",
+    "firingDeg": [
+      0,
+      180,
+      360,
+      540
+    ],
+    "idleRpm": 1500,
+    "est": true,
+    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est."
   }
 }

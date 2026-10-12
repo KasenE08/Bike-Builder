@@ -90,5 +90,17 @@
     "shiftTimeS": 0.06,
     "est": false,
     "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top +0.0%, 0-150 +0.0%, 60-150 -0.0% (target est.); shift 0.06s est."
+  },
+  "engine": {
+    "layout": "crossplaneI4",
+    "firingDeg": [
+      0,
+      270,
+      450,
+      540
+    ],
+    "idleRpm": 1250,
+    "est": true,
+    "source": "crossplane inline-4, 270-180-90-180 firing; idle rpm est."
   }
 }

@@ -96,5 +96,17 @@
     "shiftTimeS": 0.06,
     "est": false,
     "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top -0.0%, 0-150 +2.5%, 60-150 +3.9% (target est.); shift 0.06s est."
+  },
+  "engine": {
+    "layout": "inline4",
+    "firingDeg": [
+      0,
+      180,
+      360,
+      540
+    ],
+    "idleRpm": 1100,
+    "est": true,
+    "source": "flat-plane inline-4 with centrifugal supercharger; idle rpm est."
   }
 }

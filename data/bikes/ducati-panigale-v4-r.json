@@ -91,5 +91,17 @@
     "shiftTimeS": 0.06,
     "est": true,
     "fit": "sim (180 lb test rider) vs published: 0-60 +0.0% (target est.), top -0.0%, 0-150 +0.5%, 60-150 +0.8% (target est.); shift 0.06s est."
+  },
+  "engine": {
+    "layout": "v4",
+    "firingDeg": [
+      0,
+      90,
+      290,
+      380
+    ],
+    "idleRpm": 1350,
+    "est": true,
+    "source": "Desmosedici Stradale R V4 'Twin Pulse' firing (0-90-290-380); idle rpm est."
   }
 }

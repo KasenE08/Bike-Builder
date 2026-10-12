@@ -88,5 +88,15 @@
     "shiftTimeS": 0.25,
     "est": true,
     "fit": "sim (180 lb test rider) vs published: 0-60 +15.3% (target est.), top +0.0%; shift 0.25s est."
+  },
+  "engine": {
+    "layout": "parallelTwin",
+    "firingDeg": [
+      0,
+      270
+    ],
+    "idleRpm": 1300,
+    "est": true,
+    "source": "270-degree parallel twin; idle rpm est."
   }
 }
