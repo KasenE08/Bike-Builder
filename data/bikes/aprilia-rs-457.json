@@ -38,10 +38,10 @@
   "topSpeedMph": {
     "value": 118,
     "est": false,
-    "source": "Aprilia claim 190 km/h, https://www.evoindia.com/bikes/bike-reviews/aprilia-rs-457-first-ride-review",
+    "source": "Aprilia claim 190 km/h, https://www.evoindia.com/bikes/bike-reviews/aprilia-rs-457-first-ride-review; factory 120 mph limit per tuner BT Moto (https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner)",
     "checked": "2026-10-12",
-    "limited": false,
-    "limitMph": null
+    "limited": true,
+    "limitMph": 120
   },
   "zeroTo60S": {
     "value": 4.0,
