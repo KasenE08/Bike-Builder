@@ -1,0 +1,42 @@
+# Bike Builder — rules for Claude
+
+Personal motorcycle build configurator. iPhone PWA on GitHub Pages. Owner-only use.
+
+## How to work
+- Ask questions and show a plan before writing code. Confirm before each phase.
+- Be direct, keep work token-efficient (owner is on a limited plan).
+- Dev branch = `claude/bike-build-configurator-g5w85d`. Merge to `main` (via PR) only after owner approval. `main` auto-deploys to Pages.
+- After each phase: explain simply what was built, update the progress log below.
+
+## Hard rules
+- **$0 to run:** static PWA only. No server, no paid APIs.
+- **Public repo:** never commit personal data, reference photos, retailer/manufacturer images, or backups. `.gitignore` blocks images; keep reference photos in the session scratchpad.
+- **US units only:** mph, lb, lb-ft, hp. **Crank hp everywhere**; convert wheel-hp dyno gains (~10% drivetrain loss) and record the assumption.
+- **Never invent a price.** Every price comes from a real US listing with URL + date checked. Not found → `usd: null` and flag. Price > 90 days old → "price may be outdated".
+- Unpublished figures are estimated and marked `est: true` ("est." in UI). Forced induction on a bike that didn't ship with it → `roughGuess`.
+- Can't reach 150 mph → 60–150 and 0–150 show "N/A, can't reach 150".
+- Stock equipment shows as "Stock", not an add-on.
+- Fewer than 3 real products in a category → show what exists and record a gap in `data/parts/_gaps.json`.
+- Red = brand/actions only, never "bad". Green ▲ better, dark gray ▼ worse. White theme, no dark mode.
+
+## Stack
+Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (builds, photos, settings, price edits, custom parts), Vitest, GitHub Actions → Pages.
+
+## Data
+- `data/bikes/<bike-id>.json` — one per bike, shape `Bike` in `src/data/types.ts`.
+- `data/parts/<category>.json` — array of `Part`; `fits` lists bike ids. Up to 3 tiers (budget/mid/premium) per category per bike.
+- Every number carries `{ value, est, source, checked }`.
+- Adding a bike = add a JSON file (uses the `generic` drawing until it gets its own).
+
+## Engine
+- Mod gains stack with diminishing returns: sort largest first, each next gain × 0.85^n, applied multiplicatively. Exhaust/intake reach full gain only with a tune.
+- Time-step sim (torque curve, gears, traction/wheelie limit, shift time, drag, rolling resistance, rider weight default 210 lb).
+- Per-bike `calibration` (cdA, launchG, shiftTimeS) fitted so stock sim matches published numbers.
+- Limiter caps top speed unless tune's "remove limiter" is on.
+- Wrap: any non-stock color adds the mid-tier wrap + labor by default (tier changeable).
+
+## Drawings
+Side-profile SVG per bike, traced from owner's reference photo (potrace → hand-redrawn clean panels: tank, fairing, tail, bellyPan, wheels, frame). Two-tone flat shading per panel, signature details listed before drawing, no floating parts, render and compare to photo before showing. Do one bike first and get approval.
+
+## Progress log
+- **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Awaiting approval.

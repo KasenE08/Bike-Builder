@@ -1,0 +1,22 @@
+import { defineConfig } from 'vite';
+import preact from '@preact/preset-vite';
+import { VitePWA } from 'vite-plugin-pwa';
+
+export default defineConfig({
+  base: '/Bike-Builder/',
+  plugins: [
+    preact(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      manifest: {
+        name: 'Bike Builder',
+        short_name: 'Bike Builder',
+        display: 'standalone',
+        background_color: '#ffffff',
+        theme_color: '#ffffff',
+        icons: [],
+      },
+      workbox: { globPatterns: ['**/*.{js,css,html,svg,json,png}'] },
+    }),
+  ],
+});
