@@ -54,5 +54,30 @@
     "requires": [
       "tune"
     ]
+  },
+  {
+    "id": "kawasaki-oem-qs-zx4r",
+    "category": "quickshifter",
+    "tier": "mid",
+    "name": "Kawasaki Quick Shifter (99994-1886)",
+    "brand": "Kawasaki",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 522.17,
+      "source": "https://www.revzilla.com/oem/kawasaki/2025-kawasaki-ninja-zx-4r/accessoryquick-shifter",
+      "checked": "2026-10-12",
+      "note": "OEM parts diagram for 2025 ZX-4R"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

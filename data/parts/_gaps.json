@@ -43,5 +43,200 @@
     "bike": "kawasaki-ninja-500",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "exhaust",
+    "note": "No US listing with a price; SC-Project (EUR 690-980) and Mivv (EUR 969+) full systems are EU-only."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "intake",
+    "note": "Only DNA filter found."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "tune",
+    "note": "Only BT Moto flash and Aprilia Racing race ECU found."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "quickshifter",
+    "note": "Aprilia AQS accessory exists but no US price found."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "carbon",
+    "note": "Only F&F Carbon (Germany, price not shown) and eBay listings found."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "wheels",
+    "note": "No wheels listed for the RS 457."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "brakes",
+    "note": "Only pads found; Discacciati caliper listed in CAD only."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "suspension",
+    "note": "No shock or fork kit listed for the RS 457 in the US."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "gearing",
+    "note": "No chain/sprocket kit listed for the RS 457."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "chain",
+    "note": "No chain listed for the RS 457."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "frameSliders",
+    "note": "Graves sliders seen only as open-box ($226.53)."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "winglets",
+    "note": "Only unbranded eBay winglets exist."
+  },
+  {
+    "bike": "aprilia-rs-457",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "exhaust",
+    "note": "Only Yoshimura and Akrapovic found with ZX-4R fitment."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "intake",
+    "note": "Only DNA filter found."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "tune",
+    "note": "Only TST and 2WDW found; BT Moto lists ZX-4RR only."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "quickshifter",
+    "note": "Only Kawasaki OEM kit; FTECU kit lists ZX-4RR only."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "carbon",
+    "note": "Only eBay/unbranded listings."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "wheels",
+    "note": "No wheels listed for the ZX-4R."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "brakes",
+    "note": "GBrakes lines and pads found list ZX-4RR only."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "suspension",
+    "note": "Andreani kit is ZX-4RR only (not ZX-4R compatible); no other listing."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "gearing",
+    "note": "Sprocket Center/Driven kits list ZX-4RR only."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "chain",
+    "note": "No chain listed for the ZX-4R."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "tailTidy",
+    "note": "Only Graves new; Puig and Rizoma seen only as blemished stock."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "winglets",
+    "note": "Only unbranded eBay winglets exist."
+  },
+  {
+    "bike": "kawasaki-zx-4r",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "exhaust",
+    "note": "Only Akrapovic Evolution found for 2026; Racing GP 2026 seen only as blemished ($1,362). 2022-2025 parts excluded."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "intake",
+    "note": "Only DNA filter found; K&N YA-6814 seen only on EU/eBay."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "tune",
+    "note": "Only TST 2026 tunes; FTECU kit lists 2022-2025 only."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "carbon",
+    "note": "Only eBay/unbranded listings."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "wheels",
+    "note": "Only a Rotobox set on eBay (excluded)."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "brakes",
+    "note": "No pad/line listing confirms 2026 fitment."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "suspension",
+    "note": "Only Ohlins FKR235; STX 46 shock listings are 2021-2023."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "gearing",
+    "note": "Only Sprocket Center kit for 2026 (2026 uses 520 pitch)."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "chain",
+    "note": "No chain-only listing for 2026."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "frameSliders",
+    "note": "Only Graves; Puig R19 lists up to 2025."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "tailTidy",
+    "note": "Only TST and Yoshimura found."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "winglets",
+    "note": "Only unbranded eBay winglets exist."
+  },
+  {
+    "bike": "yamaha-r7",
+    "category": "forcedInduction",
+    "note": "Extreme Creations CP2 turbo kit (Australia, from A$4,275) has no US listing."
   }
 ]

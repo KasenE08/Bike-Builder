@@ -22,5 +22,30 @@
     "weightDeltaLb": null,
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "ohlins-fkr235-r7-2026",
+    "category": "suspension",
+    "tier": "premium",
+    "name": "FKR235 Fork Cartridge Kit",
+    "brand": "Ohlins",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 2499.0,
+      "source": "https://www.revzilla.com/motorcycle/ohlins-fkr235-cartridge-kit-yamaha-r7-2026",
+      "checked": "2026-10-12",
+      "note": "Out of stock; page copy describes FKR100"
+    },
+    "labor": {
+      "usd": 441.0,
+      "hours": 3.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

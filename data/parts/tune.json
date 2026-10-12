@@ -73,5 +73,155 @@
     "weightDeltaLb": null,
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "btmoto-stage1plus-rs457",
+    "category": "tune",
+    "tier": "budget",
+    "name": "Stage 1+ ECU Flash with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 699.0,
+      "source": "https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner",
+      "checked": "2026-10-12",
+      "note": "Covers 2025-2027 RS 457"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "aprilia-racing-ecu-rs457",
+    "category": "tune",
+    "tier": "premium",
+    "name": "Aprilia Racing Marelli Race ECU",
+    "brand": "Aprilia Racing",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 799.95,
+      "source": "https://hsbkracing.com/parts-and-apparel/aprilia/rs-457/electrical/aprilia-racing-rs-457-marelli-racing-race-ecu",
+      "checked": "2026-10-12",
+      "note": "Track/race use only"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "Track/race use only"
+  },
+  {
+    "id": "tst-worx-zx4r",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-kawasaki-ninja-zx-4rr-2023-zx-4r-2024",
+      "checked": "2026-10-12",
+      "note": "ZX-4R 2024-2026, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "2wdw-flash-zx4r",
+    "category": "tune",
+    "tier": "mid",
+    "name": "Mail-In ECU Flashing Service",
+    "brand": "2 Wheel Dynoworks",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 399.99,
+      "source": "https://2wheeldynoworks.com/products/2wdw-zx4rr-mail-in-ecu-flashing-service",
+      "checked": "2026-10-12",
+      "note": "Regular price; covers ZX-4R/RR"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-stage1-r7-2026",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2026",
+      "checked": "2026-10-12",
+      "note": "2026+ R7, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-stage2-r7-2026",
+    "category": "tune",
+    "tier": "mid",
+    "name": "TST WORX Stage 2 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 285.0,
+      "source": "https://tstindustries.com/products/tst-worx-stage-2-ecu-tune-yamaha-yzf-r7-2026",
+      "checked": "2026-10-12",
+      "note": "2026+ R7, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

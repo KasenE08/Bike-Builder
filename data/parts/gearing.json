@@ -73,5 +73,30 @@
     "weightDeltaLb": null,
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-superlite-kit-r7-2026",
+    "category": "gearing",
+    "tier": "mid",
+    "name": "520 Chain Kit, Superlite RSX sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 199.0,
+      "source": "https://sprocketcenter.com/i-30501159-520-chain-kit-superlite-rsx-sprocket-set-withchoice-of-chain-yamaha-yzf-r7-26-27.html",
+      "checked": "2026-10-12",
+      "note": "2026-27 R7 (520 pitch); includes X-ring chain"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

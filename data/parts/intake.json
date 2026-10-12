@@ -50,5 +50,80 @@
     "requires": [
       "tune"
     ]
+  },
+  {
+    "id": "dna-filter-rs457",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter",
+    "brand": "DNA",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 112.1,
+      "source": "https://www.revzilla.com/motorcycle/dna-air-filter-aprilia-rs-457-2024-2026",
+      "checked": "2026-10-12",
+      "note": "Out of stock at RevZilla; same price at Cycle Gear"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "dna-filter-zx4r",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (P-K4S18-01)",
+    "brand": "DNA",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 117.8,
+      "source": "https://www.cyclegear.com/parts/dna-air-filter-kawasaki-z400-ninja-400-ninja-zx-4rr-2018-2023",
+      "checked": "2026-10-12",
+      "note": "Listing fitment includes ZX-4R"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "dna-filter-r7",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (R-Y7N14-01)",
+    "brand": "DNA",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 84.0,
+      "source": "https://edrperformance.com/collections/fz07-mt07-r7/products/dna-yamaha-r7-fz07-mt07-xsr700-tenere-700-air-filter",
+      "checked": "2026-10-12",
+      "note": "Fitment R7 2021+"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

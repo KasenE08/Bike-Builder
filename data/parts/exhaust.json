@@ -75,5 +75,86 @@
     "streetLegal": false,
     "streetLegalReason": "Seller: not legal on emissions-controlled vehicles",
     "layer": "slipon"
+  },
+  {
+    "id": "yoshimura-at2-zx4r",
+    "category": "exhaust",
+    "tier": "budget",
+    "name": "AT2 Street Slip-On",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 689.0,
+      "source": "https://tstindustries.com/products/yoshimura-street-at2-slip-on-exhaust-kawasaki-zx4rr-zx4r",
+      "checked": "2026-10-12",
+      "note": "Same price at Cycle Gear"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "layer": "slipon"
+  },
+  {
+    "id": "akrapovic-slipon-zx4r",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Slip-On Line",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 1137.0,
+      "source": "https://tstindustries.com/products/akrapovic-slip-on-exhaust-kawasaki-ninja-zx-4rr-zx-4r",
+      "checked": "2026-10-12",
+      "note": "Regular price; Kawasaki store MSRP pages conflict ($984-$1,048)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "Seller: closed-course use only",
+    "layer": "slipon"
+  },
+  {
+    "id": "akrapovic-evolution-r7-2026",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Evolution Full Exhaust System",
+    "brand": "Akrapovic",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 2232.0,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-evolution-exhaust-system-yamaha-r7-2026",
+      "checked": "2026-10-12",
+      "note": "Out of stock at RevZilla"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "layer": "fullSystem",
+    "requires": [
+      "tune"
+    ]
   }
 ]

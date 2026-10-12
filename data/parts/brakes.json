@@ -47,5 +47,55 @@
     "weightDeltaLb": null,
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "ebc-r-pads-rs457",
+    "category": "brakes",
+    "tier": "budget",
+    "name": "Sintered R-Series Front Pads",
+    "brand": "EBC",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 38.43,
+      "source": "https://www.rockymountainatvmc.com/parts/2024-aprilia-rs-457",
+      "checked": "2026-10-12",
+      "note": "Price from bike fitment page"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "dp-rdp519-rs457",
+    "category": "brakes",
+    "tier": "mid",
+    "name": "RDP X-Race Titanium Front Pads (RDP519)",
+    "brand": "DP Brakes",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 88.95,
+      "source": "https://www.cyclegear.com/parts/dp-brakes-rdp-x-race-titanium-front-brake-pads-rdp519",
+      "checked": "2026-10-12",
+      "note": "Track-only compound; out of stock"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "Track-only compound"
   }
 ]

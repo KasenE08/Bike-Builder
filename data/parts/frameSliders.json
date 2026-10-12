@@ -72,5 +72,155 @@
     "weightDeltaLb": null,
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "woodcraft-sliders-rs457",
+    "category": "frameSliders",
+    "tier": "budget",
+    "name": "Frame Slider Kit",
+    "brand": "Woodcraft",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 99.99,
+      "source": "https://www.revzilla.com/motorcycle/woodcraft-frame-slider-kit-aprilia-rs-457-2024-2025",
+      "checked": "2026-10-12",
+      "note": "$99.99-$109.99 by option; needs bodywork cuts both sides"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "puig-r19-rs457",
+    "category": "frameSliders",
+    "tier": "mid",
+    "name": "R19 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 164.18,
+      "source": "https://www.revzilla.com/motorcycle/puig-r19-frame-sliders-aprilia-rs-457-2024-2025",
+      "checked": "2026-10-12",
+      "note": "Listing years 2024-2025"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "woodcraft-sliders-zx4r",
+    "category": "frameSliders",
+    "tier": "budget",
+    "name": "Frame Slider Kit",
+    "brand": "Woodcraft",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 99.99,
+      "source": "https://www.revzilla.com/motorcycle/woodcraft-frame-slider-kit-kawasaki-ninja-zx-4rr-2023",
+      "checked": "2026-10-12",
+      "note": "$89.99-$99.99 by option; fits ZX-4R/RR 2023-2026"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "puig-pro2-zx4r",
+    "category": "frameSliders",
+    "tier": "mid",
+    "name": "Pro 2.0 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 172.06,
+      "source": "https://www.cyclegear.com/parts/puig-pro-20-frame-sliders-kawasaki-ninja-zx-4r-zx-4rr-2023-2024",
+      "checked": "2026-10-12",
+      "note": "Fitment lists ZX-4R 2024-2026"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "kawasaki-oem-sliders-zx4r",
+    "category": "frameSliders",
+    "tier": "premium",
+    "name": "Kawasaki Frame Slider Set (99994-1868)",
+    "brand": "Kawasaki",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 389.94,
+      "source": "https://www.kawasaki.com/en-us/shop/vehicle-accessories/motorcycle/zx400prfnl/999941868/frame-slider-set",
+      "checked": "2026-10-12",
+      "note": "MSRP"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "graves-sliders-r7",
+    "category": "frameSliders",
+    "tier": "premium",
+    "name": "Diamond Frame Sliders",
+    "brand": "Graves Motorsports",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 209.95,
+      "source": "https://edrperformance.com/collections/fz07-mt07-r7/products/graves-yamaha-r7-diamond-frame-sliders-2021",
+      "checked": "2026-10-12",
+      "note": "Fitment R7 2021+"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
