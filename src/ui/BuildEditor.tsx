@@ -2,20 +2,30 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { bikeById } from '../data/bikes';
 import type { Category, Part } from '../data/types';
 import { deleteBuild, saveBuild, type SavedBuild } from '../store/db';
+import { CustomPartForm } from './CustomPartForm';
 import { PartSheet } from './PartSheet';
 import { Est, StatBar } from './Stats';
 import { isOutdated, usd } from './format';
-import { CATEGORIES, TIERS, bikeName, evalSaved, evalStock, gapFor, partById, partsFor } from './model';
+import { CATEGORIES, TIERS, bikeName, customFor, evalSaved, evalStock, gapFor, partById, partsFor, userPrice } from './model';
 import { go } from './router';
 
 const cap = (s: string) => s[0].toUpperCase() + s.slice(1);
 
-export function BuildEditor({ initial, riderLb, onChanged }: { initial: SavedBuild; riderLb: number; onChanged: () => void }) {
+interface Props {
+  initial: SavedBuild;
+  riderLb: number;
+  userVersion: number; // bumps when price edits / custom parts change
+  onChanged: () => void;
+  onUserDataChanged: () => Promise<void>;
+}
+
+export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDataChanged }: Props) {
   const [b, setB] = useState(initial);
   const [sheet, setSheet] = useState<Part | null>(null);
+  const [form, setForm] = useState<{ category: Category; existing?: Part } | null>(null);
   const bike = bikeById(b.bikeId)!;
   const stock = useMemo(() => evalStock(bike.id, riderLb), [bike.id, riderLb]);
-  const r = useMemo(() => evalSaved(b, riderLb), [b, riderLb]);
+  const r = useMemo(() => evalSaved(b, riderLb), [b, riderLb, userVersion]);
 
   // Autosave (debounced) to IndexedDB.
   const first = useRef(true);
@@ -53,17 +63,19 @@ export function BuildEditor({ initial, riderLb, onChanged }: { initial: SavedBui
 
       {CATEGORIES.map(({ key, label }) => {
         const options = partsFor(bike.id, key);
+        const customs = customFor(bike.id, key);
         const stockItem = bike.stock[key];
         const gap = gapFor(bike.id, key);
         const chosen = b.picks[key] ? partById(b.picks[key]!) : undefined;
-        if (!options.length && !stockItem && !gap) return null;
+        const mine = chosen ? userPrice(chosen.id) : undefined;
+        const shownUsd = mine ?? chosen?.price.usd;
         return (
           <section class="cat" key={key}>
             <div class="spread">
               <strong>{label}</strong>
               {chosen ? <button class="btn ghost small" onClick={() => setSheet(chosen)}>Details</button> : null}
             </div>
-            <div class="seg" role="group" aria-label={`${label} tier`}>
+            <div class="seg" role="group" aria-label={`${label} tier`} style={customs.length ? { gridTemplateColumns: 'repeat(5, 1fr)' } : undefined}>
               <button aria-pressed={!chosen} onClick={() => setPick(key, undefined)}>Stock</button>
               {TIERS.map((t) => {
                 const p = options.find((o) => o.tier === t);
@@ -73,23 +85,33 @@ export function BuildEditor({ initial, riderLb, onChanged }: { initial: SavedBui
                   </button>
                 );
               })}
+              {customs.length > 0 && (
+                <button aria-pressed={chosen?.tier === 'custom'} onClick={() => setPick(key, chosen?.tier === 'custom' ? chosen.id : customs[0].id)}>Custom</button>
+              )}
             </div>
+            {chosen?.tier === 'custom' && customs.length > 1 && (
+              <select aria-label={`${label} custom part`} value={chosen.id} onChange={(e) => setPick(key, (e.target as HTMLSelectElement).value)} style={{ marginTop: 8, width: '100%' }}>
+                {customs.map((c) => <option key={c.id} value={c.id}>{c.brand} {c.name}</option>)}
+              </select>
+            )}
             <div class="pick">
               {chosen ? (
                 <>
                   <div>{chosen.brand} {chosen.name}</div>
                   <div class="muted small">
-                    {chosen.price.usd == null ? 'Price not found' : usd(chosen.price.usd)}
+                    {shownUsd == null ? (chosen.tier === 'custom' ? 'No price' : 'Price not found') : usd(shownUsd)}
+                    {mine != null && ' (your price)'}
                     {chosen.labor && <> + {usd(chosen.labor.usd)} labor<Est /></>}
                     {chosen.effect.hpPct > 0 && <> · +{chosen.effect.hpPct}% hp{chosen.effect.est && <Est />}</>}
                     {chosen.effect.needsTuneForFullGain && !b.picks.tune && chosen.effect.hpPct > 0 && <> (half without tune)</>}
                   </div>
-                  {isOutdated(chosen.price.checked) && <div class="flag">Price may be outdated</div>}
+                  {chosen.tier !== 'custom' && mine == null && isOutdated(chosen.price.checked) && <div class="flag">Price may be outdated</div>}
                 </>
               ) : (
                 stockItem && <div class="muted small">Stock: {stockItem}</div>
               )}
               {gap && <div class="flag" style={{ marginTop: 4 }}>{gap.note}</div>}
+              <button class="btn ghost small" onClick={() => setForm({ category: key })}>+ Add custom part</button>
             </div>
 
             {key === 'gearing' && (
@@ -131,7 +153,24 @@ export function BuildEditor({ initial, riderLb, onChanged }: { initial: SavedBui
         </tbody>
       </table>
       <button class="btn ghost" style={{ marginTop: 16 }} onClick={remove}>Delete build</button>
-      {sheet && <PartSheet part={sheet} onClose={() => setSheet(null)} />}
+      {sheet && (
+        <PartSheet
+          part={sheet}
+          onClose={() => setSheet(null)}
+          onUserDataChanged={onUserDataChanged}
+          onEditCustom={(p) => { setSheet(null); setForm({ category: p.category, existing: p }); }}
+        />
+      )}
+      {form && (
+        <CustomPartForm
+          bikeId={bike.id}
+          category={form.category}
+          categoryLabel={CATEGORIES.find((c) => c.key === form.category)!.label}
+          existing={form.existing}
+          onClose={() => setForm(null)}
+          onSaved={async (p) => { await onUserDataChanged(); setPick(p.category, p.id); }}
+        />
+      )}
     </main>
   );
 }

@@ -69,7 +69,7 @@ export interface Bike {
   notes?: string[];
 }
 
-export type Tier = 'budget' | 'mid' | 'premium';
+export type Tier = 'budget' | 'mid' | 'premium' | 'custom'; // custom = owner-made, stored on device
 
 export interface Price {
   usd: number | null; // null => flagged "price not found"

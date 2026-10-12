@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'preact/hooks';
-import { DEFAULT_SETTINGS, getSettings, listBuilds, type SavedBuild, type Settings } from '../store/db';
+import { DEFAULT_SETTINGS, getSettings, listBuilds, listCustomParts, listPriceEdits, type SavedBuild, type Settings } from '../store/db';
+import { setUserData } from './model';
 import { BikePicker } from './BikePicker';
 import { BuildEditor } from './BuildEditor';
 import { Compare } from './Compare';
@@ -15,17 +16,24 @@ export function App() {
   const route = useRoute();
   const [builds, setBuilds] = useState<SavedBuild[] | null>(null);
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
+  const [userVersion, setUserVersion] = useState(0);
   const refresh = () => listBuilds().then(setBuilds);
-  useEffect(() => { refresh(); getSettings().then(setSettings); }, []);
+  const refreshUser = async () => {
+    const [c, p] = await Promise.all([listCustomParts(), listPriceEdits()]);
+    setUserData(c, p);
+    setUserVersion((v) => v + 1);
+  };
+  const reloadAll = async () => { await refreshUser(); await refresh(); setSettings(await getSettings()); };
+  useEffect(() => { reloadAll(); }, []);
 
-  if (!builds) return null;
+  if (!builds || userVersion === 0) return null;
   let page;
   if (route.page === 'new') page = <BikePicker onCreated={refresh} />;
   else if (route.page === 'build') {
     const b = builds.find((x) => x.id === route.id);
-    page = b ? <BuildEditor key={b.id} initial={b} riderLb={settings.riderLb} onChanged={refresh} /> : <main><p>Build not found.</p></main>;
+    page = b ? <BuildEditor key={b.id} initial={b} riderLb={settings.riderLb} userVersion={userVersion} onChanged={refresh} onUserDataChanged={refreshUser} /> : <main><p>Build not found.</p></main>;
   } else if (route.page === 'compare') page = <Compare builds={builds} riderLb={settings.riderLb} />;
-  else if (route.page === 'settings') page = <SettingsPage settings={settings} onSaved={setSettings} />;
+  else if (route.page === 'settings') page = <SettingsPage settings={settings} onSaved={setSettings} onRestored={reloadAll} />;
   else page = <Garage builds={builds} riderLb={settings.riderLb} />;
 
   const tab = route.page === 'compare' || route.page === 'settings' ? route.page : 'garage';
