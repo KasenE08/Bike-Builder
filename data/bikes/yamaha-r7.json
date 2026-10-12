@@ -29,6 +29,12 @@
     "source": "189 kg wet, https://daytonamotorsports.ca/items/itemid/40315295/2026-Yamaha-YZF-R7-Breaker-Cyan/",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 383.3,
+    "est": true,
+    "source": "est. wet minus fuel (3.4 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 139,
     "est": false,

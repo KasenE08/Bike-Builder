@@ -29,6 +29,12 @@
     "source": "curb, 49-state non-ABS, https://www.cyclenews.com/2025/09/article/2026-kawasaki-ninja-sport-and-supersport-lineup/",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 341.8,
+    "est": false,
+    "source": "Kawasaki est. dry (50-state non-ABS), https://www.motorcycle.com/specs/kawasaki/sport/2026/ninja-500/base/detail.html",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 115,
     "est": true,

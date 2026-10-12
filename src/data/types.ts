@@ -51,7 +51,8 @@ export interface Bike {
   torqueLbFt: Stat;
   peakHpRpm: number;
   peakTorqueRpm: number;
-  wetWeightLb: Stat;
+  wetWeightLb: Stat; // ready to ride, full tank
+  dryWeightLb: Stat; // no fuel, oil or coolant
   topSpeedMph: TopSpeed;
   zeroTo60S: Stat;
   sixtyTo150S: Stat; // value null => "N/A, can't reach 150"
@@ -59,8 +60,6 @@ export interface Bike {
   displacementCc: number;
   gearing: Gearing;
   calibration?: Calibration; // added in Phase 4
-  /** Set when the published wet weight excludes fuel (Ducati); gallons to add. */
-  weightExcludesFuelGal?: number;
   streetLegal: boolean;
   streetLegalReason?: string; // e.g. "H2R base bike: track only"
   /** Categories fitted from the factory; shown as "Stock". */

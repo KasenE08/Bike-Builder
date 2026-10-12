@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { bikes } from './bikes';
 
-const statKeys = ['msrp', 'hp', 'torqueLbFt', 'wetWeightLb', 'topSpeedMph', 'zeroTo60S', 'sixtyTo150S', 'zeroTo150S'] as const;
+const statKeys = ['msrp', 'hp', 'torqueLbFt', 'wetWeightLb', 'dryWeightLb', 'topSpeedMph', 'zeroTo60S', 'sixtyTo150S', 'zeroTo150S'] as const;
 
 describe('bike data', () => {
   it('loads all 12 v1 bikes', () => expect(bikes).toHaveLength(12));
@@ -29,4 +29,10 @@ describe('bike data', () => {
       });
     });
   }
+});
+
+describe('weights', () => {
+  it('dry is lighter than wet for every bike', () => {
+    for (const b of bikes) expect(b.dryWeightLb.value!, b.id).toBeLessThan(b.wetWeightLb.value!);
+  });
 });

@@ -29,6 +29,12 @@
     "source": "curb, https://www.birkeys.com/inventory/v1/Current/Kawasaki/Motorcycle/StreetTrack/Ninja/SuperSport/Ninja-ZX-4R-ABS",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 383.7,
+    "est": false,
+    "source": "Kawasaki est. dry, https://www.birkeys.com/inventory/v1/Current/Kawasaki/Motorcycle/StreetTrack/Ninja/SuperSport/Ninja-ZX-4R-ABS",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 125,
     "est": true,

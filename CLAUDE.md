@@ -26,6 +26,7 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - `data/bikes/<bike-id>.json` — one per bike, shape `Bike` in `src/data/types.ts`.
 - `data/parts/<category>.json` — array of `Part`; `fits` lists bike ids. Up to 3 tiers (budget/mid/premium) per category per bike.
 - Every number carries `{ value, est, source, checked }`.
+- Weights: `wetWeightLb` = ready to ride, full tank (physics uses this); `dryWeightLb` = no fuel/oil/coolant. Unpublished dry = wet − fuel×6.1 lb/gal − 12 lb (est.).
 - Adding a bike = add a JSON file (uses the `generic` drawing until it gets its own).
 
 ## Engine

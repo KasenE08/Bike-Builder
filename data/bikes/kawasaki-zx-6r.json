@@ -29,6 +29,12 @@
     "source": "curb, 49-state non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-6r",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 388.1,
+    "est": false,
+    "source": "Kawasaki est. dry, 49-state non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-6r",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 164,
     "est": false,

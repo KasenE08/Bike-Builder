@@ -29,6 +29,12 @@
     "source": "175 kg kerb, https://www.torquepedia.com/aprilia/rs457/2026",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 350.5,
+    "est": false,
+    "source": "159 kg Aprilia claim, https://motorcycles.autotrader.com/motorcycles/2026/aprilia/rs_457/201933549",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 118,
     "est": false,

@@ -29,6 +29,12 @@
     "source": "curb (2023 US sheet, assumed unchanged), https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2023-ninja-h2r",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 432.2,
+    "est": false,
+    "source": "196 kg, https://www.1000ps.com/en-us/model/7947/kawasaki-ninja-h2r/2026",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 205.7,
     "est": false,

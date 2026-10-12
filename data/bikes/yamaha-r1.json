@@ -29,6 +29,12 @@
     "source": "https://www.motorcycle.com/specs/yamaha/sport/2026/yzf/r1/detail.html",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 408.6,
+    "est": true,
+    "source": "est. wet minus fuel (4.5 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 191,
     "est": false,

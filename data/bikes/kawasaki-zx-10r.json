@@ -29,6 +29,12 @@
     "source": "curb, non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
     "checked": "2026-10-12"
   },
+  "dryWeightLb": {
+    "value": 421.2,
+    "est": false,
+    "source": "Kawasaki est. dry, non-ABS, https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-zx-10r",
+    "checked": "2026-10-12"
+  },
   "topSpeedMph": {
     "value": 188.9,
     "est": false,

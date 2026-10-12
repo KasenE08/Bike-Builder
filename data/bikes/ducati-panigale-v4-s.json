@@ -24,9 +24,15 @@
   "peakHpRpm": 12750,
   "peakTorqueRpm": 11250,
   "wetWeightLb": {
-    "value": 412,
-    "est": false,
-    "source": "187 kg wet without fuel, https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "value": 439.4,
+    "est": true,
+    "source": "est. 412 lb published wet without fuel + 4.5 gal x 6.1 lb; 187 kg wet without fuel, https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 399.9,
+    "est": true,
+    "source": "est. wet minus fuel (4.5 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
     "checked": "2026-10-12"
   },
   "topSpeedMph": {
@@ -79,6 +85,5 @@
     "quickshifter": "Ducati DQS up/down EVO 2",
     "winglets": "Factory aero winglets"
   },
-  "drawing": "generic",
-  "weightExcludesFuelGal": 4.5
+  "drawing": "generic"
 }
