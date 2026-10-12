@@ -1,0 +1,28 @@
+[
+  {
+    "id": "tst-carbon-front-fender-ninja400-500",
+    "category": "carbon",
+    "tier": "mid",
+    "name": "Twill Carbon Fiber Front Fender",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": null,
+      "source": "https://tstindustries.com/tst-twill-carbon-fiber-front-fender-kawasaki-ninja-400.html",
+      "checked": "2026-10-12",
+      "note": "Listing names Ninja 500 2024 fitment; price not visible in search"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "layer": "carbon"
+  }
+]

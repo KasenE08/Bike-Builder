@@ -1,0 +1,54 @@
+[
+  {
+    "id": "dna-filter-ninja400-500",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (P-K4S18-01)",
+    "brand": "DNA",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 115.6,
+      "source": "https://www.sportbiketrackgear.com/dna-kawasaki-ninja-500-2024-air-filter/",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "norton-ram-air-ninja400-500",
+    "category": "intake",
+    "tier": "premium",
+    "name": "Norton Racing Ram Air Kit",
+    "brand": "Norton Motorsports",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 449.95,
+      "source": "https://norton-motorsports.com/product/norton-racing-ninja400r-ram-air-kit-kawasaki-ninja-400-z400-500-z500",
+      "checked": "2026-10-12",
+      "note": "Not compatible with ABS; ABS must be removed"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "Requires ABS removal; closed-course",
+    "requires": [
+      "tune"
+    ]
+  }
+]

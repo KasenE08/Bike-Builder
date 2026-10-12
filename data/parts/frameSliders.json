@@ -1,0 +1,76 @@
+[
+  {
+    "id": "woodcraft-sliders-ninja400-500",
+    "category": "frameSliders",
+    "tier": "budget",
+    "name": "Frame Slider Kit",
+    "brand": "Woodcraft",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 139.99,
+      "source": "https://www.revzilla.com/motorcycle/woodcraft-frame-slider-kit-kawasaki-ninja-400-z400-6",
+      "checked": "2026-10-12",
+      "note": "List price (new)"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "gbracing-bullet-ninja400-500",
+    "category": "frameSliders",
+    "tier": "mid",
+    "name": "Bullet Race Frame Sliders",
+    "brand": "GB Racing",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 157.32,
+      "source": "https://www.revzilla.com/motorcycle/gb-racing-bullet-race-frame-sliders-kawasaki-ninja-400-ninja-500-2018-2025",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "puig-r19-ninja500",
+    "category": "frameSliders",
+    "tier": "premium",
+    "name": "R19 Frame Sliders",
+    "brand": "Puig",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 220.03,
+      "source": "https://www.revzilla.com/motorcycle/puig-r19-frame-sliders-kawasaki-ninja-500-2024-2025",
+      "checked": "2026-10-12",
+      "note": "List price"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  }
+]

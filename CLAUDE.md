@@ -34,11 +34,12 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - Time-step sim (torque curve, gears, traction/wheelie limit, shift time, drag, rolling resistance, rider weight default 210 lb).
 - Per-bike `calibration` (cdA, launchG, shiftTimeS) fitted so stock sim matches published numbers.
 - Limiter caps top speed unless tune's "remove limiter" is on.
-- Wrap: any non-stock color adds the mid-tier wrap + labor by default (tier changeable).
+- Wrap/color is cosmetic only: never added to build price (owner decision, Phase 3a).
 
 ## Drawings
 Side-profile SVG per bike, traced from owner's reference photo (potrace → hand-redrawn clean panels: tank, fairing, tail, bellyPan, wheels, frame). Two-tone flat shading per panel, signature details listed before drawing, no floating parts, render and compare to photo before showing. Do one bike first and get approval.
 
 ## Progress log
 - **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Approved.
-- **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Awaiting approval.
+- **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Approved.
+- **Phase 3a (part prices, Ninja 500 / RS 457 / ZX-4R / R7):** in progress. Prices = full/list price from real US listings (RevZilla first, then maker; no Amazon/eBay), via web search since direct fetches are blocked. Labor = est. hours × $147/hr (Nashville Motorcycle Repair). `effect` and `weightDeltaLb` deferred to Phase 3b. Wraps not priced. `src/data/parts.ts` loader + `parts.test.ts`. Ninja 500 done (pilot).

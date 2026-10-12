@@ -1,0 +1,79 @@
+[
+  {
+    "id": "yoshimura-at2-ss-ninja500",
+    "category": "exhaust",
+    "tier": "budget",
+    "name": "AT2 Stainless Slip-On (14730BP520)",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 609.0,
+      "source": "https://tstindustries.com/products/yoshimura-street-series-at2-stainless-slip-on-exhaust-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "Yoshimura's own pages show both $529 and $609; $609 matches TST"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "layer": "slipon"
+  },
+  {
+    "id": "two-brothers-s1r-ninja500",
+    "category": "exhaust",
+    "tier": "mid",
+    "name": "S1R Slip-On",
+    "brand": "Two Brothers Racing",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 659.97,
+      "source": "https://www.sportbiketrackgear.com/two-brothers-kawasaki-ninja-500-2024-s1r-slip-on-exhaust/",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "layer": "slipon"
+  },
+  {
+    "id": "akrapovic-slipon-ti-ninja400-500",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Slip-On Line (Titanium)",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 783.95,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-slip-on-exhaust-kawasaki-ninja-400-2018",
+      "checked": "2026-10-12",
+      "note": "List price; listing title covers Ninja 400/500 2018-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles",
+    "layer": "slipon"
+  }
+]

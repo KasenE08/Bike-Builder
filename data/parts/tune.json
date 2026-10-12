@@ -1,0 +1,77 @@
+[
+  {
+    "id": "tst-worx-stage1-ninja500",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Spec Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-spec-stage-1-ecu-tune-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "tst-worx-stage3-ninja500",
+    "category": "tune",
+    "tier": "mid",
+    "name": "TST WORX Stage 3 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 285.99,
+      "source": "https://tstindustries.com/products/tst-worx-stage-3-ecu-tune-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "flashtune-datalink-kawasaki",
+    "category": "tune",
+    "tier": "premium",
+    "name": "Data-Link ECU Flashing Kit",
+    "brand": "FlashTune",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 380.0,
+      "source": "https://www.revzilla.com/motorcycle/flash-tune-data-link-ecu-flashing-kit-suzuki-yamaha-kawasaki",
+      "checked": "2026-10-12",
+      "note": "Self-flash tool; fitment lists Ninja 500 2024-2025"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  }
+]

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "tst-standard-tail-ninja500",
+    "category": "tailTidy",
+    "tier": "budget",
+    "name": "Standard High Mount Fender Eliminator",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 34.99,
+      "source": "https://Tstindustries.com/tst-fender-eliminator-kawasaki-ninja-500-2024.html",
+      "checked": "2026-10-12",
+      "note": "Seller labels closed-course"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept",
+    "layer": "tailTidy"
+  },
+  {
+    "id": "yoshimura-fender-elim-ninja500",
+    "category": "tailTidy",
+    "tier": "mid",
+    "name": "Fender Eliminator Kit (070BG147300)",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 149.0,
+      "source": "https://yoshimura-rd.com/collections/all/products/ninja-500-z400-fender-eliminator-kit-070bg147300",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept",
+    "layer": "tailTidy"
+  },
+  {
+    "id": "nrc-led-fender-elim-ninja500",
+    "category": "tailTidy",
+    "tier": "premium",
+    "name": "LED Fender Eliminator (integrated signals)",
+    "brand": "New Rage Cycles",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 175.0,
+      "source": "https://www.cyclegear.com/parts/new-rage-cycles-led-fender-eliminator-kawasaki-ninja-500-2024-2025",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 183.75,
+      "hours": 1.25,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "DOT lighting; legal if plate light kept",
+    "layer": "tailTidy"
+  }
+]

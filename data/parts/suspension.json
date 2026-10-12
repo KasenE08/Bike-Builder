@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ktech-dds-lite-ninja500",
+    "category": "suspension",
+    "tier": "premium",
+    "name": "35DDS Lite Rear Shock",
+    "brand": "K-Tech",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 1398.6,
+      "source": "https://www.sportbiketrackgear.com/k-tech-kawasaki-ninja-500-2024-35dds-lite-rear-shock/",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  }
+]

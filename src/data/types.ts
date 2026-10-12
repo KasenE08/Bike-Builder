@@ -74,12 +74,14 @@ export interface Price {
   usd: number | null; // null => flagged "price not found"
   source: string;     // listing URL
   checked: IsoDate;   // > 90 days old => "price may be outdated"
+  note?: string;      // e.g. conflicting listings, price-per-wheel, fitment caveat
 }
 
 export interface Labor {
   usd: number;
   hours: number;
   source: string; // shop rate source
+  est: boolean;   // hours are estimated unless a published flat-rate time exists
 }
 
 export interface Effect {
@@ -102,8 +104,8 @@ export interface Part {
   fits: string[]; // bike ids
   price: Price;
   labor?: Labor;
-  weightDeltaLb: number; // negative = lighter
-  effect: Effect;
+  weightDeltaLb: number | null; // negative = lighter; null until Phase 3b
+  effect?: Effect;              // performance effect; added in Phase 3b
   requires?: Category[]; // e.g. forcedInduction -> ["tune"]
   streetLegal: boolean;
   streetLegalReason: string;

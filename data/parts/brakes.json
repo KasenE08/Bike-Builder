@@ -1,0 +1,51 @@
+[
+  {
+    "id": "galfer-hh-g1370-ninja500",
+    "category": "brakes",
+    "tier": "budget",
+    "name": "HH Sintered Front Pads (G1370)",
+    "brand": "Galfer",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 44.45,
+      "source": "https://www.sportbiketrackgear.com/galfer-kawasaki-ninja-500-2024-g1370-hh-front-brake-pads/",
+      "checked": "2026-10-12",
+      "note": "One card; single front disc"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "gbrakes-front-lines-ninja500",
+    "category": "brakes",
+    "tier": "mid",
+    "name": "Sportbike Front Brake Lines (stainless)",
+    "brand": "GBrakes",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 175.0,
+      "source": "https://www.cyclegear.com/parts/gbrakes-sportbike-front-brake-lines-kawasaki-ninja-500-2024-2026",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": null,
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  }
+]
