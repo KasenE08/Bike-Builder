@@ -1,0 +1,95 @@
+{
+  "id": "ducati-panigale-v4-r",
+  "make": "Ducati",
+  "model": "Panigale V4 R",
+  "year": 2026,
+  "msrp": {
+    "value": 49995,
+    "est": false,
+    "source": "https://www.motorcycle.com/specs/ducati/track/2026/panigale/v4-r/detail.html",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 208,
+    "est": false,
+    "source": "US-spec, https://www.cyclenews.com/2025/09/article/2026-ducati-panigale-v4-r-first-look-and-specs/",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 84,
+    "est": false,
+    "source": "https://www.cyclenews.com/2025/09/article/2026-ducati-panigale-v4-r-first-look-and-specs/",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 13250,
+  "peakTorqueRpm": 12000,
+  "wetWeightLb": {
+    "value": 438.4,
+    "est": true,
+    "source": "est. 411 lb published wet without fuel + 4.5 gal x 6.1 lb; 186.5 kg wet without fuel, https://www.motorcycle.com/specs/ducati/track/2026/panigale/v4-r/detail.html",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 379.2,
+    "est": false,
+    "source": "172 kg, https://www.1000ps.com/en-gb/model/9559/ducati-panigale-v4-r/2025",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 197,
+    "est": false,
+    "source": "Ducati US claim, https://www.ducati.com/us/en/news/new-panigale-v4-r-the-maximum-expression-of-ducati-racing-technology",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 2.9,
+    "est": true,
+    "source": "est. no published 0-60 for current V4 R",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 6.06,
+    "est": true,
+    "source": "est. tested 0-150 minus est. 0-60",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 8.96,
+    "est": false,
+    "source": "https://motostatz.com/ducati-panigale-vr-acceleation-top-speed/",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 998,
+  "gearing": {
+    "frontSprocket": 16,
+    "rearSprocket": 43,
+    "primaryRatio": 1.8,
+    "gearRatios": [
+      2.4,
+      2,
+      1.737,
+      1.524,
+      1.364,
+      1.227
+    ],
+    "rearTire": "200/60-17",
+    "rearTireDiameterIn": 26.45,
+    "redlineRpm": 16000,
+    "est": false,
+    "source": "https://www.motorcyclespecs.co.za/model/ducati/ducati-panigale-v4r-2026.html (2025 sheets list 15/42; redline est.)"
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Ducati DQS up/down EVO 2",
+    "winglets": "Factory aero winglets"
+  },
+  "calibration": {
+    "cdA": 3.403,
+    "launchG": 1.022,
+    "shiftTimeS": 0.06,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0% (target est.), top -0.0%, 0-150 +0.5%, 60-150 +0.8% (target est.); shift 0.06s est."
+  }
+}

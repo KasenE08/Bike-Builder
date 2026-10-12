@@ -1,0 +1,92 @@
+{
+  "id": "kawasaki-ninja-500",
+  "make": "Kawasaki",
+  "model": "Ninja 500",
+  "year": 2026,
+  "msrp": {
+    "value": 5399,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-500",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 51,
+    "est": false,
+    "source": "Kawasaki US (ISO 4106), https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-500",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 31.7,
+    "est": false,
+    "source": "https://www.kawasaki.com/en-us/products/ProductSpecSheetPDF/2026-ninja-500",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 10000,
+  "peakTorqueRpm": 7500,
+  "wetWeightLb": {
+    "value": 370.4,
+    "est": false,
+    "source": "curb, 49-state non-ABS, https://www.cyclenews.com/2025/09/article/2026-kawasaki-ninja-sport-and-supersport-lineup/",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 341.8,
+    "est": false,
+    "source": "Kawasaki est. dry (50-state non-ABS), https://www.motorcycle.com/specs/kawasaki/sport/2026/ninja-500/base/detail.html",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 115,
+    "est": true,
+    "source": "est. no official figure; owners report 110-120 mph, https://www.vikingbags.com/blogs/news/ninja-500-top-speed",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 3.9,
+    "est": true,
+    "source": "est. no published instrumented test",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 451,
+  "gearing": {
+    "frontSprocket": 14,
+    "rearSprocket": 43,
+    "primaryRatio": 2.029,
+    "gearRatios": [
+      2.929,
+      2.056,
+      1.619,
+      1.333,
+      1.154,
+      1.037
+    ],
+    "rearTire": "150/60-17",
+    "rearTireDiameterIn": 24.09,
+    "redlineRpm": 12000,
+    "est": false,
+    "source": "https://www.kawasaki.com.au/en-au/motorcycle/ninja/sport/ninja-500/2026-ninja-500 (redline est.)"
+  },
+  "streetLegal": true,
+  "stock": {},
+  "calibration": {
+    "cdA": 4.214,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +7.4% (target est.), top +0.0% (target est.); shift 0.25s est."
+  }
+}

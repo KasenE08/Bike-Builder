@@ -1,0 +1,94 @@
+{
+  "id": "yamaha-r7",
+  "make": "Yamaha",
+  "model": "YZF-R7",
+  "year": 2026,
+  "msrp": {
+    "value": 9399,
+    "est": false,
+    "source": "https://motorcycles.autotrader.com/motorcycles/2026/yamaha/yzf_r7/201952934",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 73,
+    "est": false,
+    "source": "Yamaha claim, https://www.rideapart.com/reviews/792423/2026-yamaha-r7-sportbike-first-ride-motorcycle-review-specs-price-features/",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 50.2,
+    "est": false,
+    "source": "https://www.bennetts.co.uk/bikesocial/reviews/bikes/yamaha/r7-2026-review",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 8750,
+  "peakTorqueRpm": 6500,
+  "wetWeightLb": {
+    "value": 416,
+    "est": false,
+    "source": "189 kg wet, https://daytonamotorsports.ca/items/itemid/40315295/2026-Yamaha-YZF-R7-Breaker-Cyan/",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 383.3,
+    "est": true,
+    "source": "est. wet minus fuel (3.4 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 139,
+    "est": false,
+    "source": "GPS test (2022+ R7), https://motostatz.com/yamaha-yzf-r7-top-speed-acceleration/",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 3.27,
+    "est": false,
+    "source": "https://motostatz.com/yamaha-yzf-r7-top-speed-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 689,
+  "gearing": {
+    "frontSprocket": 16,
+    "rearSprocket": 42,
+    "primaryRatio": 1.925,
+    "gearRatios": [
+      2.846,
+      2.125,
+      1.632,
+      1.3,
+      1.091,
+      0.964
+    ],
+    "rearTire": "180/55-17",
+    "rearTireDiameterIn": 24.8,
+    "redlineRpm": 10000,
+    "est": true,
+    "source": "sprockets 42/16 https://www.motorsportsuniverse.com/blog/powersports-news/2021/05/performance-on-a-budget-2022-yamaha-yzf-r7-blends-track-focused-features-with-a-rider-friendly-design ; primary+gears est. from MT-07 CP2 engine"
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Yamaha QSS up/down (3rd gen)"
+  },
+  "calibration": {
+    "cdA": 3.374,
+    "launchG": 1.023,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top -0.0%; shift 0.06s est."
+  }
+}

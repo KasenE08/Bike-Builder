@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+*.local
+
+# Personal data and reference photos must never be committed
+reference/
+photos/
+*.jpg
+*.jpeg
+*.heic
+*.HEIC
+*.png
+!public/icons/*.png
+*.bikebuilder-backup.json

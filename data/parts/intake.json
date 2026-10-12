@@ -1,0 +1,189 @@
+[
+  {
+    "id": "dna-filter-ninja400-500",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (P-K4S18-01)",
+    "brand": "DNA",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 115.6,
+      "source": "https://www.sportbiketrackgear.com/dna-kawasaki-ninja-500-2024-air-filter/",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No Ninja 500 dyno; est. from MT-07 DNA filter dyno (+~0.5 hp peak on ~50 hp) (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "norton-ram-air-ninja400-500",
+    "category": "intake",
+    "tier": "premium",
+    "name": "Norton Racing Ram Air Kit",
+    "brand": "Norton Motorsports",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 449.95,
+      "source": "https://norton-motorsports.com/product/norton-racing-ninja400r-ram-air-kit-kawasaki-ninja-400-z400-500-z500",
+      "checked": "2026-10-12",
+      "note": "Not compatible with ABS; ABS must be removed"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Requires ABS removal; closed-course",
+    "requires": [
+      "tune"
+    ],
+    "effect": {
+      "hpPct": 4.2,
+      "torquePct": 2.0,
+      "est": true,
+      "basis": "No published dyno; hp est. from TST V2 velocity stacks claim on Ninja 500 (+4.2% peak) (https://tstindustries.com/products/tst-worx-v2-velocity-stacks-kawasaki-ninja-500-2024); torque est.",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "dna-filter-rs457",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter",
+    "brand": "DNA",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 112.1,
+      "source": "https://www.revzilla.com/motorcycle/dna-air-filter-aprilia-rs-457-2024-2026",
+      "checked": "2026-10-12",
+      "note": "Out of stock at RevZilla; same price at Cycle Gear"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No RS 457 dyno; est. from MT-07 DNA filter dyno (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "dna-filter-zx4r",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (P-K4S18-01)",
+    "brand": "DNA",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 117.8,
+      "source": "https://www.cyclegear.com/parts/dna-air-filter-kawasaki-z400-ninja-400-ninja-zx-4rr-2018-2023",
+      "checked": "2026-10-12",
+      "note": "Listing fitment includes ZX-4R"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No ZX-4R dyno; est. from MT-07 DNA filter dyno (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "dna-filter-r7",
+    "category": "intake",
+    "tier": "budget",
+    "name": "High-Performance Air Filter (R-Y7N14-01)",
+    "brand": "DNA",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 84.0,
+      "source": "https://edrperformance.com/collections/fz07-mt07-r7/products/dna-yamaha-r7-fz07-mt07-xsr700-tenere-700-air-filter",
+      "checked": "2026-10-12",
+      "note": "Fitment R7 2021+"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "MT-07 (same CP2 engine) DNA dyno +~0.5 hp peak; test also had a modified airbox lid (https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    }
+  }
+]

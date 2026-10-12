@@ -1,0 +1,94 @@
+{
+  "id": "yamaha-r1",
+  "make": "Yamaha",
+  "model": "YZF-R1",
+  "year": 2026,
+  "msrp": {
+    "value": 19199,
+    "est": false,
+    "source": "https://www.motorcycle.com/specs/yamaha/sport/2026/yzf/r1/detail.html",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 197,
+    "est": false,
+    "source": "200 PS Yamaha EU claim (Yamaha US doesn't publish hp), https://1000ps.com/en-us/model/329/yamaha-r1/2020",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 83,
+    "est": false,
+    "source": "112.4-113.3 Nm, https://www.torquepedia.com/yamaha/r1/2020",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 13500,
+  "peakTorqueRpm": 11500,
+  "wetWeightLb": {
+    "value": 448,
+    "est": false,
+    "source": "https://www.motorcycle.com/specs/yamaha/sport/2026/yzf/r1/detail.html",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 408.6,
+    "est": true,
+    "source": "est. wet minus fuel (4.5 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 191,
+    "est": false,
+    "source": "GPS test, at limiter, https://motostatz.com/15-19-yamaha-yzf-r1-acceleration/",
+    "checked": "2026-10-12",
+    "limited": true,
+    "limitMph": 191
+  },
+  "zeroTo60S": {
+    "value": 3.1,
+    "est": false,
+    "source": "https://motostatz.com/15-19-yamaha-yzf-r1-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 6.43,
+    "est": true,
+    "source": "est. tested 0-150 minus tested 0-60",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 9.53,
+    "est": false,
+    "source": "https://motostatz.com/15-19-yamaha-yzf-r1-acceleration/",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 998,
+  "gearing": {
+    "frontSprocket": 16,
+    "rearSprocket": 41,
+    "primaryRatio": 1.512,
+    "gearRatios": [
+      2.6,
+      2.176,
+      1.842,
+      1.579,
+      1.381,
+      1.25
+    ],
+    "rearTire": "190/55-17",
+    "rearTireDiameterIn": 25.23,
+    "redlineRpm": 14000,
+    "est": true,
+    "source": "sprockets https://sprocketcenter.com/c-1392113-YZF-R1-/-YZF-R1M-2015-2025.html ; primary+gears est."
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Yamaha QSS up/down"
+  },
+  "calibration": {
+    "cdA": 2.839,
+    "launchG": 0.955,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.0%, top +0.0%, 0-150 +0.0%, 60-150 -0.0% (target est.); shift 0.06s est."
+  }
+}

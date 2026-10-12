@@ -1,0 +1,119 @@
+[
+  {
+    "id": "flashtune-qs-kawasaki",
+    "category": "quickshifter",
+    "tier": "budget",
+    "name": "Quick Shifter Kit",
+    "brand": "FlashTune",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 240.0,
+      "source": "https://www.revzilla.com/motorcycle/flash-tune-quick-shifter-kit",
+      "checked": "2026-10-12",
+      "note": "List price; needs FlashTune-flashed ECU"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "requires": [
+      "tune"
+    ],
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
+  },
+  {
+    "id": "ftecu-qs-ninja400-500",
+    "category": "quickshifter",
+    "tier": "mid",
+    "name": "ECU-Based Quickshifter",
+    "brand": "FTECU",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 240.0,
+      "source": "https://www.norton-motorsports.com/product/ftecu-ecu-based-quickshifter-kawasaki-ninja-400-z400-23-500-24/",
+      "checked": "2026-10-12",
+      "note": "Needs ECU flash or flash harness to enable"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "requires": [
+      "tune"
+    ],
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
+  },
+  {
+    "id": "kawasaki-oem-qs-zx4r",
+    "category": "quickshifter",
+    "tier": "mid",
+    "name": "Kawasaki Quick Shifter (99994-1886)",
+    "brand": "Kawasaki",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 522.17,
+      "source": "https://www.revzilla.com/oem/kawasaki/2025-kawasaki-ninja-zx-4r/accessoryquick-shifter",
+      "checked": "2026-10-12",
+      "note": "OEM parts diagram for 2025 ZX-4R"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0.4,
+      "est": true,
+      "source": "est. sensor + harness",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "Quickshifter upshift 40-80 ms (https://www.bikedekho.com/news/category-explainers/understanding-quickshifters-and-their-benefits-19035); 0.06 s used. Clutch upshift ~0.6 s (https://www.brm.co.nz/how-quickshifters-work/).",
+      "shiftTimeS": 0.06
+    }
+  }
+]

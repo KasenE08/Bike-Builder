@@ -1,0 +1,92 @@
+{
+  "id": "aprilia-rs-457",
+  "make": "Aprilia",
+  "model": "RS 457",
+  "year": 2026,
+  "msrp": {
+    "value": 6849,
+    "est": false,
+    "source": "https://www.motorcycle.com/specs/aprilia/sport/2026/rs-457/base/detail.html",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 47,
+    "est": false,
+    "source": "Aprilia claim via https://www.motorcycle.com/specs/aprilia/sport/2026/rs-457/base/detail.html",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 32,
+    "est": false,
+    "source": "Aprilia claim via https://www.motorcycle.com/specs/aprilia/sport/2026/rs-457/base/detail.html",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 9400,
+  "peakTorqueRpm": 6700,
+  "wetWeightLb": {
+    "value": 385,
+    "est": false,
+    "source": "175 kg kerb, https://www.torquepedia.com/aprilia/rs457/2026",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 350.5,
+    "est": false,
+    "source": "159 kg Aprilia claim, https://motorcycles.autotrader.com/motorcycles/2026/aprilia/rs_457/201933549",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 118,
+    "est": false,
+    "source": "Aprilia claim 190 km/h, https://www.evoindia.com/bikes/bike-reviews/aprilia-rs-457-first-ride-review; factory 120 mph limit per tuner BT Moto (https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner)",
+    "checked": "2026-10-12",
+    "limited": true,
+    "limitMph": 120
+  },
+  "zeroTo60S": {
+    "value": 4,
+    "est": true,
+    "source": "est. no published test; similar to Ninja 400 (4.07 s, MotoStatz)",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 457,
+  "gearing": {
+    "frontSprocket": 14,
+    "rearSprocket": 40,
+    "primaryRatio": 2.5,
+    "gearRatios": [
+      2.833,
+      1.947,
+      1.5,
+      1.227,
+      1,
+      0.84
+    ],
+    "rearTire": "150/60-17",
+    "rearTireDiameterIn": 24.09,
+    "redlineRpm": 10500,
+    "est": true,
+    "source": "est. stock gearing not published; ratios chosen to match 118 mph claim"
+  },
+  "streetLegal": true,
+  "stock": {},
+  "calibration": {
+    "cdA": 3.46,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": true,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +15.3% (target est.), top +0.0%; shift 0.25s est."
+  }
+}

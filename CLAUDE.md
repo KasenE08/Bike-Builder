@@ -1,0 +1,50 @@
+# Bike Builder — rules for Claude
+
+Personal motorcycle build configurator. iPhone PWA on GitHub Pages. Owner-only use.
+
+## How to work
+- Ask questions and show a plan before writing code. Confirm before each phase.
+- Data-accuracy calls (which figure, source or fitment is right): research and pick the most accurate yourself, note it; do not ask the owner.
+- Be direct, keep work token-efficient (owner is on a limited plan).
+- Dev branch = `claude/bike-build-configurator-g5w85d`. Merge to `main` (via PR) only after owner approval. `main` auto-deploys to Pages.
+- After each phase: explain simply what was built, update the progress log below.
+
+## Hard rules
+- **$0 to run:** static PWA only. No server, no paid APIs.
+- **Public repo:** never commit personal data, retailer/manufacturer images, or backups. `.gitignore` blocks images (except app icons).
+- **US units only:** mph, lb, lb-ft, hp. **Crank hp everywhere**; convert wheel-hp dyno gains (~10% drivetrain loss) and record the assumption.
+- **Never invent a price.** Every price comes from a real US listing with URL + date checked. Not found → `usd: null` and flag. Price > 90 days old → "price may be outdated".
+- Unpublished figures are estimated and marked `est: true` ("est." in UI). Forced induction on a bike that didn't ship with it → `roughGuess`.
+- Can't reach 150 mph → 60–150 and 0–150 show "N/A, can't reach 150".
+- Stock equipment shows as "Stock", not an add-on.
+- Fewer than 3 real products in a category → show what exists and record a gap in `data/parts/_gaps.json`.
+- Red = brand/actions only, never "bad". Green ▲ better, dark gray ▼ worse. White theme, no dark mode.
+
+## Stack
+Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (builds, settings, price edits, custom parts), Vitest, GitHub Actions → Pages.
+
+## Data
+- `data/bikes/<bike-id>.json` — one per bike, shape `Bike` in `src/data/types.ts`.
+- `data/parts/<category>.json` — array of `Part`; `fits` lists bike ids. Up to 3 tiers (budget/mid/premium) per category per bike.
+- Every number carries `{ value, est, source, checked }`.
+- Weights: `wetWeightLb` = ready to ride, full tank (physics uses this); `dryWeightLb` = no fuel/oil/coolant. Unpublished dry = wet − fuel×6.1 lb/gal − 12 lb (est.).
+- Adding a bike = add a JSON file, then `npm run calibrate`.
+- No photos or bike drawings (owner decision, Phase 5a).
+
+## Engine
+- Mod gains stack with diminishing returns: sort largest first, each next gain × 0.85^n, applied multiplicatively. Exhaust/intake reach full gain only with a tune.
+- Time-step sim (torque curve, gears, traction/wheelie limit, shift time, drag, rolling resistance, rider weight default 155 lb).
+- Per-bike `calibration` (cdA, launchG, shiftTimeS) fitted so stock sim matches published numbers.
+- Limiter caps top speed unless tune's "remove limiter" is on.
+- Code: `src/engine/` (curve, gains, sim, stock, calibrate, build). `npm run calibrate` rewrites every bike's `calibration`.
+- Est. constants: exhaust/intake without tune = 50% of gain; stock shift 0.25 s (0.06 s with factory QS); calibration uses a 180 lb test rider (published tests), builds use the owner's 155 lb; torque curve synthesized from peak hp/torque rpm.
+- Wrap/color is cosmetic only: never added to build price (owner decision, Phase 3a).
+
+## Progress log
+- **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Approved.
+- **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Approved.
+- **Phase 3a (part prices, Ninja 500 / RS 457 / ZX-4R / R7):** done. Approved. Prices = full/list price from real US listings (RevZilla first, then maker; no Amazon/eBay), via web search since direct fetches are blocked. Labor = est. hours × $147/hr (Nashville Motorcycle Repair). `effect` and `weightDeltaLb` deferred to Phase 3b. Wraps not priced. `src/data/parts.ts` loader + `parts.test.ts`. 51 parts, 48 gaps. Fitment is exact-model only: Ninja 400-only, ZX-4RR-only and pre-2026 R7 listings excluded (2026 R7 changed, e.g. 520 chain). Blemished/open-box-only prices not used. Dev branch for this phase: `claude/bike-build-phase-3a-6fpfvy` → PR to `main` on approval.
+- **Phase 3b (part effects + weights):** every part has `effect` (hp/torque %, `est`, basis) and `weightDeltaLb` (Stat). No dyno for a part → est. from closest real data (same category/bike, or same engine). Gearing parts list tooth options (`sprocketOptions`, default stock, owner picks). Quickshifter `shiftTimeS` 0.06 s. ZX-4R tune = +20.2% (TST ECU-only dyno), not +35%. RS 457 marked factory-limited at 120 mph (BT Moto). Done.
+- **Phase 4 (sim engine):** time-step sim + top-speed solver, gain stacking, build evaluator (price, hp, torque, weight, 0-60/60-150/0-150/top), calibration for all 12 bikes (cdA from top speed, or 0-150 when the limiter binds; launchG from 0-60). Big bikes match published within 2%. Ninja 500 (+7%) and RS 457 (+15%) stay slower than their est. 0-60 targets (physics says the targets were optimistic; Ninja 400 measured 4.07 s). ZX-4R 0-60 target corrected to 4.5 s est. Note: -1 front on the Ninja 500 adds a shift before 60 mph. Default rider 155 lb. Approved.
+- **Phase 5a (core screens):** hash-routed Preact UI in `src/ui/` — Garage, bike picker (4 bikes with parts first, others stock-only), build editor (sticky stat bar with ▲/▼ vs stock and per-metric est., Stock/Budget/Mid/Premium per category, gap notes, price-not-found/outdated flags, gearing teeth, limiter switch, part detail sheet, cost table, autosave), Compare (any saved build or stock bike), Settings (rider weight). IndexedDB store `src/store/db.ts` (+ tests with fake-indexeddb). App icon (public/icon.svg + PNGs). Photos and drawings dropped. Approved.
+- **Phase 5b (owner prices, custom parts, backup):** DB v2 adds `prices` (owner price per catalog part; listed price still shown) and `customParts` (tier `custom`, fits one bike, all numbers est.). Build editor: "Custom" option + "+ Add custom part" per category; part sheet: "Use my price"/reset, edit/delete custom. Settings: backup to Files (share sheet or download, `*.bikebuilder-backup.json`) and restore (replaces all). Awaiting approval.

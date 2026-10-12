@@ -1,0 +1,214 @@
+[
+  {
+    "id": "sc-jt-kit-ninja500",
+    "category": "gearing",
+    "tier": "budget",
+    "name": "520 Chain Kit, JT sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 145.0,
+      "source": "https://sprocketcenter.com/i-30500937-520-chain-kit-jt-sprockets-set-with-choice-of-chain-kawasaki-500-ninja-24-26.html",
+      "checked": "2026-10-12",
+      "note": "Includes chain (DID/EK/RK)"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          13,
+          14,
+          15
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    }
+  },
+  {
+    "id": "sc-superlite-kit-ninja500",
+    "category": "gearing",
+    "tier": "mid",
+    "name": "520 Chain Kit, Superlite RSX sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 173.0,
+      "source": "https://sprocketcenter.com/i-30500938-520-chain-kit-superlite-rsx-sprocket-set-with-choice-of-chain-kawasaki-500-ninja-24-26.html",
+      "checked": "2026-10-12",
+      "note": "Includes X-ring chain"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          13,
+          14,
+          15
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    }
+  },
+  {
+    "id": "sc-renthal-race-kit-ninja500",
+    "category": "gearing",
+    "tier": "premium",
+    "name": "520 Race Kit, Renthal aluminum rear, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 214.0,
+      "source": "https://sprocketcenter.com/i-30501004-520-race-kit-renthal-aluminum-sprocket-set-with-choice-of-chain-kawasaki-500-ninja-24-26.html",
+      "checked": "2026-10-12",
+      "note": "Includes chain"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -0.9,
+      "est": true,
+      "source": "Renthal: aluminum rear up to 33% lighter than steel; est. on ~2.7 lb steel 43T (https://sprocketcenter.com/i-30501004-520-race-kit-renthal-aluminum-sprocket-set-with-choice-of-chain-kawasaki-500-ninja-24-26.html)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          13,
+          14,
+          15
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    }
+  },
+  {
+    "id": "sc-superlite-kit-r7-2026",
+    "category": "gearing",
+    "tier": "mid",
+    "name": "520 Chain Kit, Superlite RSX sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 199.0,
+      "source": "https://sprocketcenter.com/i-30501159-520-chain-kit-superlite-rsx-sprocket-set-withchoice-of-chain-yamaha-yzf-r7-26-27.html",
+      "checked": "2026-10-12",
+      "note": "2026-27 R7 (520 pitch); includes X-ring chain"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact",
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "est": true
+      }
+    }
+  }
+]

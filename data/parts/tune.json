@@ -1,0 +1,327 @@
+[
+  {
+    "id": "tst-worx-stage1-ninja500",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Spec Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-spec-stage-1-ecu-tune-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No TST figure published; est. from BT Moto Ninja 500 flash dyno 45->50 whp, 27->29 wtq (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "tst-worx-stage3-ninja500",
+    "category": "tune",
+    "tier": "mid",
+    "name": "TST WORX Stage 3 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 285.99,
+      "source": "https://tstindustries.com/products/tst-worx-stage-3-ecu-tune-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "Est. as Stage 1 (BT Moto Ninja 500 flash dyno). TST Stage 3 is mapped for its airbox + full exhaust; gains on stock hardware may be lower. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "flashtune-datalink-kawasaki",
+    "category": "tune",
+    "tier": "premium",
+    "name": "Data-Link ECU Flashing Kit",
+    "brand": "FlashTune",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 380.0,
+      "source": "https://www.revzilla.com/motorcycle/flash-tune-data-link-ecu-flashing-kit-suzuki-yamaha-kawasaki",
+      "checked": "2026-10-12",
+      "note": "Self-flash tool; fitment lists Ninja 500 2024-2025"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "Est. from BT Moto Ninja 500 flash dyno 45->50 whp (https://bt-moto.com/product/23-25-kawasaki-ninja-500-stage-1-performance-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "btmoto-stage1plus-rs457",
+    "category": "tune",
+    "tier": "budget",
+    "name": "Stage 1+ ECU Flash with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 699.0,
+      "source": "https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner",
+      "checked": "2026-10-12",
+      "note": "Covers 2025-2027 RS 457"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "limiterRemovable": true,
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No RS 457 figure; est. from BT Moto flash dyno on Ninja 500 twin (+11% whp). Removes 2nd-gear and 120 mph limits (https://bt-moto.com/product/25-aprilia-rs-457-1-ecu-flash-with-tuner). Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "aprilia-racing-ecu-rs457",
+    "category": "tune",
+    "tier": "premium",
+    "name": "Aprilia Racing Marelli Race ECU",
+    "brand": "Aprilia Racing",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 799.95,
+      "source": "https://hsbkracing.com/parts-and-apparel/aprilia/rs-457/electrical/aprilia-racing-rs-457-marelli-racing-race-ecu",
+      "checked": "2026-10-12",
+      "note": "Track/race use only"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Track/race use only",
+    "effect": {
+      "hpPct": 11.1,
+      "torquePct": 7.4,
+      "est": true,
+      "basis": "No figure published; est. from BT Moto twin-cylinder flash dyno (+11% whp). Race maps intended with race exhaust."
+    }
+  },
+  {
+    "id": "tst-worx-zx4r",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-kawasaki-ninja-zx-4rr-2023-zx-4r-2024",
+      "checked": "2026-10-12",
+      "note": "ZX-4R 2024-2026, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 20.2,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "TST dyno ZX-4RR ECU-only 58.56 -> 70.39 whp (+20.2%) (https://tstindustries.com/blogs/news/removing-the-leash-kawasakis-ninja-zx-4rr-tune-reveals-massive-power-gains). Torque gain not published, est. +5%. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "2wdw-flash-zx4r",
+    "category": "tune",
+    "tier": "mid",
+    "name": "Mail-In ECU Flashing Service",
+    "brand": "2 Wheel Dynoworks",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 399.99,
+      "source": "https://2wheeldynoworks.com/products/2wdw-zx4rr-mail-in-ecu-flashing-service",
+      "checked": "2026-10-12",
+      "note": "Regular price; covers ZX-4R/RR"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 20.2,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "No 2WDW figure; est. from TST ZX-4RR ECU-only dyno +20.2% (https://tstindustries.com/blogs/news/removing-the-leash-kawasakis-ninja-zx-4rr-tune-reveals-massive-power-gains). Torque est. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional)."
+    }
+  },
+  {
+    "id": "tst-worx-stage1-r7-2026",
+    "category": "tune",
+    "tier": "budget",
+    "name": "TST WORX Stage 1 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 250.0,
+      "source": "https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2026",
+      "checked": "2026-10-12",
+      "note": "2026+ R7, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 2.5,
+      "torquePct": 2.5,
+      "est": true,
+      "basis": "TST claim 'up to 2.5%' hp and torque for 2022-25 R7 tune, applied to 2026; rev limit to 11,000 rpm (https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2022)."
+    }
+  },
+  {
+    "id": "tst-worx-stage2-r7-2026",
+    "category": "tune",
+    "tier": "mid",
+    "name": "TST WORX Stage 2 ECU Tune (mail-in)",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 285.0,
+      "source": "https://tstindustries.com/products/tst-worx-stage-2-ecu-tune-yamaha-yzf-r7-2026",
+      "checked": "2026-10-12",
+      "note": "2026+ R7, North American ECUs only"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 2.5,
+      "torquePct": 2.5,
+      "est": true,
+      "basis": "No Stage 2 figure; est. from TST R7 claim 'up to 2.5%' (https://tstindustries.com/products/tst-worx-performance-ecu-tune-yamaha-yzf-r7-2022). Stage 2 is mapped for TST airbox."
+    }
+  }
+]

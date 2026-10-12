@@ -1,0 +1,226 @@
+[
+  {
+    "id": "yoshimura-at2-ss-ninja500",
+    "category": "exhaust",
+    "tier": "budget",
+    "name": "AT2 Stainless Slip-On (14730BP520)",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 609.0,
+      "source": "https://tstindustries.com/products/yoshimura-street-series-at2-stainless-slip-on-exhaust-kawasaki-ninja-500-2024",
+      "checked": "2026-10-12",
+      "note": "Yoshimura's own pages show both $529 and $609; $609 matches TST"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.3,
+      "est": false,
+      "source": "Stock muffler 8.1 lb vs AT2 4.8 lb (https://tstindustries.com/products/yoshimura-street-series-at2-stainless-slip-on-exhaust-kawasaki-ninja-500-2024)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 3.2,
+      "torquePct": 5.3,
+      "est": false,
+      "basis": "Yoshimura claim +3.2% hp, +5.3% torque (https://tstindustries.com/products/yoshimura-street-series-at2-stainless-slip-on-exhaust-kawasaki-ninja-500-2024).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "two-brothers-s1r-ninja500",
+    "category": "exhaust",
+    "tier": "mid",
+    "name": "S1R Slip-On",
+    "brand": "Two Brothers Racing",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 659.97,
+      "source": "https://www.sportbiketrackgear.com/two-brothers-kawasaki-ninja-500-2024-s1r-slip-on-exhaust/",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.3,
+      "est": true,
+      "source": "est. from Yoshimura AT2 on same bike",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 3.2,
+      "torquePct": 5.3,
+      "est": true,
+      "basis": "No published dyno; est. from Yoshimura AT2 slip-on on the same bike (+3.2% hp, +5.3% torque).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "akrapovic-slipon-ti-ninja400-500",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Slip-On Line (Titanium)",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 783.95,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-slip-on-exhaust-kawasaki-ninja-400-2018",
+      "checked": "2026-10-12",
+      "note": "List price; listing title covers Ninja 400/500 2018-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -2.9,
+      "est": false,
+      "source": "Akrapovic: -1.3 kg vs stock (https://www.sportbiketrackgear.com/akrapovic-kawasaki-ninja-500-24-25-titanium-slip-on-exhaust/)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles",
+    "effect": {
+      "hpPct": 0.8,
+      "torquePct": 0.7,
+      "est": false,
+      "basis": "Akrapovic dyno +0.3 kW (0.4 hp) at 8,750 rpm, +0.3 Nm; % of 51 hp / 31.7 lb-ft stock (https://www.sportbiketrackgear.com/akrapovic-kawasaki-ninja-500-24-25-titanium-slip-on-exhaust/).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "yoshimura-at2-zx4r",
+    "category": "exhaust",
+    "tier": "budget",
+    "name": "AT2 Street Slip-On",
+    "brand": "Yoshimura",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 689.0,
+      "source": "https://tstindustries.com/products/yoshimura-street-at2-slip-on-exhaust-kawasaki-zx4rr-zx4r",
+      "checked": "2026-10-12",
+      "note": "Same price at Cycle Gear"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.5,
+      "est": false,
+      "source": "Yoshimura: -4.5 lb vs stock (https://www.cyclenews.com/2023/08/article/yoshimura-at2-zx-4rr-slip-on/)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "effect": {
+      "hpPct": 3.0,
+      "torquePct": 4.3,
+      "est": false,
+      "basis": "Yoshimura claim ~+3% hp, +4.3% torque on ZX-4RR (same engine) (https://www.cyclenews.com/2023/08/article/yoshimura-at2-zx-4rr-slip-on/).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "akrapovic-slipon-zx4r",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Slip-On Line",
+    "brand": "Akrapovic",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 1137.0,
+      "source": "https://tstindustries.com/products/akrapovic-slip-on-exhaust-kawasaki-ninja-zx-4rr-zx-4r",
+      "checked": "2026-10-12",
+      "note": "Regular price; Kawasaki store MSRP pages conflict ($984-$1,048)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.5,
+      "est": true,
+      "source": "Saving not published; est. from Yoshimura AT2 on ZX-4RR (-4.5 lb)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: closed-course use only",
+    "effect": {
+      "hpPct": 1.2,
+      "torquePct": 2.0,
+      "est": false,
+      "basis": "Akrapovic dyno +0.7 kW at 8,650 rpm, +0.8 Nm; % of 77 hp / 28.9 lb-ft unrestricted baseline (https://tstindustries.com/products/akrapovic-slip-on-exhaust-kawasaki-ninja-zx-4rr-zx-4r).",
+      "needsTuneForFullGain": true
+    }
+  },
+  {
+    "id": "akrapovic-evolution-r7-2026",
+    "category": "exhaust",
+    "tier": "premium",
+    "name": "Evolution Full Exhaust System",
+    "brand": "Akrapovic",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 2232.0,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-evolution-exhaust-system-yamaha-r7-2026",
+      "checked": "2026-10-12",
+      "note": "Out of stock at RevZilla"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.6,
+      "est": true,
+      "source": "est. from Akrapovic racing system on 2022 R7: -3.0 kg (https://www.rideapart.com/news/554286/akrapovic-exhaust-euro5-yamaha-r7/)",
+      "checked": "2026-10-12"
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use",
+    "requires": [
+      "tune"
+    ],
+    "effect": {
+      "hpPct": 8.1,
+      "torquePct": 4.3,
+      "est": true,
+      "basis": "No 2026 figure; est. from Akrapovic racing (open) system on 2022 R7: +5.9 hp, +2.9 Nm (https://www.rideapart.com/news/554286/akrapovic-exhaust-euro5-yamaha-r7/); % of 73 hp / 50.2 lb-ft.",
+      "needsTuneForFullGain": true
+    }
+  }
+]

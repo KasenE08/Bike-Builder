@@ -1,0 +1,92 @@
+{
+  "id": "honda-cbr650r",
+  "make": "Honda",
+  "model": "CBR650R ABS",
+  "year": 2026,
+  "msrp": {
+    "value": 9199,
+    "est": false,
+    "source": "https://motorcycles.autotrader.com/motorcycles/2026/honda/cbr650r/201974300",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 94,
+    "est": false,
+    "source": "70 kW Honda claim, https://www.torquepedia.com/honda/cbr650r/2026/e-clutch",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 46.5,
+    "est": false,
+    "source": "63 Nm, https://www.torquepedia.com/honda/cbr650r/2026/e-clutch",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 12000,
+  "peakTorqueRpm": 9500,
+  "wetWeightLb": {
+    "value": 466,
+    "est": false,
+    "source": "curb, https://hondanews.com/en-US/releases/release-410d07897fdd63d8043cb727500900a8-2024-honda-cbr650r-specifications",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 429,
+    "est": true,
+    "source": "est. wet minus fuel (4.1 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 144,
+    "est": false,
+    "source": "GPS test, https://motostatz.com/honda-cbr650r-review/",
+    "checked": "2026-10-12",
+    "limited": false,
+    "limitMph": null
+  },
+  "zeroTo60S": {
+    "value": 3.3,
+    "est": false,
+    "source": "https://motostatz.com/honda-cbr650r-review/",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": null,
+    "est": true,
+    "source": "N/A, can't reach 150 mph (top speed below 150)",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 649,
+  "gearing": {
+    "frontSprocket": 15,
+    "rearSprocket": 42,
+    "primaryRatio": 1.69,
+    "gearRatios": [
+      3.071,
+      2.352,
+      1.888,
+      1.56,
+      1.37,
+      1.214
+    ],
+    "rearTire": "180/55-17",
+    "rearTireDiameterIn": 24.8,
+    "redlineRpm": 12500,
+    "est": true,
+    "source": "sprockets 15/42 https://hondanews.com/en-US/releases/release-410d07897fdd63d8043cb727500900a8-2024-honda-cbr650r-specifications ; primary+gears est."
+  },
+  "streetLegal": true,
+  "stock": {},
+  "calibration": {
+    "cdA": 3.936,
+    "launchG": 2.5,
+    "shiftTimeS": 0.25,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 +0.5%, top -0.0%; shift 0.25s est."
+  }
+}

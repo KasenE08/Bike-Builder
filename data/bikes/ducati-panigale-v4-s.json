@@ -1,0 +1,95 @@
+{
+  "id": "ducati-panigale-v4-s",
+  "make": "Ducati",
+  "model": "Panigale V4 S",
+  "year": 2026,
+  "msrp": {
+    "value": 35595,
+    "est": false,
+    "source": "https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "checked": "2026-10-12"
+  },
+  "hp": {
+    "value": 209,
+    "est": false,
+    "source": "US-spec, https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "checked": "2026-10-12"
+  },
+  "torqueLbFt": {
+    "value": 89.5,
+    "est": false,
+    "source": "121.3 Nm, https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "checked": "2026-10-12"
+  },
+  "peakHpRpm": 12750,
+  "peakTorqueRpm": 11250,
+  "wetWeightLb": {
+    "value": 439.4,
+    "est": true,
+    "source": "est. 412 lb published wet without fuel + 4.5 gal x 6.1 lb; 187 kg wet without fuel, https://www.motorcycle.com/specs/ducati/sport/2026/panigale/v4-s/detail.html",
+    "checked": "2026-10-12"
+  },
+  "dryWeightLb": {
+    "value": 399.9,
+    "est": true,
+    "source": "est. wet minus fuel (4.5 gal x 6.1 lb) minus ~12 lb oil/coolant (rule fitted to Kawasaki's published dry/curb pairs)",
+    "checked": "2026-10-12"
+  },
+  "topSpeedMph": {
+    "value": 191.3,
+    "est": false,
+    "source": "GPS test, at limiter (2018-19 V4 S), https://motorcyclenews.com/bike-reviews/ducati/panigale-v4s/2018",
+    "checked": "2026-10-12",
+    "limited": true,
+    "limitMph": 191.3
+  },
+  "zeroTo60S": {
+    "value": 2.88,
+    "est": false,
+    "source": "Cycle World Oct 2019 (V4), via https://fastestlaps.com/models/ducati-panigale-v4",
+    "checked": "2026-10-12"
+  },
+  "sixtyTo150S": {
+    "value": 6.43,
+    "est": true,
+    "source": "est. tested 0-150 minus tested 0-60",
+    "checked": "2026-10-12"
+  },
+  "zeroTo150S": {
+    "value": 9.31,
+    "est": false,
+    "source": "Panigale V4, https://motostatz.com/panigale-v4-vs-panigale-1299/",
+    "checked": "2026-10-12"
+  },
+  "displacementCc": 1103,
+  "gearing": {
+    "frontSprocket": 16,
+    "rearSprocket": 41,
+    "primaryRatio": 1.8,
+    "gearRatios": [
+      2.4,
+      2,
+      1.737,
+      1.524,
+      1.364,
+      1.227
+    ],
+    "rearTire": "200/60-17",
+    "rearTireDiameterIn": 26.45,
+    "redlineRpm": 14500,
+    "est": false,
+    "source": "https://www.bobsmotorcycles.com/2025-ducati-panigale-v4-s-b004154/ (redline est.)"
+  },
+  "streetLegal": true,
+  "stock": {
+    "quickshifter": "Ducati DQS up/down EVO 2",
+    "winglets": "Factory aero winglets"
+  },
+  "calibration": {
+    "cdA": 4.008,
+    "launchG": 1.032,
+    "shiftTimeS": 0.06,
+    "est": false,
+    "fit": "sim (180 lb test rider) vs published: 0-60 -0.0%, top -1.9%, 0-150 -0.0%, 60-150 -0.0% (target est.); shift 0.06s est."
+  }
+}
