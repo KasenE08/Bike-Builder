@@ -905,5 +905,399 @@
     },
     "streetLegal": false,
     "streetLegalReason": "H2R itself is track-only"
+  },
+  {
+    "id": "arrow-pro-race-ninja500",
+    "category": "exhaust",
+    "name": "Pro-Race Slip-On",
+    "brand": "Arrow",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 499.0,
+      "source": "https://www.revzilla.com/motorcycle/arrow-pro-race-slip-on-exhaust-kawasaki-ninja-500-z500-2024",
+      "checked": "2026-10-12",
+      "note": "List price ($468 on sale); fits 2024-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.1,
+      "est": true,
+      "source": "est. average of Yoshimura (-3.3 lb) and Akrapovic (-2.9 lb) slip-ons on same bike",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 2.0,
+      "torquePct": 3.0,
+      "est": true,
+      "basis": "No figure; est. as average of sourced slip-ons on the Ninja 500 (Yoshimura +3.2%/+5.3%, Akrapovic +0.8%/+0.7%).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "leovince-lv10-ninja500",
+    "category": "exhaust",
+    "name": "LV-10 Slip-On",
+    "brand": "LeoVince",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 317.95,
+      "source": "https://www.leovince.com/en-us/product/1811-3537-lv-10-kawasaki-ninja-500-se-2024-2026",
+      "checked": "2026-10-12",
+      "note": "Maker US price; fits Ninja 500/SE 2024-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.1,
+      "est": true,
+      "source": "est. average of Yoshimura (-3.3 lb) and Akrapovic (-2.9 lb) slip-ons on same bike",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 2.0,
+      "torquePct": 3.0,
+      "est": true,
+      "basis": "No figure; est. as average of sourced slip-ons on the Ninja 500 (Yoshimura +3.2%/+5.3%, Akrapovic +0.8%/+0.7%).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "arrow-racing-full-rs457",
+    "category": "exhaust",
+    "name": "Racing Full Exhaust System",
+    "brand": "Arrow",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 1946.0,
+      "source": "https://www.hsbkracing.com/parts-and-apparel/aprilia/rs-457/exhaust/",
+      "checked": "2026-10-12",
+      "note": "ECU remap required (Moto-D)"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from SC-Project S1 system claim (-2.9 kg vs stock)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.3,
+      "torquePct": 5.1,
+      "est": true,
+      "basis": "est. from SC-Project claim for its RS 457 full system: +2.5 hp, +2.2 Nm (https://shop.sc-project.com/en/brands/aprilia/rs-457-2024/a30a-177a-2-1-stainless-steel-full-exhaust-system-with-s1-stainless-steel-exhaust); % of 47 hp / 32 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Non-homologated racing version"
+  },
+  {
+    "id": "arrow-pista-ti-rs457",
+    "category": "exhaust",
+    "name": "Pista Titanium Full System, Dark (no cat)",
+    "brand": "Arrow",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 1520.28,
+      "source": "https://www.af1racing.com/rs457-exhaust-systems",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from SC-Project S1 system claim (-2.9 kg vs stock)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.3,
+      "torquePct": 5.1,
+      "est": true,
+      "basis": "est. from SC-Project claim for its RS 457 full system: +2.5 hp, +2.2 Nm (https://shop.sc-project.com/en/brands/aprilia/rs-457-2024/a30a-177a-2-1-stainless-steel-full-exhaust-system-with-s1-stainless-steel-exhaust); % of 47 hp / 32 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Race use (no catalytic converter)"
+  },
+  {
+    "id": "spark-grid-o-rs457",
+    "category": "exhaust",
+    "name": "\"Grid-O\" Full Exhaust System",
+    "brand": "Spark",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 1499.99,
+      "source": "https://hhrperformance.com/products/spark-aprilia-rs-457-grid-o-full-exhaust-system",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from SC-Project S1 system claim (-2.9 kg vs stock)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.3,
+      "torquePct": 5.1,
+      "est": true,
+      "basis": "est. from SC-Project claim for its RS 457 full system: +2.5 hp, +2.2 Nm (https://shop.sc-project.com/en/brands/aprilia/rs-457-2024/a30a-177a-2-1-stainless-steel-full-exhaust-system-with-s1-stainless-steel-exhaust); % of 47 hp / 32 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "gpr-m3-inox-rs457",
+    "category": "exhaust",
+    "name": "M3 Inox Full System",
+    "brand": "GPR",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 1190.0,
+      "source": "https://www.sixty61.com/products/aprilia-rs-457-2024-2025-exhaust-gpr-full-system-m3-inox",
+      "checked": "2026-10-12",
+      "note": "Backordered; may trigger engine error without remap"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from SC-Project S1 system claim (-2.9 kg vs stock)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.3,
+      "torquePct": 5.1,
+      "est": true,
+      "basis": "est. from SC-Project claim for its RS 457 full system: +2.5 hp, +2.2 Nm (https://shop.sc-project.com/en/brands/aprilia/rs-457-2024/a30a-177a-2-1-stainless-steel-full-exhaust-system-with-s1-stainless-steel-exhaust); % of 47 hp / 32 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "dominator-gps-rs457",
+    "category": "exhaust",
+    "name": "GP-s Stainless Full System",
+    "brand": "Dominator",
+    "fits": [
+      "aprilia-rs-457"
+    ],
+    "price": {
+      "usd": 484.95,
+      "source": "https://www.af1racing.com/rs457-exhaust-systems",
+      "checked": "2026-10-12",
+      "note": "Special order"
+    },
+    "labor": {
+      "usd": 367.5,
+      "hours": 2.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.4,
+      "est": true,
+      "source": "est. from SC-Project S1 system claim (-2.9 kg vs stock)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.3,
+      "torquePct": 5.1,
+      "est": true,
+      "basis": "est. from SC-Project claim for its RS 457 full system: +2.5 hp, +2.2 Nm (https://shop.sc-project.com/en/brands/aprilia/rs-457-2024/a30a-177a-2-1-stainless-steel-full-exhaust-system-with-s1-stainless-steel-exhaust); % of 47 hp / 32 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "leovince-lv-corsa-s-zx4r",
+    "category": "exhaust",
+    "name": "LV Corsa S Slip-On",
+    "brand": "LeoVince",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 409.95,
+      "source": "https://www.cyclegear.com/parts/leovince-lv-corsa-s-slip-on-exhaust-kawasaki-ninja-zx-4r-rr-2023-2025",
+      "checked": "2026-10-12",
+      "note": "Fits ZX-4R/RR 2023-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.5,
+      "est": true,
+      "source": "est. from Yoshimura AT2 on ZX-4RR (-4.5 lb)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 2.1,
+      "torquePct": 3.2,
+      "est": true,
+      "basis": "No figure; est. as average of sourced slip-ons on the ZX-4R (Yoshimura +3%/+4.3%, Akrapovic +1.2%/+2.0%).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "arrow-indy-race-evo-zx4r",
+    "category": "exhaust",
+    "name": "Indy Race Evo Slip-On, Aluminum Dark (71963AKN)",
+    "brand": "Arrow",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 636.0,
+      "source": "https://www.accessoryinternational.com/category/sportbikes-kawasaki-ninja-zx4r-exhausts.html",
+      "checked": "2026-10-12",
+      "note": "ZX-4R 2024+; titanium version $726"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.5,
+      "est": true,
+      "source": "est. from Yoshimura AT2 on ZX-4RR (-4.5 lb)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 2.1,
+      "torquePct": 3.2,
+      "est": true,
+      "basis": "No figure; est. as average of sourced slip-ons on the ZX-4R (Yoshimura +3%/+4.3%, Akrapovic +1.2%/+2.0%).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "graves-catback-carbon-zx4r",
+    "category": "exhaust",
+    "name": "Cat-Back Slip-On, Carbon (EXK-23ZX4-CBTC)",
+    "brand": "Graves Motorsports",
+    "fits": [
+      "kawasaki-zx-4r"
+    ],
+    "price": {
+      "usd": 649.0,
+      "source": "https://www.gravesport.com/products/kawasaki-zx-4rr-zx-4r-cat-back-slip-on-carbon-exhaust.html",
+      "checked": "2026-10-12",
+      "note": "ZX-4RR/ZX-4R 2023+"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.5,
+      "est": true,
+      "source": "est. from Yoshimura AT2 on ZX-4RR (-4.5 lb)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 2.1,
+      "torquePct": 3.2,
+      "est": true,
+      "basis": "No figure; est. as average of sourced slip-ons on the ZX-4R (Yoshimura +3%/+4.3%, Akrapovic +1.2%/+2.0%).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "toce-razor-full-r7",
+    "category": "exhaust",
+    "name": "Full Exhaust System, Razor Tip",
+    "brand": "Toce Performance",
+    "fits": [
+      "yamaha-r7"
+    ],
+    "price": {
+      "usd": 1098.0,
+      "source": "https://toceperformance.com/yamaha/yamaha-r7-700-698-689-r-7",
+      "checked": "2026-10-12",
+      "note": "Listed for R7 2022-2026; listing may be dated"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -6.6,
+      "est": true,
+      "source": "est. from Akrapovic racing system on 2022 R7 (-3.0 kg)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 8.1,
+      "torquePct": 4.3,
+      "est": true,
+      "basis": "No Toce figure; est. from Akrapovic racing system on 2022 R7: +5.9 hp, +2.9 Nm (https://www.rideapart.com/news/554286/akrapovic-exhaust-euro5-yamaha-r7/)",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

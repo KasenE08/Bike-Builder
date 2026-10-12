@@ -141,5 +141,40 @@
       "est": false,
       "basis": "No power effect."
     }
+  },
+  {
+    "id": "galfer-hh-g1397-ninja500",
+    "category": "brakes",
+    "name": "HH Sintered Front Pads (G1397)",
+    "brand": "Galfer",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 40.28,
+      "source": "https://www.sportbiketrackgear.com/galfer-kawasaki-ninja-500-2024-g1397-hh-front-brake-pads/",
+      "checked": "2026-10-12",
+      "note": "List price; one card"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. negligible",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

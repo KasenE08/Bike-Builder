@@ -1,11 +1,6 @@
 [
   {
     "bike": "kawasaki-ninja-500",
-    "category": "intake",
-    "note": "Only 2 real products found (DNA filter, Norton ram air)."
-  },
-  {
-    "bike": "kawasaki-ninja-500",
     "category": "quickshifter",
     "note": "Only 2 branded kits found; unbranded eBay kits excluded."
   },
@@ -18,11 +13,6 @@
     "bike": "kawasaki-ninja-500",
     "category": "wheels",
     "note": "No wheels with confirmed Ninja 500 fitment; Dymag/OZ list Ninja 400 only."
-  },
-  {
-    "bike": "kawasaki-ninja-500",
-    "category": "brakes",
-    "note": "Only pads and lines found; no caliper/master cylinder kit with Ninja 500 fitment."
   },
   {
     "bike": "kawasaki-ninja-500",
@@ -43,11 +33,6 @@
     "bike": "kawasaki-ninja-500",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
-  },
-  {
-    "bike": "aprilia-rs-457",
-    "category": "exhaust",
-    "note": "No US listing with a price; SC-Project (EUR 690-980) and Mivv (EUR 969+) full systems are EU-only."
   },
   {
     "bike": "aprilia-rs-457",
@@ -111,11 +96,6 @@
   },
   {
     "bike": "kawasaki-zx-4r",
-    "category": "exhaust",
-    "note": "Only Yoshimura and Akrapovic found with ZX-4R fitment."
-  },
-  {
-    "bike": "kawasaki-zx-4r",
     "category": "intake",
     "note": "Only DNA filter found."
   },
@@ -162,7 +142,7 @@
   {
     "bike": "kawasaki-zx-4r",
     "category": "tailTidy",
-    "note": "Only Graves new; Puig and Rizoma seen only as blemished stock."
+    "note": "Only Graves and TST new; Puig and Rizoma seen only as blemished stock."
   },
   {
     "bike": "kawasaki-zx-4r",
@@ -177,7 +157,7 @@
   {
     "bike": "yamaha-r7",
     "category": "exhaust",
-    "note": "Only Akrapovic Evolution found for 2026; Racing GP 2026 seen only as blemished ($1,362). 2022-2025 parts excluded."
+    "note": "Only Akrapovic Evolution and Toce found for 2026; Racing GP 2026 seen only as blemished."
   },
   {
     "bike": "yamaha-r7",
@@ -222,7 +202,7 @@
   {
     "bike": "yamaha-r7",
     "category": "frameSliders",
-    "note": "Only Graves; Puig R19 lists up to 2025."
+    "note": "Only OES and Woodcraft confirmed for 2026; older sets don't fit the 2026 bodywork."
   },
   {
     "bike": "yamaha-r7",

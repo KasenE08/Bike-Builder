@@ -786,5 +786,57 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "vortex-ek-race-kit-ninja500",
+    "category": "gearing",
+    "name": "Vortex/EK Race 520 Chain and Sprocket Kit",
+    "brand": "Vortex",
+    "fits": [
+      "kawasaki-ninja-500"
+    ],
+    "price": {
+      "usd": 208.0,
+      "source": "https://www.sportbiketrackgear.com/vortex-ek-kawasaki-ninja-500-2024-race-520-chain-and-sprocket-kit/",
+      "checked": "2026-10-12",
+      "note": "Price $186-$208 by options"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          13,
+          14,
+          15
+        ],
+        "rear": [
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
