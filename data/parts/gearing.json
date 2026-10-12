@@ -628,5 +628,111 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-kit-r1",
+    "category": "gearing",
+    "name": "530 Chain Kit, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 229.0,
+      "source": "https://sprocketcenter.com/c-1392113-YZF-R1-/-YZF-R1M-2015-2025.html",
+      "checked": "2026-10-12",
+      "note": "Listed for 2015-2025; similar kits shown at $230-$245"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-520-driven-r1",
+    "category": "gearing",
+    "name": "520 Conversion Kit, Driven Racing rear, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 210.0,
+      "source": "https://sprocketcenter.com/c-1392113-YZF-R1-/-YZF-R1M-2015-2025.html",
+      "checked": "2026-10-12",
+      "note": "Listed for 2015-2025"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
