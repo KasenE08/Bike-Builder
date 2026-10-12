@@ -298,5 +298,50 @@
     "bike": "honda-cbr650r",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "intake",
+    "note": "Only DNA filter found, listed by a Canadian retailer (no US price)."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "frameSliders",
+    "note": "Only GB Racing (needs fairing cut) and Yamaha OEM (no price) found; Puig/Woodcraft R9 fitment not confirmed."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "brakes",
+    "note": "No priced pad/line/master listing with R9 fitment at a US retailer."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "suspension",
+    "note": "Only Ohlins FKR232 priced; K-Tech 25IDS dealer-only, no price."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "chain",
+    "note": "No chain-only listing; chains come in the gearing kits."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "carbon",
+    "note": "No priced carbon parts at US retailers."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "wheels",
+    "note": "No wheels listed for the R9."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "winglets",
+    "note": "Yamaha offers carbon winglets as an accessory but no price found."
+  },
+  {
+    "bike": "yamaha-r9",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]

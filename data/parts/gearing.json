@@ -366,5 +366,163 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-superlite-525-kit-r9",
+    "category": "gearing",
+    "name": "525 Chain Kit, Superlite sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 199.95,
+      "source": "https://sprocketcenter.com/c-1393155-YZF-R9--2025-2026.html",
+      "checked": "2026-10-12",
+      "note": "List price; $179 on sale"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-520-conversion-r9",
+    "category": "gearing",
+    "name": "520 Conversion Kit, Superlite RSX sprockets, gearing of choice",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 199.0,
+      "source": "https://sprocketcenter.com/i-30500868-520-conversion-kit-superlite-rsx-sprocket-set-with-choice-of-chain-yamaha-yzf-r9-25-26.html",
+      "checked": "2026-10-12",
+      "note": "Narrower/lighter than stock 525"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "sc-rsx-525-kit-r9",
+    "category": "gearing",
+    "name": "525 Chain Kit, Superlite RSX rear, gearing of choice (SL1290011)",
+    "brand": "Sprocket Center",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 201.0,
+      "source": "https://sprocketcenter.com/c-1393155-YZF-R9--2025-2026.html",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

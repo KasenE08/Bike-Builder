@@ -355,5 +355,179 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "tst-elite1-low-r9",
+    "category": "tailTidy",
+    "name": "Elite-1 Low Mount Fender Eliminator",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 85.99,
+      "source": "https://tstindustries.com/products/tst-elite-1-low-mount-fender-eliminator-yamaha-yzf-r9-2025",
+      "checked": "2026-10-12",
+      "note": "Undertail closeout extra ($55.99)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "tst-elite1-high-r9",
+    "category": "tailTidy",
+    "name": "Elite-1 High Mount Fender Eliminator",
+    "brand": "TST Industries",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 85.99,
+      "source": "https://tstindustries.com/products/tst-elite-1-fender-eliminator-yamaha-yzf-r9-2025",
+      "checked": "2026-10-12",
+      "note": "Undertail closeout extra ($55.99)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "puig-fender-elim-r9",
+    "category": "tailTidy",
+    "name": "Fender Eliminator Kit",
+    "brand": "Puig",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 156.9,
+      "source": "https://www.revzilla.com/motorcycle/puig-fender-eliminator-kit-yamaha-r9-2025-2026",
+      "checked": "2026-10-12",
+      "note": "List price"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "graves-fender-elim-r9",
+    "category": "tailTidy",
+    "name": "Fender Eliminator Kit (with LED plate light)",
+    "brand": "Graves Motorsports",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 189.5,
+      "source": "https://www.cyclegear.com/parts/graves-fender-eliminator-kit-yamaha-r9-2025-2026",
+      "checked": "2026-10-12",
+      "note": "List price"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "evotech-tail-tidy-r9",
+    "category": "tailTidy",
+    "name": "Tail Tidy Fender Eliminator Kit",
+    "brand": "Evotech Performance",
+    "fits": [
+      "yamaha-r9"
+    ],
+    "price": {
+      "usd": 197.49,
+      "source": "https://www.hsbkracing.com/parts-and-apparel/yamaha/yzf-r9/electrical/evotech-performance-yamaha-yzf-r9-tail-tidy-fender-eliminator-kit-2025",
+      "checked": "2026-10-12"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
   }
 ]
