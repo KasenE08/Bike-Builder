@@ -616,5 +616,77 @@
     },
     "streetLegal": false,
     "streetLegalReason": "Seller: not legal on emissions-controlled vehicles"
+  },
+  {
+    "id": "akrapovic-gp-slipon-r1",
+    "category": "exhaust",
+    "name": "GP Slip-On (Titanium)",
+    "brand": "Akrapovic",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 1167.95,
+      "source": "https://www.revzilla.com/motorcycle/akrapovic-gp-slip-on-exhaust-yamaha-r1-r1s-r1m",
+      "checked": "2026-10-12",
+      "note": "List price; fits 2015-2026 (some retailers list 2015-2025)"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.2,
+      "est": false,
+      "source": "Review weighed stock silencers 4.75 kg vs Akrapovic 3.31 kg (-1.44 kg), https://www.caradisiac.com/et-les-silencieux-2-2-127484.htm",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0.8,
+      "torquePct": 0.7,
+      "est": false,
+      "basis": "Akrapovic data sheet for 2015+ R1 Slip-On Line: +1.1 kW (1.5 hp) at 12,400 rpm, +0.8 Nm at 12,450 rpm (https://powersportsbusiness.com/?p=32516); % of 197 hp / 83 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Seller: not legal on emissions-controlled vehicles"
+  },
+  {
+    "id": "akrapovic-trackday-slipon-r1",
+    "category": "exhaust",
+    "name": "Track Day Slip-On",
+    "brand": "Akrapovic",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 996.88,
+      "source": "https://www.cyclegear.com/parts/akrapovic-track-day-slip-on-exhaust-yamaha-r1-2015-2025",
+      "checked": "2026-10-12",
+      "note": "Fits 2015-2026"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -3.2,
+      "est": true,
+      "source": "est. from Akrapovic Slip-On Line (-1.44 kg)",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0.8,
+      "torquePct": 0.7,
+      "est": true,
+      "basis": "No separate figure; est. same as Akrapovic slip-on: Akrapovic data sheet for 2015+ R1 Slip-On Line: +1.1 kW (1.5 hp) at 12,400 rpm, +0.8 Nm at 12,450 rpm (https://powersportsbusiness.com/?p=32516); % of 197 hp / 83 lb-ft.",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Closed-course use"
   }
 ]

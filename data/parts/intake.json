@@ -256,5 +256,41 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "dna-filter-r1",
+    "category": "intake",
+    "name": "High-Flow Air Filter",
+    "brand": "DNA",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 150.0,
+      "source": "https://bt-moto.com/product/15-24-yamaha-r1r1sr1m-dna-high-flow-air-filter",
+      "checked": "2026-10-12",
+      "note": "Fits 2015-2026; claims 19.7% more flow than stock"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Filter swap, no weight change",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.0,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No R1 dyno; est. from MT-07 DNA filter dyno, https://bikereview.com.au/dna-airfilter-added-lt-mt-07-tracer-dynod/. Wheel-hp % applied to crank hp (~10% drivetrain loss, proportional).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

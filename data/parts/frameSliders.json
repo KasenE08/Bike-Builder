@@ -496,5 +496,75 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "womet-tech-sliders-r1",
+    "category": "frameSliders",
+    "name": "Frame Sliders",
+    "brand": "Womet-Tech",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 105.99,
+      "source": "https://tstindustries.com/products/womet-tech-frame-sliders-yamaha-2015-r1",
+      "checked": "2026-10-12",
+      "note": "Fits R1/R1M/R1S 2015-2026"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "womet-tech-ma-sliders-r1",
+    "category": "frameSliders",
+    "name": "Frame Sliders, MotoAmerica Edition (WT-1043)",
+    "brand": "Womet-Tech",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 82.99,
+      "source": "https://tstindustries.com/products/womet-tech-frame-sliders-yamaha-2015-r1-motoamerica-edition-wt-1043",
+      "checked": "2026-10-12",
+      "note": "Low-profile race version; 2015-2026"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]

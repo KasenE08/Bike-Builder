@@ -393,5 +393,70 @@
     "bike": "kawasaki-zx-6r",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "exhaust",
+    "note": "Only 2 Akrapovic slip-ons confirmed for 2025+; Graves fitment unconfirmed."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "intake",
+    "note": "Only DNA confirmed for 2025+; K&N R1 pages don't list years."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "tune",
+    "note": "No ECU tune listed for the 2025+ R1 (FTECU kits stop at 2019, BT Moto at 2024)."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "frameSliders",
+    "note": "Only Womet-Tech confirmed for 2025+ at a US retailer."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "tailTidy",
+    "note": "Only Yoshimura V2 and New Rage Cycles found new."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "gearing",
+    "note": "Only 2 Sprocket Center kits."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "suspension",
+    "note": "No priced shock or fork kit for the 2025+ R1."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "brakes",
+    "note": "No priced pad/line listing with 2025+ fitment."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "chain",
+    "note": "No chain-only listing; chains come in the gearing kits."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "carbon",
+    "note": "No priced carbon parts at US retailers."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "wheels",
+    "note": "No priced forged wheels for the R1."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "winglets",
+    "note": "2025 R1 has factory winglets; no aftermarket set found."
+  },
+  {
+    "bike": "yamaha-r1",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]

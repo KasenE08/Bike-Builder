@@ -634,5 +634,75 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "yoshimura-v2-fender-r1",
+    "category": "tailTidy",
+    "name": "V2 Fender Eliminator Kit (075BG131410)",
+    "brand": "Yoshimura",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 169.0,
+      "source": "https://www.yoshimura-rd.com/products/yzf-r1-m-s-fender-eliminator-kit-075bg131410",
+      "checked": "2026-10-12",
+      "note": "Fitment list includes 2025"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Legal if plate light and reflector kept"
+  },
+  {
+    "id": "nrc-led-fender-r1",
+    "category": "tailTidy",
+    "name": "LED Fender Eliminator (tucked)",
+    "brand": "New Rage Cycles",
+    "fits": [
+      "yamaha-r1"
+    ],
+    "price": {
+      "usd": 150.0,
+      "source": "https://www.jpcycles.com/product/new-rage-cycles-led-fender-eliminator-yamaha-r1-r1m-r1s-2015-2023",
+      "checked": "2026-10-12",
+      "note": "Listed for 2015-2026"
+    },
+    "labor": {
+      "usd": 183.75,
+      "hours": 1.25,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -1.5,
+      "est": true,
+      "source": "est. stock fender/plate assembly removed",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": true,
+    "streetLegalReason": "DOT lighting; legal if plate light kept"
   }
 ]
