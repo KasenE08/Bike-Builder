@@ -869,5 +869,41 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "scorpion-serket-h2r",
+    "category": "exhaust",
+    "name": "Serket Taper Slip-On",
+    "brand": "Scorpion",
+    "fits": [
+      "kawasaki-ninja-h2r"
+    ],
+    "price": {
+      "usd": 660.94,
+      "source": "https://www.motomachines.com/shop-by-bike/kawasaki/ninja-h2",
+      "checked": "2026-10-12",
+      "note": "H2/H2R 2018-2021; H2R frame and exhaust unchanged since"
+    },
+    "labor": {
+      "usd": 147.0,
+      "hours": 1.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -4.0,
+      "est": true,
+      "source": "est. titanium/stainless slip-on vs stock can",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0.5,
+      "torquePct": 0.5,
+      "est": true,
+      "basis": "H2R already has a free-flowing race can; est. small gain (Scorpion claims +1.1 bhp on a 94 hp CBR650R full system, https://www.sportsbikeshop.co.uk/motorcycle_parts/content_prod/497561).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "H2R itself is track-only"
   }
 ]

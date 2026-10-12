@@ -566,5 +566,75 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "woodcraft-sliders-h2r",
+    "category": "frameSliders",
+    "name": "Frame Slider Kit (H2/H2R/SX)",
+    "brand": "Woodcraft",
+    "fits": [
+      "kawasaki-ninja-h2r"
+    ],
+    "price": {
+      "usd": 89.99,
+      "source": "https://www.revzilla.com/motorcycle/woodcraft-frame-slider-kit-kawasaki-ninja-h2-sx-sxe-2018-2021",
+      "checked": "2026-10-12",
+      "note": "Listed through 2021; H2R frame and exhaust unchanged since"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "H2R itself is track-only"
+  },
+  {
+    "id": "kawasaki-oem-sliders-h2r",
+    "category": "frameSliders",
+    "name": "Kawasaki Slider Kit (99994-0919)",
+    "brand": "Kawasaki",
+    "fits": [
+      "kawasaki-ninja-h2r"
+    ],
+    "price": {
+      "usd": 332.99,
+      "source": "https://www.revzilla.com/oem/kawasaki/kawasaki-99994-0919-kit-accessory-slider",
+      "checked": "2026-10-12",
+      "note": "Listed for H2R 2016-2019; out of stock"
+    },
+    "labor": {
+      "usd": 110.25,
+      "hours": 0.75,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 1.0,
+      "est": true,
+      "source": "est. pair of sliders + bolts",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": false,
+      "basis": "No power effect."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "H2R itself is track-only"
   }
 ]

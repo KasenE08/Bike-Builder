@@ -638,5 +638,60 @@
     "bike": "ducati-panigale-v4-r",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "exhaust",
+    "note": "Only Scorpion slip-on lists the H2R; Vandemon/Hotbodies listings name the H2 only."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "intake",
+    "note": "No intake listing for the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "tune",
+    "note": "No ECU tune listed for the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "frameSliders",
+    "note": "Only Woodcraft and Kawasaki OEM list the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "tailTidy",
+    "note": "H2R is track-only with no plate hardware; no tail tidy needed or listed."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "gearing",
+    "note": "Only single Vortex sprockets (mixed 525/530) found; no matched kit for the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "suspension",
+    "note": "Ohlins TTX36 shock is stock; no aftermarket kit listed."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "brakes",
+    "note": "No priced pad/line listing for the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "chain",
+    "note": "No chain listing for the H2R."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "carbon",
+    "note": "H2R already has carbon bodywork; no priced aftermarket parts."
+  },
+  {
+    "bike": "kawasaki-ninja-h2r",
+    "category": "wheels",
+    "note": "No priced wheels for the H2R."
   }
 ]
