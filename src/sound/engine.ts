@@ -30,6 +30,24 @@ function noiseBuffer(ctx: BaseAudioContext, seconds: number) {
   return b;
 }
 
+/** Shared output stage: gentle compressor (keeps exhaust differences) -> makeup gain -> limiter -> soft clipper (never hard-clips). */
+export function buildOutput(ctx: BaseAudioContext, level = 1): { input: GainNode; master: GainNode } {
+  const input = ctx.createGain(); input.gain.value = 1.4;
+  const comp = ctx.createDynamicsCompressor();
+  comp.threshold.value = -12; comp.knee.value = 10; comp.ratio.value = 2.5; comp.attack.value = 0.006; comp.release.value = 0.15;
+  const makeup = ctx.createGain(); makeup.gain.value = 2.5;
+  const limiter = ctx.createDynamicsCompressor();
+  limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20; limiter.attack.value = 0.001; limiter.release.value = 0.06;
+  const soft = ctx.createWaveShaper(); // smooth ceiling just under full scale
+  const c = new Float32Array(2048);
+  for (let i = 0; i < c.length; i++) { const x = (i / 1023.5) - 1; c[i] = 0.97 * Math.tanh(1.5 * x) / Math.tanh(1.5); }
+  soft.curve = c; soft.oversample = '2x';
+  const post = ctx.createGain(); post.gain.value = level; // exhaust loudness after compression
+  const master = ctx.createGain(); master.gain.value = 1; // fade in/out lives here
+  input.connect(comp).connect(makeup).connect(limiter).connect(soft).connect(post).connect(master).connect(ctx.destination);
+  return { input, master };
+}
+
 export interface Voice {
   apply(t: number, s: RevState, events: { crackleStart: boolean; blowOff: number }): void;
   stop(t: number): void;
@@ -146,11 +164,10 @@ export class EngineSound {
     const ctx = new AudioContext({ latencyHint: 'interactive' });
     this.ctx = ctx;
     await ctx.resume();
-    const master = ctx.createGain(); master.gain.value = 0;
-    const comp = ctx.createDynamicsCompressor(); comp.threshold.value = -14; comp.ratio.value = 4;
-    master.connect(comp).connect(ctx.destination);
-    master.gain.setTargetAtTime(0.9, ctx.currentTime, 0.15);
-    this.voice = await buildVoice(ctx, this.p, master);
+    const { input, master } = buildOutput(ctx, EXHAUST_VOICE[this.p.exhaust].level);
+    master.gain.value = 0;
+    master.gain.setTargetAtTime(0.98, ctx.currentTime, 0.15);
+    this.voice = await buildVoice(ctx, this.p, input);
     this.state = { rpm: this.p.idleRpm, load: 0, boost: 0, wasOn: false };
     this.last = performance.now();
     const tick = (now: number) => {

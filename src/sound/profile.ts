@@ -76,9 +76,10 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
 }
 
 /** Muffler/voice settings per exhaust (used by the audio graph). */
-export const EXHAUST_VOICE: Record<ExhaustKind, { lowpassHz: number; drive: number; bodyDb: number; gain: number; crackle: number }> = {
-  stock: { lowpassHz: 1100, drive: 1.6, bodyDb: 4, gain: 0.5, crackle: 0 },
-  slipOn: { lowpassHz: 2300, drive: 2.6, bodyDb: 6, gain: 0.72, crackle: 0.35 },
-  fullSystem: { lowpassHz: 3600, drive: 3.6, bodyDb: 7, gain: 0.88, crackle: 0.6 },
-  race: { lowpassHz: 5200, drive: 5, bodyDb: 8, gain: 0.85, crackle: 1 },
+// level = loudness applied after the master compressor, so louder exhausts stay louder at full rev.
+export const EXHAUST_VOICE: Record<ExhaustKind, { lowpassHz: number; drive: number; bodyDb: number; gain: number; crackle: number; level: number }> = {
+  stock: { lowpassHz: 1100, drive: 1.6, bodyDb: 4, gain: 0.5, crackle: 0, level: 0.82 },
+  slipOn: { lowpassHz: 2300, drive: 2.6, bodyDb: 6, gain: 0.72, crackle: 0.35, level: 0.9 },
+  fullSystem: { lowpassHz: 3600, drive: 3.6, bodyDb: 7, gain: 0.88, crackle: 0.6, level: 0.96 },
+  race: { lowpassHz: 5200, drive: 5, bodyDb: 8, gain: 0.85, crackle: 1, level: 1 },
 };
