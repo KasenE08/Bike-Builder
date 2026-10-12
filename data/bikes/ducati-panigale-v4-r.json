@@ -102,6 +102,24 @@
     ],
     "idleRpm": 1350,
     "est": true,
-    "source": "Desmosedici Stradale R V4 'Twin Pulse' firing (0-90-290-380); idle rpm est."
+    "source": "Desmosedici Stradale R V4 'Twin Pulse' firing (0-90-290-380); idle rpm est.",
+    "exhaust": {
+      "layout": "4-2-1",
+      "headerM": 0.35,
+      "secondaryM": 0.3,
+      "linkM": 0.45,
+      "groups": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "est": true,
+      "source": "4-2-1-2: each side pair joins, then one pipe through the cats (Rushlane); pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

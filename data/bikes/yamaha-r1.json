@@ -101,6 +101,24 @@
     ],
     "idleRpm": 1250,
     "est": true,
-    "source": "crossplane inline-4, 270-180-90-180 firing; idle rpm est."
+    "source": "crossplane inline-4, 270-180-90-180 firing; idle rpm est.",
+    "exhaust": {
+      "layout": "4-2-1",
+      "headerM": 0.4,
+      "secondaryM": 0.3,
+      "linkM": 0.3,
+      "groups": [
+        [
+          0,
+          3
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "est": true,
+      "source": "4-2-1 with EXUP; cylinders 1+4 and 2+3 paired; pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

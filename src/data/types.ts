@@ -51,6 +51,16 @@ export interface EngineLayout {
   ramAir?: boolean; // pressurized ram-air intake: induction howl at high rpm
   est: boolean;
   source: string;
+  /** Stock exhaust plumbing (shapes the pipe resonances of the generated sound). */
+  exhaust: {
+    layout: '2-1' | '3-1' | '4-1' | '4-2-1';
+    headerM: number;      // primary pipe length per cylinder
+    secondaryM?: number;  // 4-2-1 only: paired pipe length
+    linkM: number;        // collector to muffler
+    groups?: number[][];  // 4-2-1 only: firing-event indexes sharing a secondary pipe
+    est: boolean;
+    source: string;
+  };
 }
 
 export interface Bike {

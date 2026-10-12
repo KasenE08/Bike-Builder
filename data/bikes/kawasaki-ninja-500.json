@@ -97,6 +97,13 @@
     ],
     "idleRpm": 1300,
     "est": true,
-    "source": "180-degree parallel twin; idle rpm est."
+    "source": "180-degree parallel twin; idle rpm est.",
+    "exhaust": {
+      "layout": "2-1",
+      "headerM": 0.55,
+      "linkM": 0.45,
+      "est": true,
+      "source": "twin headers into one under-engine muffler; pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

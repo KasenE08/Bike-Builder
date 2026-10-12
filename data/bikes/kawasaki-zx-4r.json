@@ -103,6 +103,24 @@
     "idleRpm": 1500,
     "est": true,
     "source": "flat-plane inline-4, even 180-degree firing; idle rpm est.; Kawasaki Ram Air intake",
-    "ramAir": true
+    "ramAir": true,
+    "exhaust": {
+      "layout": "4-2-1",
+      "headerM": 0.32,
+      "secondaryM": 0.3,
+      "linkM": 0.35,
+      "groups": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "est": true,
+      "source": "4-2-1 (aftermarket Arrow 4-2-1 header replaces stock; stock layout est.); pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

@@ -104,6 +104,13 @@
     ],
     "idleRpm": 1300,
     "est": true,
-    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est."
+    "source": "flat-plane inline-4, even 180-degree firing; idle rpm est.",
+    "exhaust": {
+      "layout": "4-1",
+      "headerM": 0.62,
+      "linkM": 0.35,
+      "est": true,
+      "source": "4-into-1 (Honda's curved headers; SC-Project 4-1 replacements); pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

@@ -99,6 +99,13 @@
     ],
     "idleRpm": 1300,
     "est": true,
-    "source": "CP2 270-degree crossplane twin; idle rpm est."
+    "source": "CP2 270-degree crossplane twin; idle rpm est.",
+    "exhaust": {
+      "layout": "2-1",
+      "headerM": 0.6,
+      "linkM": 0.5,
+      "est": true,
+      "source": "CP2 2-into-1 into under-engine muffler; pipe lengths est. from typical sportbike geometry"
+    }
   }
 }

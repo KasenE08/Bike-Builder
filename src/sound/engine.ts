@@ -40,7 +40,7 @@ export function buildOutput(ctx: BaseAudioContext, level = 1): { input: GainNode
   limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20; limiter.attack.value = 0.001; limiter.release.value = 0.06;
   const soft = ctx.createWaveShaper(); // smooth ceiling just under full scale
   const c = new Float32Array(2048);
-  for (let i = 0; i < c.length; i++) { const x = (i / 1023.5) - 1; c[i] = 0.97 * Math.tanh(1.5 * x) / Math.tanh(1.5); }
+  for (let i = 0; i < c.length; i++) { const x = (i / 1023.5) - 1; c[i] = 0.9 * Math.tanh(1.5 * x) / Math.tanh(1.5); } // 0.9: headroom for oversampling overshoot
   soft.curve = c; soft.oversample = '2x';
   const post = ctx.createGain(); post.gain.value = level; // exhaust loudness after compression
   const master = ctx.createGain(); master.gain.value = 1; // fade in/out lives here
@@ -57,28 +57,21 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   await ctx.audioWorklet.addModule(workletUrl());
   const v = EXHAUST_VOICE[p.exhaust];
   const crackleAmt = p.exhaust === 'stock' ? (p.tuned ? 0.15 : 0) : Math.min(1, v.crackle + (p.tuned ? 0.25 : 0));
-  const node = new AudioWorkletNode(ctx, 'engine-proc', { numberOfInputs: 0, outputChannelCount: [1], processorOptions: p });
-  const shaper = ctx.createWaveShaper();
-  const curve = new Float32Array(1024);
-  for (let i = 0; i < curve.length; i++) { const x = (i / 511.5) - 1; curve[i] = Math.tanh(x * v.drive) / Math.tanh(v.drive); }
-  shaper.curve = curve;
-  const body = ctx.createBiquadFilter(); body.type = 'peaking'; body.frequency.value = p.pulseHz * 1.6; body.Q.value = 1.1; body.gain.value = v.bodyDb;
   // A turbine in the exhaust takes energy out of the pulses: duller, quieter exhaust note.
   const turbo = p.fi === 'turbo';
-  const muffler = ctx.createBiquadFilter(); muffler.type = 'lowpass'; muffler.frequency.value = v.lowpassHz * (turbo ? 0.6 : 1); muffler.Q.value = 0.7;
+  const voice = { ...v, lowpassHz: v.lowpassHz * p.mufflerScale * (turbo ? 0.6 : 1), bodyHz: 1 / (4 * p.pipes.linkS) };
+  const node = new AudioWorkletNode(ctx, 'engine-proc', {
+    numberOfInputs: 0, outputChannelCount: [1],
+    processorOptions: { ...p, voice, intakeLvl: p.intakeMod ? 0.32 : 0.18, outGain: (12 / Math.sqrt(p.firingDeg.length)) * Math.pow(10, p.trimDb / 20) },
+  });
   const exGain = ctx.createGain(); exGain.gain.value = v.gain * (turbo ? 0.75 : 1);
-  node.connect(shaper).connect(body).connect(muffler).connect(exGain).connect(out);
+  node.connect(exGain).connect(out);
 
-  // Induction noise (louder with an intake mod).
+  // Induction hiss (louder with an intake mod).
   const intake = ctx.createBufferSource(); intake.buffer = noiseBuffer(ctx, 2); intake.loop = true;
   const intakeBp = ctx.createBiquadFilter(); intakeBp.type = 'bandpass'; intakeBp.Q.value = 0.9;
   const intakeGain = ctx.createGain(); intakeGain.gain.value = 0;
   intake.connect(intakeBp).connect(intakeGain).connect(out); intake.start();
-  const howl = ctx.createOscillator(); howl.type = 'sawtooth';
-  const howlLp = ctx.createBiquadFilter(); howlLp.type = 'lowpass'; howlLp.frequency.value = 2500;
-  const howlGain = ctx.createGain(); howlGain.gain.value = 0;
-  howl.connect(howlLp).connect(howlGain).connect(out);
-  if (p.ramAir) howl.start();
 
   // Forced induction. Turbo: compressor whistle + intake hiss that build with boost, blow-off on lift.
   // Supercharger (centrifugal, gear-driven): whine locked to crank speed x impeller ratio, always present.
@@ -95,6 +88,17 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   if (p.fi !== 'none') { tone1.start(); tone2.start(); hiss.start(); }
   const burst = noiseBuffer(ctx, 0.8);
   const rpm = node.parameters.get('rpm')!, load = node.parameters.get('load')!, crackle = node.parameters.get('crackle')!;
+  // Glide every control instead of stepping it each frame (steps make faint zipper clicks).
+  const glide = (a: AudioParam, val: number, t: number, tc = 0.012) => a.setTargetAtTime(val, t, tc);
+  // Air release: filtered noise with a falling band (breathy, never a pure tone).
+  const release = (t: number, peak: number, f0: number, f1: number, q: number, dur: number) => {
+    const src = ctx.createBufferSource(); src.buffer = burst;
+    const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.Q.value = q;
+    bp.frequency.setValueAtTime(f0, t); bp.frequency.exponentialRampToValueAtTime(f1, t + dur * 0.8);
+    const g = ctx.createGain();
+    g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(peak, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    src.connect(bp).connect(g).connect(fiOut); src.start(t); src.stop(t + dur + 0.05);
+  };
   let crackleUntil = -1;
   return {
     apply(t, s, ev) {
@@ -103,47 +107,32 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
       load.setValueAtTime(s.load, t);
       if (ev.crackleStart && crackleAmt > 0) crackleUntil = t + 0.9;
       crackle.setValueAtTime(t < crackleUntil ? crackleAmt * (crackleUntil - t) / 0.9 : 0, t);
-      intakeBp.frequency.setValueAtTime(300 + 2200 * r, t);
-      intakeGain.gain.setValueAtTime((p.intakeMod ? 0.05 : 0.02) * s.load * (0.3 + r), t);
-      if (p.ramAir) { // airbox resonance tracks the firing frequency: the ZX howl
-        const fire = (s.rpm / 120) * p.firingDeg.length;
-        howl.frequency.setValueAtTime(fire * 2, t);
-        howlGain.gain.setValueAtTime(0.09 * s.load * r * r, t);
-      }
+      glide(intakeBp.frequency, 300 + 2200 * r, t);
+      glide(intakeGain.gain, (p.intakeMod ? 0.05 : 0.02) * s.load * (0.3 + r), t);
       if (p.fi === 'supercharger') {
         const impHz = (s.rpm / 60) * p.scRatio; // impeller shaft frequency
-        tone1.frequency.setValueAtTime(impHz, t);
-        tone2.frequency.setValueAtTime(impHz * 2, t);
+        glide(tone1.frequency, impHz, t);
+        glide(tone2.frequency, impHz * 2, t);
         // Scale with exhaust loudness so the whine stays on top of a loud pipe (the H2R's race can).
-        const lvl = (0.35 + 0.65 * r) * (0.55 + 0.45 * s.load) * Math.max(1, v.gain * 2.2);
-        toneGain1.gain.setValueAtTime(0.24 * lvl, t);
-        toneGain2.gain.setValueAtTime(0.1 * lvl, t);
-        hissBp.frequency.setValueAtTime(1500 + 3000 * r, t);
-        hissGain.gain.setValueAtTime(0.05 * lvl * s.load, t);
-        if (ev.blowOff > 0.45) { // H2's chirp from the boost relief when you lift
-          const o = ctx.createOscillator(); const g = ctx.createGain();
-          o.frequency.setValueAtTime(2600, t); o.frequency.exponentialRampToValueAtTime(900, t + 0.22);
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.18 * ev.blowOff, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.25);
-          o.connect(g).connect(fiOut); o.start(t); o.stop(t + 0.3);
-        }
+        // Impeller noise grows steeply with tip speed: faint at idle, a scream at redline.
+        const lvl = (0.06 + 0.94 * Math.pow(r, 1.5)) * (0.55 + 0.45 * s.load) * Math.max(1, v.gain * 2.2);
+        glide(toneGain1.gain, 0.1 * lvl, t);
+        glide(toneGain2.gain, 0.04 * lvl, t);
+        glide(hissBp.frequency, 1500 + 3000 * r, t);
+        glide(hissGain.gain, 0.025 * lvl * s.load, t);
+        if (ev.blowOff > 0.45) release(t, 0.2 * ev.blowOff, 3000, 1100, 2.5, 0.3); // H2's chirp from the boost relief when you lift
       } else if (p.fi === 'turbo') {
         const b = s.boost;
-        tone1.frequency.setValueAtTime(2200 + 8500 * b, t); // compressor whistle rises with shaft speed
-        tone2.frequency.setValueAtTime((2200 + 8500 * b) * 1.52, t);
-        toneGain1.gain.setValueAtTime(0.15 * Math.pow(b, 1.4), t);
-        toneGain2.gain.setValueAtTime(0.035 * Math.pow(b, 1.4), t);
-        hissBp.frequency.setValueAtTime(2500 + 3500 * b, t); // air rushing through the compressor
-        hissGain.gain.setValueAtTime(0.2 * Math.pow(b, 1.5), t);
-        if (ev.blowOff > 0.2) { // blow-off valve: sharp "pssh" that fades
-          const src = ctx.createBufferSource(); src.buffer = burst;
-          const bp = ctx.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.setValueAtTime(3200, t); bp.frequency.exponentialRampToValueAtTime(1800, t + 0.5); bp.Q.value = 0.7;
-          const g = ctx.createGain();
-          g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.55 * ev.blowOff, t + 0.012); g.gain.exponentialRampToValueAtTime(0.0001, t + 0.6);
-          src.connect(bp).connect(g).connect(fiOut); src.start(t); src.stop(t + 0.65);
-        }
+        glide(tone1.frequency, 2200 + 8500 * b, t); // compressor whistle rises with shaft speed
+        glide(tone2.frequency, (2200 + 8500 * b) * 1.52, t);
+        glide(toneGain1.gain, 0.07 * Math.pow(b, 1.4), t);
+        glide(toneGain2.gain, 0.016 * Math.pow(b, 1.4), t);
+        glide(hissBp.frequency, 2500 + 3500 * b, t); // air rushing through the compressor
+        glide(hissGain.gain, 0.09 * Math.pow(b, 1.5), t);
+        if (ev.blowOff > 0.2) release(t, 0.55 * ev.blowOff, 3200, 1800, 0.7, 0.6); // blow-off valve: sharp "pssh" that fades
       }
     },
-    stop(t) { intake.stop(t); if (p.ramAir) howl.stop(t); if (p.fi !== 'none') { tone1.stop(t); tone2.stop(t); hiss.stop(t); } node.disconnect(); },
+    stop(t) { intake.stop(t); if (p.fi !== 'none') { tone1.stop(t); tone2.stop(t); hiss.stop(t); } node.disconnect(); },
   };
 }
 

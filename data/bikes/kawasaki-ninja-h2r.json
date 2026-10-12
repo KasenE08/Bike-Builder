@@ -108,6 +108,24 @@
     "idleRpm": 1100,
     "est": true,
     "source": "flat-plane inline-4 with centrifugal supercharger; idle rpm est.; Kawasaki Ram Air intake",
-    "ramAir": true
+    "ramAir": true,
+    "exhaust": {
+      "layout": "4-2-1",
+      "headerM": 0.45,
+      "secondaryM": 0.35,
+      "linkM": 0.3,
+      "groups": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "est": true,
+      "source": "4-2-1 est. into track-only silencer; pipe lengths est. from typical sportbike geometry"
+    }
   }
 }
