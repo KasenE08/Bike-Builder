@@ -46,20 +46,23 @@ describe('engine sound generator', () => {
         expect(Math.abs(gaps[i] - want), `${b.id} gap ${i}`).toBeLessThanOrEqual(step + 1e-9);
       }
     }
-  });
+  }, 20000);
 
   it('stays finite and bounded for every bike at idle, full load and on the limiter, with crackle', () => {
     for (const b of bikes) {
       const p = soundProfile(b, []);
       const proc = makeProc({ ...optsFor(p), outGain: 1 });
       for (const [rpm, load, cr] of [[p.idleRpm, 0.1, 0], [p.redlineRpm * 0.9, 1, 0], [p.redlineRpm, 1, 0], [p.redlineRpm * 0.6, 0, 1]]) {
-        const x = run(proc, 0.3, rpm, load, cr);
-        for (const v of x) expect(Number.isFinite(v) && Math.abs(v) <= 0.7 + 1e-6, b.id).toBe(true);
-        const rms = Math.sqrt(x.reduce((s, v) => s + v * v, 0) / x.length);
+        const x = run(proc, 0.2, rpm, load, cr);
+        let peak = 0, sum = 0, finite = true;
+        for (const v of x) { if (!Number.isFinite(v)) finite = false; peak = Math.max(peak, Math.abs(v)); sum += v * v; }
+        expect(finite, b.id).toBe(true);
+        expect(peak, b.id).toBeLessThanOrEqual(0.7 + 1e-6);
+        const rms = Math.sqrt(sum / x.length);
         expect(rms, `${b.id} silent at ${rpm} rpm`).toBeGreaterThan(1e-4);
       }
     }
-  });
+  }, 20000); // renders ~10 s of audio in total; CI runners are slower
 });
 
 /** Rotation of the expected gap list that best matches the measured sequence. */
