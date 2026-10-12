@@ -671,5 +671,40 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "btmoto-stage1plus-v4-2025",
+    "category": "tune",
+    "name": "Stage 1+ Performance Calibration with Handheld Tuner",
+    "brand": "BT Moto",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 895.0,
+      "source": "https://bt-moto.com/product/2025-ducati-v4--v4s-stage-1-performance-calibration-with-handheld-tuner",
+      "checked": "2026-10-12",
+      "note": "2025 Panigale V4/V4S; Stage 2 ($499) adds velocity stacks"
+    },
+    "labor": {
+      "usd": 73.5,
+      "hours": 0.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": false,
+      "source": "Software only",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 5.0,
+      "torquePct": 5.0,
+      "est": true,
+      "basis": "No BT Moto V4 figure; est. ~+5% (BT Moto reports +5-10 whp from flash-only on middleweights, https://bt-moto.com/blog/how-much-hp-does-an-ecu-flash-add-to-a-motorcycle)."
+    },
+    "streetLegal": false,
+    "streetLegalReason": "CARB approval pending (seller)"
   }
 ]

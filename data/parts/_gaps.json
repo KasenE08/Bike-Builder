@@ -523,5 +523,120 @@
     "bike": "kawasaki-zx-10r",
     "category": "forcedInduction",
     "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "intake",
+    "note": "No DNA/BMC listing for the 2025+ V4 at a US retailer."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "tune",
+    "note": "Only BT Moto lists the 2025+ V4/V4S."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "frameSliders",
+    "note": "Only eBay sliders, none confirmed for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "tailTidy",
+    "note": "New Rage Cycles 2025 kit found only on eBay."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "gearing",
+    "note": "Only Superlite sprockets for 2025+; quick-change kit listed for 2019-2024."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "suspension",
+    "note": "Ohlins semi-active is stock; no aftermarket kit for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "brakes",
+    "note": "No priced pad/line listing for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "chain",
+    "note": "No chain-only listing for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "carbon",
+    "note": "No priced carbon parts at US retailers for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "wheels",
+    "note": "Forged wheels found only for 2018-2024 (eBay)."
+  },
+  {
+    "bike": "ducati-panigale-v4-s",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "exhaust",
+    "note": "Only Vandemon lists the 2025-2026 V4 R; Ducati/Akrapovic racing silencers listed for 2022-2024."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "intake",
+    "note": "No intake listing for the 2025+ V4 R."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "tune",
+    "note": "No ECU tune listed for the 2025+ V4 R."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "frameSliders",
+    "note": "No slider listing for the 2025+ V4 R."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "tailTidy",
+    "note": "No tail tidy listing for the 2025+ V4 R."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "gearing",
+    "note": "Sprocket Center V4 R kits listed for 2019-2024 only."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "suspension",
+    "note": "Ohlins is stock; no aftermarket kit for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "brakes",
+    "note": "No priced pad/line listing for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "chain",
+    "note": "No chain listing for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "carbon",
+    "note": "No priced carbon parts for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "wheels",
+    "note": "No priced wheels for 2025+."
+  },
+  {
+    "bike": "ducati-panigale-v4-r",
+    "category": "forcedInduction",
+    "note": "No real turbo or supercharger kit exists."
   }
 ]

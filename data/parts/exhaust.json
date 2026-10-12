@@ -688,5 +688,186 @@
     },
     "streetLegal": false,
     "streetLegalReason": "Closed-course use"
+  },
+  {
+    "id": "akrapovic-homologated-slipon-v4-2025",
+    "category": "exhaust",
+    "name": "Homologated Slip-On (96482491AA)",
+    "brand": "Akrapovic (Ducati Performance)",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 6872.61,
+      "source": "https://amsducati.com/brands/akrapovic",
+      "checked": "2026-10-12",
+      "note": "Panigale V4 2025+; dealer listing may be dated"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.0,
+      "est": true,
+      "source": "est. typical titanium slip-on saving vs Ducati stock silencers",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.3,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No 2025+ figure; est. from Ducati's Akrapovic track exhaust on the 2023 V4 R (+3 hp to 237 hp claimed, https://www.bennetts.co.uk/bikesocial/reviews/bikes/ducati/panigale-v4r-2023-review).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Homologated (Euro 5+); check state rules"
+  },
+  {
+    "id": "akrapovic-race-slipon-v4-2025",
+    "category": "exhaust",
+    "name": "Race Slip-On (96482341AA)",
+    "brand": "Akrapovic (Ducati Performance)",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 5542.43,
+      "source": "https://amsducati.com/brands/akrapovic",
+      "checked": "2026-10-12",
+      "note": "Panigale V4 2025+; dealer listing may be dated"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.0,
+      "est": true,
+      "source": "est. typical titanium slip-on saving vs Ducati stock silencers",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.3,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No 2025+ figure; est. from Ducati's Akrapovic track exhaust on the 2023 V4 R (+3 hp to 237 hp claimed, https://www.bennetts.co.uk/bikesocial/reviews/bikes/ducati/panigale-v4r-2023-review).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "Track use only"
+  },
+  {
+    "id": "arrow-works-ti-slipon-v4-2025",
+    "category": "exhaust",
+    "name": "Works Full Titanium Racing Slip-On",
+    "brand": "Arrow",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 3063.0,
+      "source": "https://www.accessoryinternational.com/category/sportbikes-ducati-panigale-v4-2025-exhausts.html",
+      "checked": "2026-10-12",
+      "note": "Panigale V4/S 2025+; dark finish $3,567"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.0,
+      "est": true,
+      "source": "est. typical titanium slip-on saving vs Ducati stock silencers",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.3,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No 2025+ figure; est. from Ducati's Akrapovic track exhaust on the 2023 V4 R (+3 hp to 237 hp claimed, https://www.bennetts.co.uk/bikesocial/reviews/bikes/ducati/panigale-v4r-2023-review).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "vandemon-ti-highmount-v4-2025",
+    "category": "exhaust",
+    "name": "Titanium High Mount Slip-On",
+    "brand": "Vandemon",
+    "fits": [
+      "ducati-panigale-v4-s",
+      "ducati-panigale-v4-r"
+    ],
+    "price": {
+      "usd": 3298.9,
+      "source": "https://bills-exhausts.com/products/vandemon-ducati-panigale-v4-v4s-titanium-high-mount-slip-on-2025-2026-ducv4pantimufhma-va-176",
+      "checked": "2026-10-12",
+      "note": "Fits Panigale V4, V4 S, V4 Speciale and V4 R 2025-2026; backordered"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.0,
+      "est": true,
+      "source": "est. typical titanium slip-on saving vs Ducati stock silencers",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.3,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No 2025+ figure; est. from Ducati's Akrapovic track exhaust on the 2023 V4 R (+3 hp to 237 hp claimed, https://www.bennetts.co.uk/bikesocial/reviews/bikes/ducati/panigale-v4r-2023-review).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
+  },
+  {
+    "id": "csracing-slipon-v4-2025",
+    "category": "exhaust",
+    "name": "Slip-On Exhaust with dB Killer",
+    "brand": "CS Racing",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 1257.25,
+      "source": "https://csracingusa.com/products/2025-on-ducati-panigale-v4-v4s-cs-racing-slip-on-exhaust-muffler-db-killer",
+      "checked": "2026-10-12",
+      "note": "2025-on V4/V4S; made to order (15-30 days)"
+    },
+    "labor": {
+      "usd": 294.0,
+      "hours": 2.0,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": -5.0,
+      "est": true,
+      "source": "est. typical titanium slip-on saving vs Ducati stock silencers",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 1.3,
+      "torquePct": 1.0,
+      "est": true,
+      "basis": "No 2025+ figure; est. from Ducati's Akrapovic track exhaust on the 2023 V4 R (+3 hp to 237 hp claimed, https://www.bennetts.co.uk/bikesocial/reviews/bikes/ducati/panigale-v4r-2023-review).",
+      "needsTuneForFullGain": true
+    },
+    "streetLegal": false,
+    "streetLegalReason": "No CARB EO found; sold for closed-course use"
   }
 ]

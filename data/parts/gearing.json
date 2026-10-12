@@ -734,5 +734,57 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact"
+  },
+  {
+    "id": "superlite-520-pair-v4-2025",
+    "category": "gearing",
+    "name": "Superlite 520 Xtreme Duty front + RSX rear sprockets",
+    "brand": "Sprocket Center",
+    "fits": [
+      "ducati-panigale-v4-s"
+    ],
+    "price": {
+      "usd": 101.9,
+      "source": "https://sprocketcenter.com/c-1393160-V4-/-V4s--Panigale-2025.html",
+      "checked": "2026-10-12",
+      "note": "Sum of two listings ($36.95 front + $64.95 rear, list); 520 conversion, chain not included"
+    },
+    "labor": {
+      "usd": 220.5,
+      "hours": 1.5,
+      "source": "Nashville Motorcycle Repair posted rate $147/hr, https://www.nashvillemotorcyclerepair.com/rates/",
+      "est": true
+    },
+    "weightDeltaLb": {
+      "value": 0,
+      "est": true,
+      "source": "est. steel sprockets similar to stock",
+      "checked": "2026-10-12"
+    },
+    "effect": {
+      "hpPct": 0,
+      "torquePct": 0,
+      "est": true,
+      "basis": "No power effect; ratio comes from the teeth the owner picks (default stock). Tooth range est.: seller offers OEM and alternate sizes.",
+      "sprocketOptions": {
+        "front": [
+          15,
+          16,
+          17
+        ],
+        "rear": [
+          39,
+          40,
+          41,
+          42,
+          43,
+          44,
+          45
+        ],
+        "est": true
+      }
+    },
+    "streetLegal": true,
+    "streetLegalReason": "Bolt-on, no emissions impact"
   }
 ]
