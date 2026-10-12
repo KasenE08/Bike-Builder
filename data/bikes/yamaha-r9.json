@@ -84,7 +84,6 @@
   "stock": {
     "quickshifter": "Yamaha QSS up/down"
   },
-  "drawing": "generic",
   "calibration": {
     "cdA": 4.041,
     "launchG": 0.932,

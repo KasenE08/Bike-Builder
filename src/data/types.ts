@@ -66,7 +66,6 @@ export interface Bike {
   streetLegalReason?: string; // e.g. "H2R base bike: track only"
   /** Categories fitted from the factory; shown as "Stock". */
   stock: Partial<Record<Category, string>>; // e.g. { quickshifter: "KQS up/down" }
-  drawing: string; // SVG drawing id; "generic" until a custom one exists
   notes?: string[];
 }
 
@@ -114,8 +113,6 @@ export interface Part {
   requires?: Category[]; // e.g. forcedInduction -> ["tune"]
   streetLegal: boolean;
   streetLegalReason: string;
-  /** Drawing layer variant for visible parts (exhaust, winglets, wheels, ...). */
-  layer?: string;
   /** Tune only: can remove the factory speed limiter. */
   limiterRemovable?: boolean;
 }

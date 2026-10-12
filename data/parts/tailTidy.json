@@ -28,7 +28,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -64,7 +63,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -100,7 +98,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "DOT lighting; legal if plate light kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -137,7 +134,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -174,7 +170,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -211,7 +206,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -248,7 +242,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -285,7 +278,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
@@ -322,7 +314,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Legal if plate light and reflector kept",
-    "layer": "tailTidy",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,

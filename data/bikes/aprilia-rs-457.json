@@ -82,7 +82,6 @@
   },
   "streetLegal": true,
   "stock": {},
-  "drawing": "generic",
   "calibration": {
     "cdA": 3.46,
     "launchG": 2.5,

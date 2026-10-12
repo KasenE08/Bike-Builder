@@ -2,7 +2,6 @@ import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { bikeById } from '../data/bikes';
 import type { Category, Part } from '../data/types';
 import { deleteBuild, saveBuild, type SavedBuild } from '../store/db';
-import { BikeDrawing } from './BikeDrawing';
 import { PartSheet } from './PartSheet';
 import { Est, StatBar } from './Stats';
 import { isOutdated, usd } from './format';
@@ -51,7 +50,6 @@ export function BuildEditor({ initial, riderLb, onChanged }: { initial: SavedBui
       <input class="title" type="text" value={b.name} aria-label="Build name" onInput={(e) => setB({ ...b, name: (e.target as HTMLInputElement).value })} />
       <div class="muted small" style={{ marginBottom: 8 }}>{bikeName(bike)} · {riderLb} lb rider</div>
       <StatBar r={r} base={stock} />
-      <BikeDrawing label={bikeName(bike)} />
 
       {CATEGORIES.map(({ key, label }) => {
         const options = partsFor(bike.id, key);

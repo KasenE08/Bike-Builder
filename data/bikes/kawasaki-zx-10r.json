@@ -84,7 +84,6 @@
   "stock": {
     "quickshifter": "Kawasaki KQS up/down"
   },
-  "drawing": "generic",
   "calibration": {
     "cdA": 3.297,
     "launchG": 1.017,

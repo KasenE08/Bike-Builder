@@ -28,7 +28,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use",
-    "layer": "slipon",
     "effect": {
       "hpPct": 3.2,
       "torquePct": 5.3,
@@ -65,7 +64,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use",
-    "layer": "slipon",
     "effect": {
       "hpPct": 3.2,
       "torquePct": 5.3,
@@ -103,7 +101,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "Seller: not legal on emissions-controlled vehicles",
-    "layer": "slipon",
     "effect": {
       "hpPct": 0.8,
       "torquePct": 0.7,
@@ -141,7 +138,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use",
-    "layer": "slipon",
     "effect": {
       "hpPct": 3.0,
       "torquePct": 4.3,
@@ -179,7 +175,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "Seller: closed-course use only",
-    "layer": "slipon",
     "effect": {
       "hpPct": 1.2,
       "torquePct": 2.0,
@@ -217,7 +212,6 @@
     },
     "streetLegal": false,
     "streetLegalReason": "No CARB EO found; sold for closed-course use",
-    "layer": "fullSystem",
     "requires": [
       "tune"
     ],

@@ -28,7 +28,6 @@
     },
     "streetLegal": true,
     "streetLegalReason": "Bolt-on, no emissions impact",
-    "layer": "carbon",
     "effect": {
       "hpPct": 0,
       "torquePct": 0,
