@@ -64,7 +64,7 @@ describe('KE1000 (owner-made bike)', () => {
     const base = soundProfile(keBike(DEFAULT_KE), []);
     expect(base.firingDeg).toEqual([0, 120, 240, 360, 480, 600]);
     expect(base.exhaust).toBe('race');
-    expect(base.ramAir).toBe(true);
+    expect(base.grumble).toBe(1);
     expect(soundProfile(keBike(DEFAULT_KE), [part(5, 0, 'exhaust')]).exhaust).toBe('race'); // never quieter
     expect(soundProfile(keBike({ ...DEFAULT_KE, redlineRpm: 20000 }), []).redlineRpm).toBe(20000);
     expect(soundProfile(keBike({ ...DEFAULT_KE, idleRpm: 900 }), []).idleRpm).toBe(900);

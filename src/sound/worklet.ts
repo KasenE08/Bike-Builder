@@ -63,6 +63,10 @@ class EngineProc extends AudioWorkletProcessor {
     this.size = Math.sqrt(p.ccPerCyl / 250);
     this.ang = 0; this.seed = 987654321;
     this.prev = this.f.map(() => 719); this.amp = this.f.map(() => 0); this.off = this.f.map(() => 0); this.crack = this.f.map(() => 0); this.crackR = this.f.map(() => 0);
+    // Grumble (KE1000): each cylinder burns a little stronger or weaker than the rest, as on any real engine.
+    // That puts energy at half-orders of the firing frequency: a rumble under the main note instead of a pure whine.
+    this.rough = p.rough || 0;
+    this.bal = this.f.map(() => 1 + this.rough * (this.rand() * 2 - 1));
     // Blowdown front: gas at several bar escaping past the opening valve. Rises over ~0.1 ms and falls over ~0.4 ms
     // (difference of two exponentials: starts at zero, so no one-sample click).
     this.crackDecay = Math.exp(-1 / (0.0004 * sampleRate)); this.crackRise = Math.exp(-1 / (0.0001 * sampleRate));
@@ -94,7 +98,7 @@ class EngineProc extends AudioWorkletProcessor {
     const evRate = (rpm / 120) * this.n; // exhaust events per second
     const popP = crackle > 0 ? Math.min(0.9, (24 * crackle) / Math.max(1, evRate)) : 0;
     const flow = 0.4 * (0.2 + 0.8 * load) * (0.3 + 0.7 * r); // turbulent flow noise grows with gas speed (throttle x rpm)
-    const jit = 0.12 - 0.08 * load, tJit = 3 - 2.5 * load; // cycle-to-cycle variation, larger when lightly loaded
+    const jit = (0.12 - 0.08 * load) * (1 + 2 * this.rough), tJit = (3 - 2.5 * load) * (1 + 2 * this.rough); // cycle-to-cycle variation, larger when lightly loaded
     // Keep idle clearly audible on a phone speaker: lift low rpm (real bikes span ~25 dB idle to redline; this keeps ~15).
     const lift = 1 / Math.sqrt(Math.max(0.12, r));
     const intakeGain = this.intakeLvl * (0.25 + 0.75 * load) * (this.ramAir ? 1 + 1.5 * r * r : 1);
@@ -107,7 +111,7 @@ class EngineProc extends AudioWorkletProcessor {
         let psi = a - this.f[k] - EVO; psi -= 720 * Math.floor(psi / 720);
         if (psi < this.prev[k]) { // new exhaust event
           const fire = !cut;
-          this.amp[k] = this.size * (fire ? (0.3 + 0.7 * load) * (1 + jit * (this.rand() * 2 - 1)) : 0.06);
+          this.amp[k] = this.size * this.bal[k] * (fire ? (0.3 + 0.7 * load) * (1 + jit * (this.rand() * 2 - 1)) : 0.06);
           this.off[k] = this.rand() * tJit;
           if ((popP > 0 && this.rand() < popP) || (cut && crackle === 0 && this.rand() < 0.04)) {
             this.pop = (0.6 + this.rand()) * (crackle > 0 ? crackle : 0.3) * this.size * 1.6;
