@@ -62,7 +62,7 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
     <main>
       <button class="btn ghost" onClick={() => go('/')}>‹ Garage</button>
       <input class="title" type="text" value={b.name} aria-label="Build name" onInput={(e) => setB({ ...b, name: (e.target as HTMLInputElement).value })} />
-      <div class="muted small" style={{ marginBottom: 8 }}>{bikeName(bike)} · {riderLb} lb rider</div>
+      <div class="muted small" style={{ marginBottom: 8 }}>{bike.custom ? 'KE1000' : bikeName(bike)} · {riderLb} lb rider{bike.custom && <> · <a href="#/ke1000">Edit specs ›</a></>}</div>
       <StatBar r={r} base={stock} />
       <EngineSoundCard bike={bike} parts={soundParts} />
 
@@ -162,7 +162,7 @@ export function BuildEditor({ initial, riderLb, userVersion, onChanged, onUserDa
       <h2>Cost</h2>
       <table>
         <tbody>
-          <tr><td>Bike (MSRP)</td><td>{usd(bike.msrp.value!)}</td></tr>
+          <tr><td>{bike.custom ? 'Bike (your price)' : 'Bike (MSRP)'}</td><td>{bike.msrp.value == null ? 'Not set' : usd(bike.msrp.value)}</td></tr>
           <tr><td>Parts</td><td>{usd(r.partsUsd)}</td></tr>
           <tr><td>Labor <Est /></td><td>{usd(r.laborUsd)}</td></tr>
           <tr><td><strong>Total</strong></td><td><strong>{usd(r.totalUsd)}</strong></td></tr>

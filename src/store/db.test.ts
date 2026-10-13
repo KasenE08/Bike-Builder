@@ -58,6 +58,22 @@ describe('price edits, custom parts, backup', () => {
     expect((await getSettings()).riderLb).toBe(160);
   });
 
+  it('KE1000 specs default, persist, back up and restore', async () => {
+    const { getKe, saveKe, resetKe } = await import('./db');
+    expect((await getKe()).hp).toBe(260);
+    await saveKe({ ...(await getKe()), hp: 300, redlineRpm: 19000 });
+    expect((await getKe()).redlineRpm).toBe(19000);
+    const file = JSON.stringify(await exportBackup());
+    await resetKe();
+    expect((await getKe()).hp).toBe(260);
+    await restoreBackup(parseBackup(file));
+    expect((await getKe()).hp).toBe(300);
+    // An older backup without KE1000 specs restores the defaults.
+    const old = { ...JSON.parse(file) }; delete old.ke1000;
+    await restoreBackup(parseBackup(JSON.stringify(old)));
+    expect((await getKe()).hp).toBe(260);
+  });
+
   it('rejects files that are not backups', () => {
     expect(() => parseBackup('{"hello":1}')).toThrow(/Not a Bike Builder backup/);
   });

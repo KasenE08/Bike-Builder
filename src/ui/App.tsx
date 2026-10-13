@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'preact/hooks';
-import { DEFAULT_SETTINGS, getSettings, listBuilds, listCustomParts, listPriceEdits, type SavedBuild, type Settings } from '../store/db';
+import { DEFAULT_KE, keBike, type KeSpec } from '../data/ke1000';
+import { setCustomBike } from '../data/bikes';
+import { DEFAULT_SETTINGS, getKe, getSettings, listBuilds, listCustomParts, listPriceEdits, type SavedBuild, type Settings } from '../store/db';
 import { setUserData } from './model';
 import { BikePicker } from './BikePicker';
 import { BuildEditor } from './BuildEditor';
+import { KeSpecPage } from './KeSpecPage';
 import { Compare } from './Compare';
 import { Garage } from './Garage';
 import { SettingsPage } from './SettingsPage';
@@ -17,10 +20,13 @@ export function App() {
   const [builds, setBuilds] = useState<SavedBuild[] | null>(null);
   const [settings, setSettings] = useState<Settings>(DEFAULT_SETTINGS);
   const [userVersion, setUserVersion] = useState(0);
+  const [ke, setKe] = useState<KeSpec>(DEFAULT_KE);
   const refresh = () => listBuilds().then(setBuilds);
   const refreshUser = async () => {
-    const [c, p] = await Promise.all([listCustomParts(), listPriceEdits()]);
+    const [c, p, k] = await Promise.all([listCustomParts(), listPriceEdits(), getKe()]);
     setUserData(c, p);
+    setCustomBike(keBike(k));
+    setKe(k);
     setUserVersion((v) => v + 1);
   };
   const reloadAll = async () => { await refreshUser(); await refresh(); setSettings(await getSettings()); };
@@ -33,6 +39,7 @@ export function App() {
     const b = builds.find((x) => x.id === route.id);
     page = b ? <BuildEditor key={b.id} initial={b} riderLb={settings.riderLb} userVersion={userVersion} onChanged={refresh} onUserDataChanged={refreshUser} /> : <main><p>Build not found.</p></main>;
   } else if (route.page === 'compare') page = <Compare builds={builds} riderLb={settings.riderLb} />;
+  else if (route.page === 'ke1000') page = <KeSpecPage key={userVersion} initial={ke} onSaved={refreshUser} />;
   else if (route.page === 'settings') page = <SettingsPage settings={settings} onSaved={setSettings} onRestored={reloadAll} />;
   else page = <Garage builds={builds} riderLb={settings.riderLb} />;
 

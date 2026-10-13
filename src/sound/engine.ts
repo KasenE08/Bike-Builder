@@ -40,8 +40,8 @@ export function buildOutput(ctx: BaseAudioContext, level = 1): { input: GainNode
   limiter.threshold.value = -3; limiter.knee.value = 0; limiter.ratio.value = 20; limiter.attack.value = 0.001; limiter.release.value = 0.06;
   const soft = ctx.createWaveShaper(); // smooth ceiling just under full scale
   const c = new Float32Array(2048);
-  for (let i = 0; i < c.length; i++) { const x = (i / 1023.5) - 1; c[i] = 0.9 * Math.tanh(1.5 * x) / Math.tanh(1.5); } // 0.9: headroom for oversampling overshoot
-  soft.curve = c; soft.oversample = '2x';
+  for (let i = 0; i < c.length; i++) { const x = (i / 1023.5) - 1; c[i] = 0.9 * Math.tanh(1.5 * x) / Math.tanh(1.5); }
+  soft.curve = c; soft.oversample = 'none'; // oversampling's filter overshoots the ceiling on dense high-rpm sound
   const post = ctx.createGain(); post.gain.value = level; // exhaust loudness after compression
   const master = ctx.createGain(); master.gain.value = 1; // fade in/out lives here
   input.connect(comp).connect(makeup).connect(limiter).connect(soft).connect(post).connect(master).connect(ctx.destination);
@@ -59,7 +59,7 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   const crackleAmt = p.exhaust === 'stock' ? (p.tuned ? 0.15 : 0) : Math.min(1, v.crackle + (p.tuned ? 0.25 : 0));
   // A turbine in the exhaust takes energy out of the pulses: duller, quieter exhaust note.
   const turbo = p.fi === 'turbo';
-  const voice = { ...v, lowpassHz: v.lowpassHz * p.mufflerScale * (turbo ? 0.6 : 1), bodyHz: 1 / (4 * p.pipes.linkS) };
+  const voice = { ...v, drive: v.drive * p.aggression, lowpassHz: v.lowpassHz * p.mufflerScale * (turbo ? 0.6 : 1), bodyHz: 1 / (4 * p.pipes.linkS) };
   const node = new AudioWorkletNode(ctx, 'engine-proc', {
     numberOfInputs: 0, outputChannelCount: [1],
     processorOptions: { ...p, voice, intakeLvl: p.intakeMod ? 0.32 : 0.18, outGain: (12 / Math.sqrt(p.firingDeg.length)) * Math.pow(10, p.trimDb / 20) },

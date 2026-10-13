@@ -45,7 +45,7 @@ export interface Calibration {
 
 /** Engine layout for the generated engine sound. */
 export interface EngineLayout {
-  layout: 'parallelTwin' | 'triple' | 'inline4' | 'crossplaneI4' | 'v4';
+  layout: 'parallelTwin' | 'triple' | 'inline4' | 'crossplaneI4' | 'v4' | 'inline6';
   firingDeg: number[]; // firing points within the 720-degree four-stroke cycle
   idleRpm: number;
   ramAir?: boolean; // pressurized ram-air intake: induction howl at high rpm
@@ -53,11 +53,11 @@ export interface EngineLayout {
   source: string;
   /** Stock exhaust plumbing (shapes the pipe resonances of the generated sound). */
   exhaust: {
-    layout: '2-1' | '3-1' | '4-1' | '4-2-1';
+    layout: '2-1' | '3-1' | '4-1' | '4-2-1' | '6-2-1';
     headerM: number;      // primary pipe length per cylinder
-    secondaryM?: number;  // 4-2-1 only: paired pipe length
+    secondaryM?: number;  // 4-2-1 / 6-2-1: paired pipe length
     linkM: number;        // collector to muffler
-    groups?: number[][];  // 4-2-1 only: firing-event indexes sharing a secondary pipe
+    groups?: number[][];  // 4-2-1 / 6-2-1: firing-event indexes sharing a secondary pipe
     est: boolean;
     source: string;
   };
@@ -88,6 +88,10 @@ export interface Bike {
   /** Categories fitted from the factory; shown as "Stock". */
   stock: Partial<Record<Category, string>>; // e.g. { quickshifter: "KQS up/down" }
   notes?: string[];
+  /** Owner-made bike (KE1000): stock figures are the owner's numbers and are shown exactly; mods scale from them. */
+  custom?: boolean;
+  /** Stock per-shift time when the owner sets it (custom bike). */
+  stockShiftS?: number;
 }
 
 export type Tier = 'budget' | 'mid' | 'premium' | 'custom'; // custom = owner-made, stored on device

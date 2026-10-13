@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { bikes } from '../data/bikes';
+import { allBikes } from '../data/bikes';
 import type { BuildResult } from '../engine/build';
 import type { SavedBuild } from '../store/db';
 import { Est } from './Stats';
@@ -11,7 +11,7 @@ interface Option { id: string; label: string; run: () => BuildResult }
 export function Compare({ builds, riderLb }: { builds: SavedBuild[]; riderLb: number }) {
   const options: Option[] = [
     ...builds.map((b) => ({ id: b.id, label: b.name, run: () => evalSaved(b, riderLb) })),
-    ...bikes.map((bk) => ({ id: `stock:${bk.id}`, label: `Stock ${bk.model}`, run: () => evalStock(bk.id, riderLb) })),
+    ...allBikes().map((bk) => ({ id: `stock:${bk.id}`, label: `Stock ${bk.model}`, run: () => evalStock(bk.id, riderLb) })),
   ];
   const [aId, setA] = useState(options[0]?.id);
   const [bId, setB] = useState(builds[0] ? `stock:${builds[0].bikeId}` : options[1]?.id);

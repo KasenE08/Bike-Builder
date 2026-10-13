@@ -44,7 +44,7 @@ export const partById = (id: string) => allParts().find((p) => p.id === id);
 export const partsFor = (bikeId: string, cat: Category) => parts.filter((p) => p.category === cat && p.fits.includes(bikeId));
 export const customFor = (bikeId: string, cat: Category) => custom.filter((p) => p.category === cat && p.fits.includes(bikeId));
 export const gapFor = (bikeId: string, cat: Category) => gaps.find((g) => g.bike === bikeId && g.category === cat);
-export const bikeName = (b: Bike) => `${b.year} ${b.make} ${b.model}`;
+export const bikeName = (b: Bike) => (b.custom ? b.model : `${b.year} ${b.make} ${b.model}`);
 
 export function pickedParts(build: Pick<SavedBuild, 'picks'>): Part[] {
   return Object.values(build.picks).map((id) => (id ? partById(id) : undefined)).filter((p): p is Part => !!p).map(withUserPrice);
