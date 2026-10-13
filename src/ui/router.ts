@@ -5,7 +5,8 @@ export type Route =
   | { page: 'new' }
   | { page: 'build'; id: string }
   | { page: 'compare' }
-  | { page: 'settings' };
+  | { page: 'settings' }
+  | { page: 'ke1000' };
 
 export function parse(hash: string): Route {
   const [, page, id] = hash.replace(/^#/, '').split('/');
@@ -13,6 +14,7 @@ export function parse(hash: string): Route {
   if (page === 'build' && id) return { page: 'build', id };
   if (page === 'compare') return { page: 'compare' };
   if (page === 'settings') return { page: 'settings' };
+  if (page === 'ke1000') return { page: 'ke1000' };
   return { page: 'garage' };
 }
 

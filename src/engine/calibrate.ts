@@ -7,8 +7,8 @@ import { stockInput, shiftTimeFor } from './stock.ts';
 export const TEST_RIDER_LB = 180;
 const DEFAULT_CDA = 5.0; // ft^2, supersport + tucked rider (est.) when no target constrains it
 
-function bisect(lo: number, hi: number, f: (x: number) => number, target: number, increasing: boolean) {
-  for (let i = 0; i < 40; i++) {
+function bisect(lo: number, hi: number, f: (x: number) => number, target: number, increasing: boolean, steps = 40) {
+  for (let i = 0; i < steps; i++) {
     const mid = (lo + hi) / 2;
     const above = f(mid) > target;
     if (above === increasing) hi = mid; else lo = mid;
@@ -18,20 +18,22 @@ function bisect(lo: number, hi: number, f: (x: number) => number, target: number
 
 const pct = (sim: number | null, pub: number) => (sim == null ? Infinity : (100 * (sim - pub)) / pub);
 
-export function calibrate(b: Bike): Calibration {
+/** `fast`: fewer steps (~0.1% precision), for the on-phone KE1000 fit, whose shown numbers are pinned anyway. */
+export function calibrate(b: Bike, fast = false): Calibration {
+  const steps = fast ? 14 : 40;
   const shiftTimeS = shiftTimeFor(b);
   let cdA = DEFAULT_CDA, launchG = 1.0;
   const top = b.topSpeedMph, t60 = b.zeroTo60S.value!, t150 = b.zeroTo150S.value;
   const limitBinds = top.limited && top.limitMph != null && top.limitMph <= top.value!;
   const cdaTarget = !limitBinds ? 'top' : t150 != null ? '0-150' : null;
 
-  for (let round = 0; round < 4; round++) {
+  for (let round = 0; round < (fast ? 3 : 4); round++) {
     if (cdaTarget === 'top') {
-      cdA = bisect(1, 20, (x) => topSpeedMph({ ...stockInput(b, { cdA: x, launchG, shiftTimeS }, TEST_RIDER_LB), speedLimitMph: null }), top.value!, false);
+      cdA = bisect(1, 20, (x) => topSpeedMph({ ...stockInput(b, { cdA: x, launchG, shiftTimeS }, TEST_RIDER_LB), speedLimitMph: null }), top.value!, false, steps);
     } else if (cdaTarget === '0-150') {
-      cdA = bisect(1, 20, (x) => simulate(stockInput(b, { cdA: x, launchG, shiftTimeS }, TEST_RIDER_LB)).zeroTo150S ?? 99, t150!, true);
+      cdA = bisect(1, 20, (x) => simulate(stockInput(b, { cdA: x, launchG, shiftTimeS }, TEST_RIDER_LB)).zeroTo150S ?? 99, t150!, true, steps);
     }
-    launchG = bisect(0.3, 2.5, (x) => simulate(stockInput(b, { cdA, launchG: x, shiftTimeS }, TEST_RIDER_LB)).zeroTo60S, t60, false);
+    launchG = bisect(0.3, 2.5, (x) => simulate(stockInput(b, { cdA, launchG: x, shiftTimeS }, TEST_RIDER_LB)).zeroTo60S, t60, false, steps);
   }
 
   const r = simulate(stockInput(b, { cdA, launchG, shiftTimeS }, TEST_RIDER_LB));

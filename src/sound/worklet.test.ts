@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { bikes } from '../data/bikes';
+import { DEFAULT_KE, keBike } from '../data/ke1000';
 import { soundProfile, EXHAUST_VOICE } from './profile';
 import { WORKLET_SRC } from './worklet';
 
@@ -14,7 +15,7 @@ function makeProc(opts: object) {
 }
 function optsFor(p: ReturnType<typeof soundProfile>) {
   const v = EXHAUST_VOICE[p.exhaust];
-  return { ...p, voice: { ...v, lowpassHz: v.lowpassHz * p.mufflerScale, bodyHz: 1 / (4 * p.pipes.linkS) }, intakeLvl: 0.18, outGain: 1 };
+  return { ...p, voice: { ...v, drive: v.drive * p.aggression, lowpassHz: v.lowpassHz * p.mufflerScale, bodyHz: 1 / (4 * p.pipes.linkS) }, intakeLvl: 0.18, outGain: 1 };
 }
 function run(proc: any, seconds: number, rpm: number, load: number, crackle = 0) {
   const out = new Float32Array(Math.round(seconds * SR));
@@ -27,8 +28,8 @@ function run(proc: any, seconds: number, rpm: number, load: number, crackle = 0)
 }
 
 describe('engine sound generator', () => {
-  it('fires each cylinder at its real crank angle (exact firing order, every bike)', () => {
-    for (const b of bikes) {
+  it('fires each cylinder at its real crank angle (exact firing order, every bike incl. KE1000)', () => {
+    for (const b of [...bikes, keBike(DEFAULT_KE)]) {
       const p = soundProfile(b, []);
       const proc = makeProc(optsFor(p));
       const rpm = 6000, events: number[] = [];
@@ -49,7 +50,7 @@ describe('engine sound generator', () => {
   }, 20000);
 
   it('stays finite and bounded for every bike at idle, full load and on the limiter, with crackle', () => {
-    for (const b of bikes) {
+    for (const b of [...bikes, keBike(DEFAULT_KE)]) {
       const p = soundProfile(b, []);
       const proc = makeProc({ ...optsFor(p), outGain: 1 });
       for (const [rpm, load, cr] of [[p.idleRpm, 0.1, 0], [p.redlineRpm * 0.9, 1, 0], [p.redlineRpm, 1, 0], [p.redlineRpm * 0.6, 0, 1]]) {

@@ -1,6 +1,7 @@
 // On-device storage (IndexedDB): builds, settings, price edits, custom parts. Nothing leaves the phone.
 import { openDB, type DBSchema, type IDBPDatabase } from 'idb';
 import type { Category, Part } from '../data/types';
+import { DEFAULT_KE, type KeSpec } from '../data/ke1000';
 
 export interface SavedBuild {
   id: string;
@@ -28,7 +29,7 @@ export const DEFAULT_SETTINGS: Settings = { riderLb: 155 };
 
 interface Schema extends DBSchema {
   builds: { key: string; value: SavedBuild };
-  settings: { key: string; value: Settings };
+  settings: { key: string; value: Settings | KeSpec }; // 'main' = Settings, 'ke1000' = KeSpec
   prices: { key: string; value: PriceEdit };
   customParts: { key: string; value: Part };
 }
@@ -54,8 +55,13 @@ export const listBuilds = async () => (await (await db()).getAll('builds')).sort
 export const getBuild = async (id: string) => (await db()).get('builds', id);
 export const saveBuild = async (b: SavedBuild) => { await (await db()).put('builds', { ...b, updatedAt: Date.now() }); };
 export const deleteBuild = async (id: string) => { await (await db()).delete('builds', id); };
-export const getSettings = async (): Promise<Settings> => ({ ...DEFAULT_SETTINGS, ...((await (await db()).get('settings', 'main')) ?? {}) });
+export const getSettings = async (): Promise<Settings> => ({ ...DEFAULT_SETTINGS, ...(((await (await db()).get('settings', 'main')) as Settings | undefined) ?? {}) });
 export const saveSettings = async (s: Settings) => { await (await db()).put('settings', s, 'main'); };
+
+/** KE1000 specs (defaults until the owner saves their own). */
+export const getKe = async (): Promise<KeSpec> => ({ ...DEFAULT_KE, ...(((await (await db()).get('settings', 'ke1000')) as KeSpec | undefined) ?? {}) });
+export const saveKe = async (k: KeSpec) => { await (await db()).put('settings', k, 'ke1000'); };
+export const resetKe = async () => { await (await db()).delete('settings', 'ke1000'); };
 
 export const listPriceEdits = async () => (await db()).getAll('prices');
 export const setPriceEdit = async (partId: string, usd: number) => { await (await db()).put('prices', { partId, usd, updatedAt: Date.now() }); };
@@ -117,6 +123,7 @@ export interface Backup {
   settings: Settings;
   prices: PriceEdit[];
   customParts: Part[];
+  ke1000?: KeSpec; // missing in backups made before the KE1000 existed
 }
 
 export async function exportBackup(): Promise<Backup> {
@@ -128,6 +135,7 @@ export async function exportBackup(): Promise<Backup> {
     settings: await getSettings(),
     prices: await listPriceEdits(),
     customParts: await listCustomParts(),
+    ke1000: (await (await db()).get('settings', 'ke1000')) as KeSpec | undefined,
   };
 }
 
@@ -149,6 +157,7 @@ export async function restoreBackup(b: Backup) {
     ...b.prices.map((x) => tx.objectStore('prices').put(x)),
     ...b.customParts.map((x) => tx.objectStore('customParts').put(x)),
     tx.objectStore('settings').put({ ...DEFAULT_SETTINGS, ...b.settings }, 'main'),
+    b.ke1000 ? tx.objectStore('settings').put(b.ke1000, 'ke1000') : tx.objectStore('settings').delete('ke1000'),
   ]);
   await tx.done;
 }

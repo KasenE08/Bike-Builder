@@ -14,6 +14,7 @@ export interface SoundProfile {
   airboxHz: number;      // airbox resonance
   mufflerScale: number;  // smaller engines carry smaller cans: brighter, thinner
   trimDb: number;        // loudness trim per engine layout
+  aggression: number;    // pipe drive multiplier (custom bike: grows with hp per liter)
   exhaust: ExhaustKind;
   tuned: boolean;        // ECU tune: sharper revs, decel crackle
   intakeMod: boolean;    // louder induction noise
@@ -32,6 +33,7 @@ const LAYOUT = {
   inline4: { revUpS: 0.8, trimDb: 3.5, name: 'inline-4' },
   crossplaneI4: { revUpS: 0.85, trimDb: 3, name: 'crossplane inline-4' },
   v4: { revUpS: 0.75, trimDb: 4.5, name: 'V4' },
+  inline6: { revUpS: 0.62, trimDb: 0, name: 'inline-6' },
 } as const;
 
 export const C_EXHAUST = 520; // m/s, speed of sound in hot exhaust gas (est., ~400 C)
@@ -57,9 +59,15 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
   const fiPart = parts.find((p) => p.category === 'forcedInduction');
   const fi: FiKind = fiPart ? fiPart.fiType ?? 'turbo' : /supercharg/i.test(bike.stock.forcedInduction ?? '') ? 'supercharger' : /turbo/i.test(bike.stock.forcedInduction ?? '') ? 'turbo' : 'none';
   // The H2R's stock silencer is a track-only race can, so its stock voice is the race voice.
-  const exhaust = ex ? exhaustKind(ex) : bike.streetLegal ? 'stock' : 'race';
+  // The KE1000 always runs its open race pipe (an exhaust part changes power, never quiets it).
+  const exhaust = bike.custom ? 'race' : ex ? exhaustKind(ex) : bike.streetLegal ? 'stock' : 'race';
   const tuned = parts.some((p) => p.category === 'tune');
   const gain = parts.reduce((s, p) => s + Math.max(0, p.effect.hpPct), 0);
+  // KE1000: the owner's numbers shape the voice. More torque per liter revs harder; more hp per liter = rawer.
+  const liters = bike.displacementCc / 1000;
+  const clamp = (x: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, x));
+  const revK = bike.custom ? clamp(Math.sqrt(100 / (bike.torqueLbFt.value! / liters)), 0.55, 1.8) : 1;
+  const aggression = bike.custom ? clamp(bike.hp.value! / liters / 220, 0.7, 1.6) : 1;
   return {
     firingDeg: bike.engine.firingDeg,
     idleRpm: bike.engine.idleRpm,
@@ -70,12 +78,13 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
       headerS: X.headerM / C_EXHAUST,
       secondaryS: (X.secondaryM ?? 0) / C_EXHAUST,
       linkS: X.linkM / C_EXHAUST,
-      groups: X.layout === '4-2-1' ? X.groups ?? [] : [],
+      groups: X.layout === '4-2-1' || X.layout === '6-2-1' ? X.groups ?? [] : [],
     },
     // Intake runner ~ bore-scaled (est.); airbox resonance lower on bigger engines (est.).
     runnerS: (0.09 + 0.03 * Math.cbrt(size)) / C_AIR,
     mufflerScale: +Math.pow(1 / size, 0.35).toFixed(3),
     trimDb: L.trimDb,
+    aggression: +aggression.toFixed(3),
     airboxHz: Math.round(520 / Math.sqrt(size * bike.engine.firingDeg.length / 2)),
     exhaust,
     tuned,
@@ -83,7 +92,7 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
     ramAir: !!bike.engine.ramAir,
     fi,
     scRatio: 9.2, // Kawasaki H2/H2R impeller ~9.2x crank speed
-    revUpS: +(L.revUpS * Math.pow(size, 0.25) / (1 + Math.min(gain, 60) / 100) / (tuned ? 1.1 : 1)).toFixed(3),
+    revUpS: +(L.revUpS * revK * Math.pow(size, 0.25) / (1 + Math.min(gain, 60) / 100) / (tuned ? 1.1 : 1)).toFixed(3),
     label: [`${bike.displacementCc} cc ${L.name}`, `${X.layout} pipes`, { stock: 'stock exhaust', slipOn: 'slip-on', fullSystem: 'full system', race: 'race exhaust' }[exhaust], tuned && 'tuned', fi !== 'none' && fi]
       .filter(Boolean).join(' · '),
   };

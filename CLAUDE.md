@@ -52,6 +52,13 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - UI: Build screen "Engine sound" card (Start engine, Hold to rev, tach). iOS: `navigator.audioSession.type = 'playback'` so it plays with the silent switch on.
 - Real recordings: not possible from this environment (network blocks freesound/wikimedia). If ever opened: CC0/CC-BY clips only, credited, generated sound as fallback.
 
+## KE1000 (owner's custom bike)
+- `src/data/ke1000.ts`: `KeSpec` (all owner inputs) → `keBike()` → a full `Bike` with `custom: true`. Stored on device (`settings` store, key `ke1000`), included in backups. `setCustomBike` / `allBikes()` in `src/data/bikes.ts`; catalog `bikes` stays real data only.
+- Owner decisions (Phase 8): inline-6 screamer (fixed, no sound option), "use my numbers", custom parts only, crazy defaults (1000 cc, 260 hp @ 16,000, 92 lb-ft @ 12,500, 17,500 redline, 395 lb, 0–60 2.5 s, 0–150 7.2 s, 220 mph). Price = owner's own (not set by default; never invented).
+- Physics: specs are fitted on save (`calibrate(b, fast)`, ~0.5 s). Stock KE1000 shows the owner's numbers exactly; a build shows owner number × (modded sim / stock sim), same rider (`pinToOwner` in `build.ts`).
+- Sound: inline-6, firing 1-5-3-6-2-4 (even 120°), 6-2-1 race pipes (front/rear three paired), ram-air, always the race voice (exhaust parts never quiet it), heavy decel crackle. Owner numbers drive it: redline/idle = pitch range, displacement = depth/muffler, torque per liter = rev speed, hp per liter = rawness (`aggression`).
+- UI: picker "Your bike" card, `#/ke1000` specs page (validation blocks impossible input; warnings allowed), Settings link, build editor "Edit specs", Compare.
+
 ## Progress log
 - **Phase 1 (plan, stack, data format):** scaffold, data types, deploy workflow, this file. Approved.
 - **Phase 2 (bike data):** 12 bike JSONs with sources (2026-10-12), `src/data/bikes.ts` loader, data tests (sources present, 150 mph N/A rule, gearing reaches top speed). Session network blocks direct page fetches; data came via web search with cited URLs. Gaps marked est.: Yamaha/Honda/Aprilia internal gear ratios, small-bike 0-60/top speed, R9/ZX-6R 0-150. Approved.
@@ -65,3 +72,4 @@ Preact + TypeScript + Vite, vite-plugin-pwa (offline), IndexedDB via `idb` (buil
 - **Phase 6a (named products):** build editor lists every product by brand + model (radio list per category, collapsible, sorted by price, ⓘ for details); tiers removed from the UI; up to 5 products per category per bike. Owner approved.
 - **Phase 6b (all 12 bikes):** 138 products, 135 gaps. Per bike: Ninja 500 32, R9 19, ZX-6R 17, RS 457 15, ZX-4R 14, R7 11, CBR650R 9, R1 9, Panigale V4 S 7, H2R 3, ZX-10R 2, Panigale V4 R 1. Fitment rule: listing must cover the exact model and the 2026 generation; older-year listings only where that model didn't change (H2R, ZX-6R 2024+, RS 457). 2026 CBR650R is E-Clutch only (counts as stock quickshifter). 2026 ZX-10R and R7 changed, so 2021-2025 parts are logged as gaps. Sums of two real listings are allowed with a note (Panigale sprockets). Done.
 - **Phase 7 (engine sound):** owner chose generated sound, Hold-to-rev control, forced induction via custom parts (Turbo/Supercharger choice). 7b: per-bike voices, realistic turbo, audible supercharger, measured accuracy (see Engine sound). Owner asked for checks before merging. 7c: louder overall. 7d: rebuilt as a pipe/waveguide model per bike's real exhaust layout; release dings removed (see Engine sound).
+- **Phase 8 (KE1000):** owner's fully custom bike (see KE1000). Also: output soft clipper without oversampling (its filter overshot the ceiling on dense high-rpm sound; peaks now ≤ 0.88). 360 tests.

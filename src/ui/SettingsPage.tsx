@@ -62,8 +62,11 @@ export function SettingsPage({ settings, onSaved, onRestored }: Props) {
       <p class="muted small">Used for every build. Published test numbers use ~180 lb riders, so a lighter rider is quicker.</p>
       <button class="btn block" disabled={!valid || n === settings.riderLb} onClick={save}>Save</button>
 
+      <h2>KE1000</h2>
+      <a class="btn ghost block" href="#/ke1000" style={{ display: 'block', textAlign: 'center' }}>Edit KE1000 specs ›</a>
+
       <h2>Backup</h2>
-      <p class="muted small">Builds, your prices and custom parts are stored only on this phone. Save a backup to Files now and then.</p>
+      <p class="muted small">Builds, your prices, custom parts and KE1000 specs are stored only on this phone. Save a backup to Files now and then.</p>
       <button class="btn block" onClick={backup}>Save backup</button>
       <label class="btn ghost block" style={{ display: 'block', textAlign: 'center', marginTop: 8 }}>
         Restore from backup…

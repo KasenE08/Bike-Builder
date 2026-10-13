@@ -5,7 +5,7 @@ import type { SimInput } from './sim.ts';
 export const DEFAULT_RIDER_LB = 155;
 
 /** Stock per-shift time (est.): factory quickshifter vs full-throttle clutch shift by a test rider. */
-export const shiftTimeFor = (b: Bike) => (b.stock.quickshifter ? 0.06 : 0.25);
+export const shiftTimeFor = (b: Bike) => b.stockShiftS ?? (b.stock.quickshifter ? 0.06 : 0.25);
 
 export function stockInput(b: Bike, cal: Pick<Calibration, 'cdA' | 'launchG' | 'shiftTimeS'>, riderLb = DEFAULT_RIDER_LB): SimInput {
   const g = b.gearing;
