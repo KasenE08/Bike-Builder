@@ -1,5 +1,5 @@
 import { useState } from 'preact/hooks';
-import { DEFAULT_KE, keBike, keErrors, keWarnings, type KeSpec } from '../data/ke1000';
+import { DEFAULT_KE, KE_LIMITS, keBike, keErrors, keWarnings, type KeSpec } from '../data/ke1000';
 import { calibrate } from '../engine/calibrate';
 import { resetKe, saveKe } from '../store/db';
 
@@ -44,6 +44,9 @@ const GROUPS: { title: string; note?: string; fields: Field[] }[] = [
 ];
 
 const toStr = (v: number | null | undefined) => (v == null ? '' : String(v));
+const fmt = (n: number) => n.toLocaleString('en-US');
+/** "min–max" shown under each field. */
+const Range = ({ k }: { k: keyof typeof KE_LIMITS }) => <span class="muted small" style={{ display: 'block' }}>{fmt(KE_LIMITS[k][0])}–{fmt(KE_LIMITS[k][1])}</span>;
 const num = (s: string) => (s.trim() === '' ? null : Number(s));
 
 export function KeSpecPage({ initial, onSaved }: { initial: KeSpec; onSaved: () => Promise<void> }) {
@@ -84,8 +87,8 @@ export function KeSpecPage({ initial, onSaved }: { initial: KeSpec; onSaved: () 
     history.back();
   };
 
-  const input = (k: string, step = '1', label: string) => (
-    <input type="number" inputMode="decimal" step={step} value={f[k]} aria-label={label} onInput={set(k)} style={{ width: '110px', flex: '0 0 110px', textAlign: 'right' }} />
+  const input = (k: string, step = '1', label: string, [min, max]: readonly [number, number]) => (
+    <input type="number" inputMode="decimal" step={step} min={min} max={max} value={f[k]} aria-label={label} onInput={set(k)} style={{ width: '110px', flex: '0 0 110px', textAlign: 'right' }} />
   );
 
   return (
@@ -99,8 +102,8 @@ export function KeSpecPage({ initial, onSaved }: { initial: KeSpec; onSaved: () 
           {g.note && <p class="muted small">{g.note}</p>}
           {g.fields.map((x) => (
             <label key={x.key} class="spread" style={{ marginBottom: '8px' }}>
-              <span>{x.label}{x.optional && <span class="muted small"> (optional)</span>}</span>
-              {input(x.key, x.step, x.label)}
+              <span>{x.label}{x.optional && <span class="muted small"> (optional)</span>}<Range k={x.key} /></span>
+              {input(x.key, x.step, x.label, KE_LIMITS[x.key])}
             </label>
           ))}
           {g.title === 'Performance' && spec.zeroTo150S != null && spec.zeroTo60S != null && (
@@ -110,8 +113,8 @@ export function KeSpecPage({ initial, onSaved }: { initial: KeSpec; onSaved: () 
             <>
               {[0, 1, 2, 3, 4, 5].map((i) => (
                 <label key={i} class="spread" style={{ marginBottom: '8px' }}>
-                  <span>Gear {i + 1} ratio</span>
-                  {input(`g${i}`, '0.001', `Gear ${i + 1} ratio`)}
+                  <span>Gear {i + 1} ratio<Range k="gearRatio" /></span>
+                  {input(`g${i}`, '0.001', `Gear ${i + 1} ratio`, KE_LIMITS.gearRatio)}
                 </label>
               ))}
             </>

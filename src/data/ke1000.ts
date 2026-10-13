@@ -49,37 +49,52 @@ export const DEFAULT_KE: KeSpec = {
   calibration: { cdA: 3.187, launchG: 1.18, shiftTimeS: 0.06, est: false, fit: 'fitted to your numbers' },
 };
 
+/** Allowed range for each owner input (shown next to every field on the specs page). */
+export const KE_LIMITS = {
+  displacementCc: [50, 3000],
+  hp: [5, 1500],
+  peakHpRpm: [2000, 30000],
+  torqueLbFt: [3, 1000],
+  peakTorqueRpm: [1500, 30000],
+  redlineRpm: [3000, 30000],
+  idleRpm: [500, 4000],
+  wetWeightLb: [100, 2000],
+  topSpeedMph: [20, 400],
+  zeroTo60S: [0.8, 30],
+  zeroTo150S: [1, 120],
+  primaryRatio: [0.5, 5],
+  frontSprocket: [8, 40],
+  rearSprocket: [20, 90],
+  rearTireDiameterIn: [15, 40],
+  shiftTimeS: [0, 1],
+  msrpUsd: [0, 10_000_000],
+  gearRatio: [0.3, 6],
+} as const satisfies Record<string, readonly [number, number]>;
+
+const NAMES: Partial<Record<keyof typeof KE_LIMITS, string>> = {
+  displacementCc: 'Displacement (cc)', hp: 'Horsepower', peakHpRpm: 'Peak hp rpm', torqueLbFt: 'Torque (lb-ft)',
+  peakTorqueRpm: 'Peak torque rpm', redlineRpm: 'Redline (rpm)', idleRpm: 'Idle (rpm)', wetWeightLb: 'Weight (lb)',
+  topSpeedMph: 'Top speed (mph)', zeroTo60S: '0–60 (s)', primaryRatio: 'Primary ratio', frontSprocket: 'Front sprocket',
+  rearSprocket: 'Rear sprocket', rearTireDiameterIn: 'Rear tire diameter (in)', shiftTimeS: 'Shift time (s)',
+};
+
 /** Problems that stop a save (empty = OK). */
 export function keErrors(s: KeSpec): string[] {
   const e: string[] = [];
-  const range = (v: number | null, lo: number, hi: number, name: string) => {
+  const range = (v: number | null, [lo, hi]: readonly [number, number], name: string) => {
     if (v == null || !Number.isFinite(v) || v < lo || v > hi) e.push(`${name}: ${lo}–${hi}`);
   };
-  range(s.displacementCc, 50, 3000, 'Displacement (cc)');
-  range(s.hp, 5, 1500, 'Horsepower');
-  range(s.torqueLbFt, 3, 1000, 'Torque (lb-ft)');
-  range(s.redlineRpm, 3000, 30000, 'Redline (rpm)');
-  range(s.idleRpm, 500, 4000, 'Idle (rpm)');
-  range(s.peakHpRpm, 2000, 30000, 'Peak hp rpm');
-  range(s.peakTorqueRpm, 1500, 30000, 'Peak torque rpm');
-  range(s.wetWeightLb, 100, 2000, 'Weight (lb)');
-  range(s.topSpeedMph, 20, 400, 'Top speed (mph)');
-  range(s.zeroTo60S, 0.8, 30, '0–60 (s)');
-  range(s.primaryRatio, 0.5, 5, 'Primary ratio');
-  range(s.frontSprocket, 8, 40, 'Front sprocket');
-  range(s.rearSprocket, 20, 90, 'Rear sprocket');
-  range(s.rearTireDiameterIn, 15, 40, 'Rear tire diameter (in)');
-  range(s.shiftTimeS, 0, 1, 'Shift time (s)');
-  s.gearRatios.forEach((g, i) => range(g, 0.3, 6, `Gear ${i + 1} ratio`));
+  for (const [k, name] of Object.entries(NAMES)) range(s[k as keyof KeSpec] as number, KE_LIMITS[k as keyof typeof KE_LIMITS], name!);
+  s.gearRatios.forEach((g, i) => range(g, KE_LIMITS.gearRatio, `Gear ${i + 1} ratio`));
   if (s.gearRatios.some((g, i) => i > 0 && g >= s.gearRatios[i - 1])) e.push('Gear ratios must get smaller from 1st to 6th');
   if (s.peakHpRpm > s.redlineRpm) e.push('Peak hp rpm must be at or below redline');
   if (s.peakTorqueRpm >= s.peakHpRpm) e.push('Peak torque rpm must be below peak hp rpm');
   if (s.idleRpm >= s.redlineRpm / 2) e.push('Idle must be under half of redline');
   if (s.topSpeedMph >= 150) {
     if (s.zeroTo150S == null) e.push('0–150 (s): needed when top speed is 150+');
-    else if (!(s.zeroTo150S > s.zeroTo60S && s.zeroTo150S <= 120)) e.push('0–150 must be slower than 0–60');
+    else if (!(s.zeroTo150S > s.zeroTo60S && s.zeroTo150S <= KE_LIMITS.zeroTo150S[1])) e.push(`0–150 must be slower than 0–60 (max ${KE_LIMITS.zeroTo150S[1]} s)`);
   }
-  if (s.msrpUsd != null) range(s.msrpUsd, 0, 10_000_000, 'Price ($)');
+  if (s.msrpUsd != null) range(s.msrpUsd, KE_LIMITS.msrpUsd, 'Price ($)');
   return e;
 }
 
@@ -132,17 +147,17 @@ export function keBike(s: KeSpec): Bike {
       layout: 'inline6',
       firingDeg: [0, 120, 240, 360, 480, 600],
       idleRpm: s.idleRpm,
-      ramAir: true,
+      ramAir: false, // ram-air resonance read as a whine on the inline-6
       est: false,
-      source: 'KE1000 (owner-made): inline-6, firing 1-5-3-6-2-4, ram-air',
+      source: 'KE1000 (owner-made): inline-6, firing 1-5-3-6-2-4',
       exhaust: {
         layout: '6-2-1',
-        headerM: 0.42,
-        secondaryM: 0.28,
-        linkM: 0.22,
+        headerM: 0.62,
+        secondaryM: 0.42,
+        linkM: 0.5,
         groups: [[0, 2, 4], [1, 3, 5]],
         est: true,
-        source: 'Short titanium race headers into a megaphone (design choice)',
+        source: 'Long titanium race headers into a big-bore megaphone, tuned low for a grumble (design choice)',
       },
     },
     streetLegal: false,

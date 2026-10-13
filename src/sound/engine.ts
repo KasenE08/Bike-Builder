@@ -59,10 +59,12 @@ export async function buildVoice(ctx: BaseAudioContext, p: SoundProfile, out: Au
   const crackleAmt = p.exhaust === 'stock' ? (p.tuned ? 0.15 : 0) : Math.min(1, v.crackle + (p.tuned ? 0.25 : 0));
   // A turbine in the exhaust takes energy out of the pulses: duller, quieter exhaust note.
   const turbo = p.fi === 'turbo';
-  const voice = { ...v, drive: v.drive * p.aggression, lowpassHz: v.lowpassHz * p.mufflerScale * (turbo ? 0.6 : 1), bodyHz: 1 / (4 * p.pipes.linkS) };
+  // Grumble: darker can, fatter low body (and cylinder imbalance in the worklet).
+  const g = p.grumble;
+  const voice = { ...v, drive: v.drive * p.aggression, bodyDb: v.bodyDb + 5 * g, lowpassHz: v.lowpassHz * p.mufflerScale * (1 - 0.5 * g) * (turbo ? 0.6 : 1), bodyHz: 1 / (4 * p.pipes.linkS) };
   const node = new AudioWorkletNode(ctx, 'engine-proc', {
     numberOfInputs: 0, outputChannelCount: [1],
-    processorOptions: { ...p, voice, intakeLvl: p.intakeMod ? 0.32 : 0.18, outGain: (12 / Math.sqrt(p.firingDeg.length)) * Math.pow(10, p.trimDb / 20) },
+    processorOptions: { ...p, voice, rough: 0.45 * p.grumble, intakeLvl: p.intakeMod ? 0.32 : 0.18, outGain: (12 / Math.sqrt(p.firingDeg.length)) * Math.pow(10, p.trimDb / 20) },
   });
   const exGain = ctx.createGain(); exGain.gain.value = v.gain * (turbo ? 0.75 : 1);
   node.connect(exGain).connect(out);

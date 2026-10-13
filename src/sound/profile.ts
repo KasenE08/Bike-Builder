@@ -15,6 +15,7 @@ export interface SoundProfile {
   mufflerScale: number;  // smaller engines carry smaller cans: brighter, thinner
   trimDb: number;        // loudness trim per engine layout
   aggression: number;    // pipe drive multiplier (custom bike: grows with hp per liter)
+  grumble: number;       // 0..1: cylinder imbalance + darker, bassier pipe (KE1000)
   exhaust: ExhaustKind;
   tuned: boolean;        // ECU tune: sharper revs, decel crackle
   intakeMod: boolean;    // louder induction noise
@@ -33,7 +34,7 @@ const LAYOUT = {
   inline4: { revUpS: 0.8, trimDb: 3.5, name: 'inline-4' },
   crossplaneI4: { revUpS: 0.85, trimDb: 3, name: 'crossplane inline-4' },
   v4: { revUpS: 0.75, trimDb: 4.5, name: 'V4' },
-  inline6: { revUpS: 0.62, trimDb: 0, name: 'inline-6' },
+  inline6: { revUpS: 0.62, trimDb: 3, name: 'inline-6' },
 } as const;
 
 export const C_EXHAUST = 520; // m/s, speed of sound in hot exhaust gas (est., ~400 C)
@@ -85,6 +86,7 @@ export function soundProfile(bike: Bike, parts: Part[]): SoundProfile {
     mufflerScale: +Math.pow(1 / size, 0.35).toFixed(3),
     trimDb: L.trimDb,
     aggression: +aggression.toFixed(3),
+    grumble: bike.custom ? 1 : 0,
     airboxHz: Math.round(520 / Math.sqrt(size * bike.engine.firingDeg.length / 2)),
     exhaust,
     tuned,
